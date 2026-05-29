@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "mpr2orhisif1b",
+    "name": "Saniya Admin",
+    "email": "admin@faq.com",
+    "password": "$2a$10$Kxrg/AItASZbfShygnxmQOPkG77GXcCSBds/KVUSNXCpTSmOTq3KS",
+    "role": "admin",
+    "createdAt": "2026-05-29T15:25:23.440Z",
+    "updatedAt": "2026-05-29T15:25:23.440Z"
+  },
+  {
+    "_id": "mpr34fwlxt9bg",
+    "name": "shaik saniya",
+    "email": "ssaniyasalluv@gmail.com",
+    "password": "$2a$10$m/tWpnm4t4QaO3CaE/uf7eY.d02EzE0343gqWsNFXCM4ko9I/BFqK",
+    "role": "user",
+    "createdAt": "2026-05-29T15:38:04.231Z",
+    "updatedAt": "2026-05-29T15:38:04.231Z"
+  },
+  {
+    "_id": "mpr37kkqd46po",
+    "name": "shaik saniya",
+    "email": "admin@abc.com",
+    "password": "$2a$10$9NqIX0hcRuC4imeqsLN9Fu5IaHcykabMj7rr5F0Cbm4A2VpdIGpYS",
+    "role": "admin",
+    "createdAt": "2026-05-29T15:43:26.249Z",
+    "updatedAt": "2026-05-29T15:43:26.249Z"
+  },
+  {
+    "_id": "mpr3ph1f8ubyj",
+    "name": "Rahul",
+    "email": "rahul@faq.com",
+    "password": "$2a$10$b5i9BInUi0Z7XhGkrq1vXuiXJlHCsfSwhvthy1J.u.dBaRezJ8tV6",
+    "role": "user",
+    "createdAt": "2026-05-29T15:53:31.120Z",
+    "updatedAt": "2026-05-29T15:53:31.123Z"
+  },
+  {
+    "_id": "mpr3q42nhwqi8",
+    "name": "Sania",
+    "email": "sania@faq.com",
+    "password": "$2a$10$D0GpCQuWpMhfSOi4ha5XUe5tfFNZ4cO6Dn3/dRKOAUosfH7/.8y6O",
+    "role": "admin",
+    "createdAt": "2026-05-29T15:53:48.142Z",
+    "updatedAt": "2026-05-29T15:53:48.145Z"
+  }
+]

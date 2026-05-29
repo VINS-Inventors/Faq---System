@@ -1,0 +1,33 @@
+[
+  {
+    "_id": "mpr2pxd0phuwq",
+    "userId": "mpr2orhisif1b",
+    "question": "How do I reset my password?",
+    "category": "Account",
+    "status": "pending",
+    "createdAt": "2026-05-29T15:25:56.518Z",
+    "updatedAt": "2026-05-29T15:25:56.518Z"
+  },
+  {
+    "_id": "mpr368udwm4pp",
+    "userId": "mpr34fwlxt9bg",
+    "question": "will i get certificate or not?",
+    "category": "General",
+    "status": "answered",
+    "createdAt": "2026-05-29T15:39:06.386Z",
+    "updatedAt": "2026-05-29T16:23:40.907Z",
+    "answer": "yes we will get after completion of internship.",
+    "answeredBy": "mpr37kkqd46po"
+  },
+  {
+    "_id": "mpr3qgv4m9x65",
+    "userId": "mpr3ph1f8ubyj",
+    "question": "How do I reset my password?",
+    "category": "Account",
+    "status": "answered",
+    "createdAt": "2026-05-29T15:54:19.757Z",
+    "updatedAt": "2026-05-29T15:57:29.779Z",
+    "answer": "Go to Settings ? Security ? Reset Password. You will receive an email with a secure link valid for 24 hours.",
+    "answeredBy": "mpr3q42nhwqi8"
+  }
+]
