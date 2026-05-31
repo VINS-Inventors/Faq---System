@@ -1,0 +1,61 @@
+[
+  {
+    "_id": "mptrrr4uqhczr",
+    "title": "when i  start my internship?",
+    "body": "about internship starting ..",
+    "tags": [
+      "start date",
+      "internship"
+    ],
+    "authorId": "mpsbaxfpmr62g",
+    "votes": 1,
+    "votedBy": [
+      "mpsbaxfpmr62g"
+    ],
+    "views": 16,
+    "answers": [
+      {
+        "_id": "ba4ce3bb-77aa-4df4-b427-4c1330d2262f",
+        "body": "internship start at 15 may 2026",
+        "authorId": "mpsbaxfpmr62g",
+        "votes": 0,
+        "votedBy": [],
+        "accepted": false,
+        "createdAt": "2026-05-31T12:56:37.821Z"
+      }
+    ],
+    "createdAt": "2026-05-31T12:45:50.864Z",
+    "updatedAt": "2026-05-31T12:57:40.361Z"
+  },
+  {
+    "_id": "mptsk0zt320rr",
+    "title": "Best resources for cracking IIT Ropar internship interviews?",
+    "body": "I have an interview scheduled next week. What topics should I prepare and which resources are most helpful?",
+    "tags": [
+      "interviews",
+      "preparation",
+      "iit-ropar"
+    ],
+    "authorId": "mptsk0zqwlhrp",
+    "votes": 1,
+    "votedBy": [
+      "mptsk0zqwlhrp"
+    ],
+    "views": 0,
+    "answers": [
+      {
+        "_id": "8706e882-addf-462c-8af8-1bd986cd292b",
+        "body": "Focus on Data Structures, OS, and OOPs.GeeksforGeeks and InterviewBit are great platforms for practice.",
+        "authorId": "mptsk0zqwlhrp",
+        "votes": 1,
+        "votedBy": [
+          "mptsk0zqwlhrp"
+        ],
+        "accepted": true,
+        "createdAt": "2026-05-31T13:07:09.961Z"
+      }
+    ],
+    "createdAt": "2026-05-31T13:07:09.579Z",
+    "updatedAt": "2026-05-31T13:07:10.110Z"
+  }
+]

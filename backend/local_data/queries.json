@@ -29,5 +29,38 @@
     "updatedAt": "2026-05-29T15:57:29.779Z",
     "answer": "Go to Settings ? Security ? Reset Password. You will receive an email with a secure link valid for 24 hours.",
     "answeredBy": "mpr3q42nhwqi8"
+  },
+  {
+    "_id": "mpsbd45cdvqrm",
+    "userId": "mpsbaxfpmr62g",
+    "title": "can i get my certificate or not?",
+    "description": "getting a certificate or not based on my performance ?",
+    "category": "General",
+    "priority": "HIGH",
+    "attachments": [],
+    "status": "RESOLVED",
+    "createdAt": "2026-05-30T12:18:21.233Z",
+    "updatedAt": "2026-05-30T12:20:13.823Z",
+    "assignedTo": "mpsbaxfpmr62g",
+    "answer": "yes , you can get a certificate after completion of internship and you can get a merit certificate also for your performance.",
+    "resolvedAt": "2026-05-30T12:20:13.819Z",
+    "linkedFAQs": []
+  },
+  {
+    "_id": "mptsk0zr7gqaw",
+    "userId": "mptsk0zqwlhrp",
+    "title": "How to apply for summer internships?",
+    "description": "I am a 2nd year student looking for internship opportunities at IIT Ropar. What is the process?",
+    "category": "Internships",
+    "priority": "MEDIUM",
+    "attachments": [],
+    "status": "APPROVED",
+    "createdAt": "2026-05-31T13:06:16.879Z",
+    "updatedAt": "2026-05-31T13:06:42.086Z",
+    "assignedTo": "mptsk0zqwlhrp",
+    "answer": "Visit the T&P portal at iitr.ac.in for internship listings and apply through the official channel.",
+    "resolvedAt": "2026-05-31T13:06:42.009Z",
+    "linkedFAQs": [],
+    "approvedBy": "mptsk0zqwlhrp"
   }
 ]

@@ -64,6 +64,20 @@ const forumSchema = {
   updatedAt: String,
 };
 
+const postSchema = {
+  title: String,
+  body: String,
+  tags: [String],
+  authorId: String,
+  authorName: String,
+  votes: Number,
+  votedBy: [String],
+  views: Number,
+  answers: [Object],
+  createdAt: String,
+  updatedAt: String,
+};
+
 // ── Mongoose model factory ────────────────────────────────────────────────────
 
 function makeMongooseModel(name, schema) {
@@ -95,6 +109,7 @@ function buildMongoModels() {
   const Query = makeMongooseModel('Query', querySchema);
   const FAQ = makeMongooseModel('FAQ', faqSchema);
   const Forum = makeMongooseModel('Forum', forumSchema);
+  const Post = makeMongooseModel('Post', postSchema);
 
   const makeRepo = (Model) => ({
     findOne: (filter) => Model.findOne(filter).lean(),
@@ -114,6 +129,7 @@ function buildMongoModels() {
   modelFns.Query = makeRepo(Query);
   modelFns.FAQ = makeRepo(FAQ);
   modelFns.Forum = makeRepo(Forum);
+  modelFns.Post = makeRepo(Post);
 }
 
 // ── Build local-json modelFns ─────────────────────────────────────────────────
@@ -123,6 +139,7 @@ function buildLocalModels() {
   const Queries = localDb.collection('queries');
   const FAQs = localDb.collection('faqs');
   const Forums = localDb.collection('forums');
+  const Posts = localDb.collection('posts');
 
   const makeRepo = (coll) => ({
     findOne: (filter) => coll.findOne(filter),
@@ -153,6 +170,7 @@ function buildLocalModels() {
   modelFns.Query = makeRepo(Queries);
   modelFns.FAQ = makeRepo(FAQs);
   modelFns.Forum = makeRepo(Forums);
+  modelFns.Post = makeRepo(Posts);
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
@@ -206,6 +224,13 @@ const db = {
   Forum_find: (filter = {}, opts = {}) => { init(); return modelFns.Forum.find(filter, opts); },
   Forum_create: (data) => { init(); return modelFns.Forum.create(data); },
   Forum_findOne: (filter) => { init(); return modelFns.Forum.findOne(filter); },
+
+  // Post
+  Post_find: (filter = {}, opts = {}) => { init(); return modelFns.Post.find(filter, opts); },
+  Post_findById: (id) => { init(); return modelFns.Post.findById(id); },
+  Post_create: (data) => { init(); return modelFns.Post.create(data); },
+  Post_findByIdAndUpdate: (id, update, opts) => { init(); return modelFns.Post.findByIdAndUpdate(id, update, opts); },
+  Post_findByIdAndDelete: (id) => { init(); return modelFns.Post.findByIdAndDelete(id); },
 };
 
 module.exports = db;

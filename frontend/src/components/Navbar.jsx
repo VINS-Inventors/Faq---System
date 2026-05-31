@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 const Navbar = () => {
   const { user, logout } = useAuth();
   const location = useLocation();
-  const isActive = path => location.pathname === path;
+  const isActive = path => location.pathname === path || location.pathname.startsWith(path + '/');
 
   if (!user) return null;
 
@@ -20,6 +20,7 @@ const Navbar = () => {
         <Link to="/ask" className={isActive('/ask') ? 'active' : ''}>Ask</Link>
         <Link to="/board" className={isActive('/board') ? 'active' : ''}>Board</Link>
         <Link to="/status" className={isActive('/status') ? 'active' : ''}>Tracker</Link>
+        <Link to="/forum" className={isActive('/forum') ? 'active' : ''}>Forum</Link>
         {user.role === 'admin' && (
           <>
             <Link to="/admin" className={isActive('/admin') ? 'active' : ''}>Admin</Link>

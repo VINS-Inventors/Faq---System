@@ -7,6 +7,7 @@ const authRoutes = require('./routes/auth');
 const queryRoutes = require('./routes/queries');
 const faqRoutes = require('./routes/faqRoutes');
 const forumRoutes = require('./routes/forumRoutes');
+const postRoutes = require('./routes/postRoutes');
 const userRoutes = require('./routes/users');
 
 const app = express();
@@ -18,6 +19,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/queries', queryRoutes);
 app.use('/api/faqs', faqRoutes);
 app.use('/api/forum', forumRoutes);
+app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 
 app.get('/api/health', (req, res) => {

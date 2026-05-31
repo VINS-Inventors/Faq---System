@@ -43,5 +43,41 @@
     "role": "admin",
     "createdAt": "2026-05-29T15:53:48.142Z",
     "updatedAt": "2026-05-29T15:53:48.145Z"
+  },
+  {
+    "_id": "mps62hrxgl5xw",
+    "name": "Test User",
+    "email": "testuser@test.com",
+    "password": "$2a$10$Sr1Oto.MQHioEkmXR5efxuWYp7xGXEHlFK6aLSJElu2PkrNM8HnH.",
+    "role": "user",
+    "createdAt": "2026-05-30T09:48:05.202Z",
+    "updatedAt": "2026-05-30T09:48:05.203Z"
+  },
+  {
+    "_id": "mps62hrykymzk",
+    "name": "amit",
+    "email": "amit123@gmail.com",
+    "password": "$2a$10$rRdPON35VcrG5BhaNDg5xOCdYPoHihvO8W1KXgVvUQs6KiHwHKlku",
+    "role": "admin",
+    "createdAt": "2026-05-30T09:53:23.491Z",
+    "updatedAt": "2026-05-30T09:53:23.491Z"
+  },
+  {
+    "_id": "mpsbaxfpmr62g",
+    "name": "raj",
+    "email": "raj123@gmail.com",
+    "password": "$2a$10$QHgDOt7SO1l3FjqxUZyjnesftiEiyBid9qP5SfBLKHsr.r5.7yO8i",
+    "role": "admin",
+    "createdAt": "2026-05-30T12:15:07.314Z",
+    "updatedAt": "2026-05-30T12:15:07.314Z"
+  },
+  {
+    "_id": "mptsk0zqwlhrp",
+    "name": "Admin User",
+    "email": "admin@iitr.ac.in",
+    "password": "$2a$10$Q6BRvC4CrmtoytD5sIAfF.TzaejsbOjn0.qKnVCyg6B7GSdgd6wey",
+    "role": "admin",
+    "createdAt": "2026-05-31T13:05:51.548Z",
+    "updatedAt": "2026-05-31T13:05:51.548Z"
   }
 ]
