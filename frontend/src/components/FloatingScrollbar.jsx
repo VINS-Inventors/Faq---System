@@ -82,20 +82,20 @@ export default function FloatingScrollbar() {
             style={{
               width: 5,
               height: thumbHeight,
-              background: 'rgba(255, 255, 255, 0.22)',
+              background: 'rgba(153, 255, 0, 0.35)',
               borderRadius: 10,
               marginTop: thumbTop,
               backdropFilter: 'blur(0px)',
-              boxShadow: '0 0 8px rgba(0,0,0,0.3), 0 0 1px rgba(255,255,255,0.15)',
+              boxShadow: '0 0 8px rgba(0,0,0,0.3), 0 0 1px rgba(153,255,0,0.15)',
               transition: 'height 80ms ease, margin-top 80ms ease, background 250ms ease',
               willChange: 'transform, height, margin-top',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.38)';
+              e.currentTarget.style.background = 'rgba(153, 255, 0, 0.85)';
               e.currentTarget.style.width = '5px';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.22)';
+              e.currentTarget.style.background = 'rgba(153, 255, 0, 0.35)';
             }}
           />
         </div>
@@ -121,7 +121,7 @@ export default function FloatingScrollbar() {
         select::-webkit-scrollbar-thumb,
         input::-webkit-scrollbar-thumb,
         textarea::-webkit-scrollbar-thumb {
-          background: rgba(118, 56, 250, 0.5);
+          background: rgba(153, 255, 0, 0.5);
           border-radius: 10px;
         }
       `}</style>

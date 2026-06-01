@@ -148,9 +148,7 @@ export default function Home() {
             IIT Ropar — Official FAQ Portal
           </div>
           <h1 className="hero-title">
-            Welcome to
-            <br />
-            <span className="hero-gradient-text">Vicharanashala</span>
+            Welcome to <em className="hero-word-em">Vicharanashala<svg className="hero-word-underline" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 Q 45 2 95 7 T 197 9" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="100"></path></svg></em>, for <span className="italic-display">ambitious</span> minds.
           </h1>
           <p className="hero-subtitle">
             Your official IIT Ropar knowledge hub. Find answers, manage queries,
@@ -268,9 +266,9 @@ export default function Home() {
             An IIT Ropar Initiative
           </div>
           <h2 className="features-title">
-            Redefining Education
+            Redefining knowledge,
             <br />
-            <span className="features-title-accent">Through Innovation.</span>
+            through <em className="hero-word-em">innovation<svg className="hero-word-underline" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 Q 45 2 95 7 T 197 9" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="100"></path></svg></em>.
           </h2>
           <p className="features-subtitle">
             Everything your team needs to manage knowledge, resolve queries, and scale support — wrapped in a premium, modern interface.
@@ -343,7 +341,7 @@ export default function Home() {
             About the Platform
           </div>
           <h2 className="about-title">
-            About <span className="about-title-accent">Vicharanashala</span>
+            About <span className="italic-display">Vicharanashala</span>
           </h2>
           <p className="about-desc">
             Vicharanashala is a centralized internship query resolver and FAQ platform designed to help students access verified information, stay updated with important announcements, and resolve queries efficiently. By bringing knowledge, support, and communication into one place, the platform simplifies the student experience and enables faster access to reliable answers.

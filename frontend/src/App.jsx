@@ -38,6 +38,7 @@ const AppRoutes = () => {
 const App = () => (
   <BrowserRouter>
     <AuthProvider>
+      <div className="grain" aria-hidden="true" />
       <FloatingScrollbar />
       <AppRoutes />
     </AuthProvider>

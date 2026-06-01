@@ -336,6 +336,7 @@ const db = {
 
   User_findOne:  f       => modelFns.User.findOne(f),
   User_findById: id      => modelFns.User.findById(id),
+  User_findByIdAndDelete: id => modelFns.User.findByIdAndDelete(id),
   User_create:   d       => modelFns.User.create(d),
   User_find:     (f={})  => modelFns.User.find(f),
 
