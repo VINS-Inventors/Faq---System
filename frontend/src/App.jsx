@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import FloatingScrollbar from './components/FloatingScrollbar';
 import Home from './pages/Home';
+import ChatBot from './components/ChatBot';
 import Auth from './pages/Auth';
 import AskQuery from './pages/AskQuery';
 import QueryBoard from './pages/QueryBoard';
@@ -41,6 +42,7 @@ const App = () => (
       <div className="grain" aria-hidden="true" />
       <FloatingScrollbar />
       <AppRoutes />
+      <ChatBot />
     </AuthProvider>
   </BrowserRouter>
 );

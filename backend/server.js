@@ -10,6 +10,7 @@ const forumRoutes = require('./routes/forumRoutes');
 const postRoutes = require('./routes/postRoutes');
 const userRoutes = require('./routes/users');
 const dbViewRoutes = require('./routes/dbView');
+const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/forum', forumRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/db-view', dbViewRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
