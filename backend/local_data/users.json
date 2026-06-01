@@ -79,5 +79,14 @@
     "role": "admin",
     "createdAt": "2026-05-31T13:05:51.548Z",
     "updatedAt": "2026-05-31T13:05:51.548Z"
+  },
+  {
+    "_id": "mpv0z2ophrwbu",
+    "name": "samarth",
+    "email": "sam123@gmail.com",
+    "password": "$2a$10$n/s56bvKWM.mbuSoLs/HeOUbXmJMGNm7QRPcf1JrYXOJRh4pUlX56",
+    "role": "user",
+    "createdAt": "2026-06-01T10:02:06.178Z",
+    "updatedAt": "2026-06-01T10:02:06.178Z"
   }
 ]

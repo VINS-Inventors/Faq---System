@@ -17,14 +17,20 @@ const Navbar = () => {
       </Link>
 
       <div className="navbar-center">
-        <Link to="/ask" className={isActive('/ask') ? 'active' : ''}>Ask</Link>
-        <Link to="/board" className={isActive('/board') ? 'active' : ''}>Board</Link>
-        <Link to="/status" className={isActive('/status') ? 'active' : ''}>Tracker</Link>
-        <Link to="/forum" className={isActive('/forum') ? 'active' : ''}>Forum</Link>
+        {user.role !== 'admin' && (
+          <>
+            <Link to="/ask" className={isActive('/ask') ? 'active' : ''}>Ask</Link>
+            <Link to="/board" className={isActive('/board') ? 'active' : ''}>Board</Link>
+            <Link to="/status" className={isActive('/status') ? 'active' : ''}>Tracker</Link>
+            <Link to="/forum" className={isActive('/forum') ? 'active' : ''}>Forum</Link>
+          </>
+        )}
         {user.role === 'admin' && (
           <>
             <Link to="/admin" className={isActive('/admin') ? 'active' : ''}>Admin</Link>
+            <Link to="/db" className={isActive('/db') ? 'active' : ''}>DB</Link>
             <Link to="/escalation" className={isActive('/escalation') ? 'active' : ''}>Escalation</Link>
+            <Link to="/users" className={isActive('/users') ? 'active' : ''}>Users</Link>
           </>
         )}
       </div>
