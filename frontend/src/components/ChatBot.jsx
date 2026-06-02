@@ -231,7 +231,7 @@ const ChatBot = () => {
                 boxShadow: '0 0 20px rgba(153,255,0,0.3)',
               }}>🤖</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-strong)' }}>T&P Assistant</div>
+                <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-strong)' }}>Yaksha</div>
                 <div style={{ fontSize: 11, color: 'var(--green)', display: 'flex', alignItems: 'center', gap: 4 }}>
                   <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--green)', display: 'inline-block', boxShadow: '0 0 6px var(--green)' }} />
                   Online — typically replies instantly
