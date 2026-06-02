@@ -87,14 +87,55 @@ exports.deleteFAQ = async (req, res) => {
   }
 };
 
-// ── Mark FAQ helpful / not helpful ──────────────────────────────────────────
+// ── Mark FAQ helpful / not helpful (per-user vote tracking) ─────────────────
 exports.markHelpful = async (req, res) => {
   try {
     const { type } = req.body; // 'helpful' | 'notHelpful'
-    const field = type === 'helpful' ? 'helpful' : 'notHelpful';
-    const faq = await db.FAQ_findByIdAndUpdate(req.params.id, { $inc: { [field]: 1 } }, { lean: false });
+    if (!['helpful', 'notHelpful'].includes(type)) {
+      return res.status(400).json({ message: "type must be 'helpful' or 'notHelpful'" });
+    }
+
+    const faq = await db.FAQ_findById(req.params.id);
     if (!faq) return res.status(404).json({ message: 'FAQ not found' });
-    res.json(faq);
+
+    const uid = String(req.user.id);
+    const helpfulVotes = Array.isArray(faq.helpfulVotes) ? faq.helpfulVotes.map(String) : [];
+    const notHelpfulVotes = Array.isArray(faq.notHelpfulVotes) ? faq.notHelpfulVotes.map(String) : [];
+
+    let updated;
+    if (type === 'helpful') {
+      if (helpfulVotes.includes(uid)) {
+        // Toggle off
+        updated = await db.FAQ_findByIdAndUpdate(req.params.id, {
+          helpfulVotes: helpfulVotes.filter(v => v !== uid),
+          helpful: Math.max(0, (faq.helpful || 0) - 1),
+        });
+      } else {
+        // Vote on (remove from opposite if present)
+        updated = await db.FAQ_findByIdAndUpdate(req.params.id, {
+          helpfulVotes: [...helpfulVotes, uid],
+          notHelpfulVotes: notHelpfulVotes.filter(v => v !== uid),
+          helpful: (faq.helpful || 0) + 1,
+          notHelpful: Math.max(0, (faq.notHelpful || 0) - (notHelpfulVotes.includes(uid) ? 1 : 0)),
+        });
+      }
+    } else {
+      if (notHelpfulVotes.includes(uid)) {
+        updated = await db.FAQ_findByIdAndUpdate(req.params.id, {
+          notHelpfulVotes: notHelpfulVotes.filter(v => v !== uid),
+          notHelpful: Math.max(0, (faq.notHelpful || 0) - 1),
+        });
+      } else {
+        updated = await db.FAQ_findByIdAndUpdate(req.params.id, {
+          notHelpfulVotes: [...notHelpfulVotes, uid],
+          helpfulVotes: helpfulVotes.filter(v => v !== uid),
+          notHelpful: (faq.notHelpful || 0) + 1,
+          helpful: Math.max(0, (faq.helpful || 0) - (helpfulVotes.includes(uid) ? 1 : 0)),
+        });
+      }
+    }
+
+    res.json(updated);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

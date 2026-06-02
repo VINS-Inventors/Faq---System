@@ -65,10 +65,14 @@ exports.getBoard = async (req, res) => {
   }
 };
 
-// ── User: my own queries (all statuses, with full timeline) ─────────────────
+// ── User: my own queries (user-facing statuses only) ───────────────────────
+// Excludes REVIEWING/ESCALATED — those internal states hide moderator notes/answers
 exports.getMyQueries = async (req, res) => {
   try {
-    const queries = await db.Query_find({ userId: req.user.id }, { sort: { createdAt: -1 } });
+    const queries = await db.Query_find(
+      { userId: req.user.id, status: { $in: ['PENDING', 'RESOLVED', 'APPROVED', 'REJECTED'] } },
+      { sort: { createdAt: -1 } }
+    );
     res.json(queries);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -128,19 +132,19 @@ exports.getPending = async (req, res) => {
 };
 
 // ── Moderator: claim a PENDING query → moves to REVIEWING ───────────────────
+// Uses findOneAndUpdate for atomic claim — prevents double-booking
 exports.claimQuery = async (req, res) => {
   try {
-    const query = await db.Query_findById(req.params.id);
-    if (!query) return res.status(404).json({ message: 'Query not found' });
-    if (query.status !== 'PENDING') {
+    const updated = await db.Query_findOneAndUpdate(
+      { _id: req.params.id, status: 'PENDING' },
+      { status: 'REVIEWING', assignedTo: req.user.id }
+    );
+    if (!updated) {
+      // Determine why: not found vs already claimed
+      const query = await db.Query_findById(req.params.id);
+      if (!query) return res.status(404).json({ message: 'Query not found' });
       return res.status(400).json({ message: 'Only PENDING queries can be claimed' });
     }
-
-    const updated = await db.Query_findByIdAndUpdate(req.params.id, {
-      status: 'REVIEWING',
-      assignedTo: req.user.id,
-    }, { lean: false });
-
     res.json(updated);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -148,6 +152,7 @@ exports.claimQuery = async (req, res) => {
 };
 
 // ── Moderator: resolve a REVIEWING query → answer provided, status RESOLVED ─
+// Only the assigned moderator or an admin can resolve
 exports.resolveQuery = async (req, res) => {
   try {
     const { answer, linkedFAQs } = req.body;
@@ -157,6 +162,10 @@ exports.resolveQuery = async (req, res) => {
     if (!query) return res.status(404).json({ message: 'Query not found' });
     if (query.status !== 'REVIEWING') {
       return res.status(400).json({ message: 'Only REVIEWING queries can be resolved' });
+    }
+    // Only assigned moderator or admin can resolve
+    if (query.assignedTo !== req.user.id && req.user.role !== 'admin') {
+      return res.status(403).json({ message: 'Not authorized to resolve this query' });
     }
 
     const updated = await db.Query_findByIdAndUpdate(req.params.id, {
@@ -180,6 +189,10 @@ exports.escalateQuery = async (req, res) => {
     if (!query) return res.status(404).json({ message: 'Query not found' });
     if (!['PENDING', 'REVIEWING'].includes(query.status)) {
       return res.status(400).json({ message: 'Cannot escalate this query' });
+    }
+    // Prevent admin from self-escalating (assigned mod can't self-escalate either)
+    if (query.assignedTo === req.user.id) {
+      return res.status(400).json({ message: 'Cannot escalate a query assigned to yourself' });
     }
 
     const updated = await db.Query_findByIdAndUpdate(req.params.id, {

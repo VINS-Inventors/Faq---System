@@ -16,10 +16,10 @@ router.get('/:id', queryController.getQueryById);
 router.post('/', auth, queryController.submitQuery);
 
 // Moderator claims a pending query → REVIEWING
-router.put('/:id/claim', auth, queryController.claimQuery);
+router.put('/:id/claim', auth, adminOnly, queryController.claimQuery);
 
 // Moderator resolves a reviewing query
-router.put('/:id/resolve', auth, queryController.resolveQuery);
+router.put('/:id/resolve', auth, adminOnly, queryController.resolveQuery);
 
 // Admin: escalate
 router.put('/:id/escalate', auth, adminOnly, queryController.escalateQuery);
@@ -36,7 +36,7 @@ router.get('/admin/pending', auth, adminOnly, queryController.getPending);
 // Admin: escalated queue
 router.get('/admin/escalated', auth, adminOnly, queryController.getEscalated);
 
-// Moderator: reviewing queue
-router.get('/admin/reviewing', auth, queryController.getReviewing);
+// Admin/Moderator: reviewing queue — restricted to admin role
+router.get('/admin/reviewing', auth, adminOnly, queryController.getReviewing);
 
 module.exports = router;

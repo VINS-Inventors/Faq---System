@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import FloatingScrollbar from './components/FloatingScrollbar';
@@ -16,23 +17,39 @@ import Forum from './pages/Forum';
 import ForumPost from './pages/ForumPost';
 import Users from './pages/Users';
 
+const PageWrapper = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 15, scale: 0.995 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    exit={{ opacity: 0, y: -15, scale: 0.995 }}
+    transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+    style={{ minHeight: '100vh' }}
+  >
+    {children}
+  </motion.div>
+);
+
 const AppRoutes = () => {
   const { user } = useAuth();
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={user ? <Navigate to="/ask" replace /> : <Auth />} />
-      <Route path="/ask" element={<ProtectedRoute><AskQuery /></ProtectedRoute>} />
-      <Route path="/board" element={<ProtectedRoute><QueryBoard /></ProtectedRoute>} />
-      <Route path="/admin" element={<ProtectedRoute adminOnly><AdminReview /></ProtectedRoute>} />
-      <Route path="/db" element={<ProtectedRoute adminOnly><AdminDB /></ProtectedRoute>} />
-      <Route path="/status" element={<ProtectedRoute><StatusTracker /></ProtectedRoute>} />
-      <Route path="/escalation" element={<ProtectedRoute adminOnly><Escalation /></ProtectedRoute>} />
-      <Route path="/users" element={<ProtectedRoute adminOnly><Users /></ProtectedRoute>} />
-      <Route path="/forum" element={<ProtectedRoute><Forum /></ProtectedRoute>} />
-      <Route path="/forum/:id" element={<ProtectedRoute><ForumPost /></ProtectedRoute>} />
-      <Route path="*" element={<Navigate to={user ? '/ask' : '/login'} replace />} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+        <Route path="/login" element={user ? <Navigate to="/ask" replace /> : <PageWrapper><Auth /></PageWrapper>} />
+        <Route path="/ask" element={<PageWrapper><ProtectedRoute><AskQuery /></ProtectedRoute></PageWrapper>} />
+        <Route path="/board" element={<PageWrapper><ProtectedRoute><QueryBoard /></ProtectedRoute></PageWrapper>} />
+        <Route path="/admin" element={<PageWrapper><ProtectedRoute adminOnly><AdminReview /></ProtectedRoute></PageWrapper>} />
+        <Route path="/db" element={<PageWrapper><ProtectedRoute adminOnly><AdminDB /></ProtectedRoute></PageWrapper>} />
+        <Route path="/status" element={<PageWrapper><ProtectedRoute><StatusTracker /></ProtectedRoute></PageWrapper>} />
+        <Route path="/escalation" element={<PageWrapper><ProtectedRoute adminOnly><Escalation /></ProtectedRoute></PageWrapper>} />
+        <Route path="/users" element={<PageWrapper><ProtectedRoute adminOnly><Users /></ProtectedRoute></PageWrapper>} />
+        <Route path="/forum" element={<PageWrapper><ProtectedRoute><Forum /></ProtectedRoute></PageWrapper>} />
+        <Route path="/forum/:id" element={<PageWrapper><ProtectedRoute><ForumPost /></ProtectedRoute></PageWrapper>} />
+        <Route path="*" element={<Navigate to={user ? '/ask' : '/login'} replace />} />
+      </Routes>
+    </AnimatePresence>
   );
 };
 

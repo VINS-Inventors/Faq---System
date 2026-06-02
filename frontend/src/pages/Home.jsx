@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer';
+import ThemeToggle from '../components/ThemeToggle';
 import { Link } from 'react-router-dom';
 
 const features = [
@@ -123,16 +124,16 @@ export default function Home() {
       <nav className="home-nav">
         <div className="home-nav-brand">
           <span className="brand-icon">📋</span>
-          Vicharanashala
+          FAQ HUB
         </div>
         <div className="home-nav-links">
-          <a href="#features">Features</a>
-          <a href="#stats">Stats</a>
-          <Link to="/forum" style={{ color: 'var(--text-muted)', fontSize: 14, textDecoration: 'none', transition: 'color 200ms' }}
-            onMouseEnter={e => e.currentTarget.style.color = 'var(--text-strong)'}
-            onMouseLeave={e => e.currentTarget.style.color = 'var(--text-muted)'}>Forum</Link>
+          <a href="#features">Focus Areas</a>
+          <a href="#stats">Pillars</a>
+          <a href="#stats">Questions</a>
+          <Link to="/forum" className="nav-link">Forum</Link>
         </div>
         <div className="home-nav-actions">
+          <ThemeToggle />
           <Link to="/login" className="btn-home-ghost">Sign In</Link>
           <Link to="/login" className="btn-home-primary">Get Started</Link>
         </div>

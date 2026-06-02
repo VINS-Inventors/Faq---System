@@ -23,11 +23,14 @@ exports.postMessage = async (req, res) => {
 exports.getMessages = async (req, res) => {
   try {
     const messages = await db.Forum_find({ queryId: req.params.queryId }, { sort: { createdAt: 1 } });
-    // Attach user names
+
+    // Attach user names — batch fetch only the userIds we need
     const userIds = [...new Set(messages.map(m => m.userId))];
-    const users = await db.User_find({});
     const userMap = {};
-    users.forEach(u => { userMap[u._id] = { name: u.name }; });
+    if (userIds.length > 0) {
+      const users = await db.User_find({ _id: { $in: userIds } });
+      users.forEach(u => { userMap[u._id] = { name: u.name }; });
+    }
 
     const result = messages.map(m => ({
       _id: m._id,
@@ -48,10 +51,15 @@ exports.getMessages = async (req, res) => {
 // ── Update a message (own messages only) ─────────────────────────────────────
 exports.updateMessage = async (req, res) => {
   try {
-    const forum = await db.Forum_findOne({ _id: req.params.id, userId: req.user.id });
-    if (!forum) return res.status(404).json({ message: 'Message not found or not yours' });
+    if (!req.body.message?.trim()) return res.status(400).json({ message: 'Message is required' });
 
-    const updated = await db.Forum_findByIdAndUpdate(req.params.id, { message: req.body.message?.trim() }, { lean: false });
+    // Atomic find-and-update with ownership check — no separate lookup
+    const updated = await db.Forum_findOneAndUpdate(
+      { _id: req.params.id, userId: req.user.id },
+      { message: req.body.message.trim() }
+    );
+    if (!updated) return res.status(404).json({ message: 'Message not found or not yours' });
+
     res.json(updated);
   } catch (err) {
     res.status(500).json({ message: err.message });

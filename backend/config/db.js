@@ -61,6 +61,8 @@ const PG_TABLES = `
     "viewCount"     INT DEFAULT 0,
     helpful         INT DEFAULT 0,
     "notHelpful"    INT DEFAULT 0,
+    "helpfulVotes"    JSONB DEFAULT '[]',
+    "notHelpfulVotes" JSONB DEFAULT '[]',
     "relatedQueries" JSONB DEFAULT '[]',
     "createdAt"     TIMESTAMPTZ DEFAULT NOW(),
     "updatedAt"     TIMESTAMPTZ DEFAULT NOW()
@@ -115,7 +117,8 @@ function rowToDoc(row) {
   const doc = { ...row };
   // parse JSONB fields that come back as objects already from pg driver
   // but ensure arrays are arrays
-  ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries'].forEach(k => {
+  ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries',
+   'helpfulVotes','notHelpfulVotes'].forEach(k => {
     if (doc[k] !== undefined && typeof doc[k] === 'string') {
       try { doc[k] = JSON.parse(doc[k]); } catch {}
     }
@@ -131,8 +134,17 @@ function buildWhere(filter) {
   keys.forEach(k => {
     const v = filter[k];
     if (v && typeof v === 'object' && v.$in) {
-      values.push(v.$in);
-      clauses.push(`"${k}" = ANY($${values.length})`);
+      const inVals = Array.isArray(v.$in) ? v.$in : [v.$in];
+      if (inVals.length === 1) {
+        values.push(inVals[0]);
+        clauses.push(`"${k}" = $${values.length}`);
+      } else {
+        const placeholders = inVals.map((_, i) => {
+          values.push(inVals[i]);
+          return `$${values.length}`;
+        });
+        clauses.push(`"${k}" = ANY(ARRAY[${placeholders.join(', ')}])`);
+      }
     } else {
       values.push(v);
       clauses.push(`"${k}" = $${values.length}`);
@@ -168,7 +180,8 @@ function pgRepo(table) {
       const now = new Date().toISOString();
       const doc = { ...data };
       // stringify arrays/objects for jsonb columns
-      ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries'].forEach(k => {
+      ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries',
+       'helpfulVotes','notHelpfulVotes'].forEach(k => {
         if (doc[k] !== undefined && typeof doc[k] !== 'string') doc[k] = JSON.stringify(doc[k]);
       });
       const cols   = Object.keys(doc);
@@ -183,7 +196,8 @@ function pgRepo(table) {
     },
     async findByIdAndUpdate(id, update) {
       const doc = { ...update, updatedAt: new Date().toISOString() };
-      ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries'].forEach(k => {
+      ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries',
+       'helpfulVotes','notHelpfulVotes'].forEach(k => {
         if (doc[k] !== undefined && typeof doc[k] !== 'string') doc[k] = JSON.stringify(doc[k]);
       });
       // handle $inc
@@ -212,6 +226,23 @@ function pgRepo(table) {
     async deleteOne(filter) {
       const { text, values } = buildWhere(filter);
       const r = await pgPool.query(`DELETE FROM ${table} ${text} RETURNING *`, values);
+      return rowToDoc(r.rows[0] || null);
+    },
+    async findOneAndUpdate(filter, update) {
+      const { text, values } = buildWhere(filter);
+      const doc = { ...update, updatedAt: new Date().toISOString() };
+      ['tags','attachments','linkedFAQs','votedBy','answers','relatedQueries',
+       'helpfulVotes','notHelpfulVotes'].forEach(k => {
+        if (doc[k] !== undefined && typeof doc[k] !== 'string') doc[k] = JSON.stringify(doc[k]);
+      });
+      const entries = Object.entries(doc);
+      if (!entries.length) return this.findOne(filter);
+      const setClauses = entries.map(([k], i) => `"${k}" = $${i + 1}`);
+      const vals = entries.map(([, v]) => v);
+      const r = await pgPool.query(
+        `UPDATE ${table} SET ${setClauses.join(', ')} ${text} RETURNING *`,
+        [...vals, ...values]
+      );
       return rowToDoc(r.rows[0] || null);
     },
   };
@@ -265,6 +296,7 @@ function buildMongoModels() {
       findByIdAndUpdate: (id, u, opts = {}) => Model.findByIdAndUpdate(id, u, { new: true, ...opts }).lean(),
       findByIdAndDelete: id => Model.findByIdAndDelete(id).lean(),
       deleteOne: f => Model.deleteOne(f).lean(),
+      findOneAndUpdate: (f, u, opts = {}) => Model.findOneAndUpdate(f, u, { new: true, ...opts }).lean(),
     };
   }
 }
@@ -295,6 +327,7 @@ function buildLocalModels() {
       findByIdAndUpdate: (id, u) => coll.findByIdAndUpdate(id, u),
       findByIdAndDelete: id => coll.findByIdAndDelete(id),
       deleteOne: f => coll.deleteOne(f),
+      findOneAndUpdate: (f, u) => coll.findOneAndUpdate(f, u),
     };
   }
 }
@@ -347,6 +380,7 @@ const db = {
   Query_findByIdAndUpdate: (id,u,o)   => modelFns.Query.findByIdAndUpdate(id, u, o),
   Query_findByIdAndDelete: id         => modelFns.Query.findByIdAndDelete(id),
   Query_deleteOne:       f            => modelFns.Query.deleteOne(f),
+  Query_findOneAndUpdate: (f,u)       => modelFns.Query.findOneAndUpdate(f, u),
 
   FAQ_find:            (f={}, o={}) => modelFns.FAQ.find(f, o),
   FAQ_findOne:         f            => modelFns.FAQ.findOne(f),

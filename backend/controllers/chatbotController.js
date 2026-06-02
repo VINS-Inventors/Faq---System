@@ -30,8 +30,7 @@ function scoreMatch(text, query) {
 }
 
 async function searchKB(query) {
-  await db.init();
-
+  // db.init() is called once at server startup — no need to re-call per request
   let faqs = [], queries = [];
   try {
     [faqs, queries] = await Promise.all([
