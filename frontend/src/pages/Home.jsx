@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Footer from '../components/Footer';
 import ThemeToggle from '../components/ThemeToggle';
 import { Link } from 'react-router-dom';
+import api from '../utils/api';
 
 const features = [
   {
@@ -55,10 +56,78 @@ const stats = [
   { value: '4.9/5', label: 'User Rating' },
 ];
 
+const defaultFaqs = [
+  {
+    question: 'What is the Vicharanashala Internship?',
+    answer:
+      'The Vicharanashala Internship is a two-month learning and project-based internship where students work on real-world open-source and AI-driven projects under the guidance of mentors from the Vicharanashala Lab.',
+  },
+  {
+    question: 'Who is eligible for the internship?',
+    answer:
+      'The internship is open to undergraduate, postgraduate, and doctoral students enrolled in recognized educational institutions.',
+  },
+  {
+    question: 'How long is the internship?',
+    answer:
+      'The internship typically lasts for two months and includes structured project work, mentorship sessions, and learning activities.',
+  },
+  {
+    question: 'Is there a stipend?',
+    answer:
+      'The VINS (Vicharanashala Internship with No Stipend) track focuses on practical learning, mentorship, skill development, and open-source contributions rather than financial compensation.',
+  },
+  {
+    question: 'What kind of projects will I work on?',
+    answer:
+      'Interns work on projects related to Artificial Intelligence, Machine Learning, Web Development, Software Engineering, Education Technology, and Open Source initiatives.',
+  },
+  {
+    question: 'Do I need a No Objection Certificate (NOC)?',
+    answer:
+      'Yes. Students are generally required to provide a valid NOC from their institution before beginning the internship.',
+  },
+  {
+    question: 'Will I receive a certificate?',
+    answer:
+      'Yes. Students who successfully complete the internship requirements receive an official completion certificate from the Vicharanashala Lab.',
+  },
+  {
+    question: 'How can I ask additional questions?',
+    answer:
+      'You can submit queries through the Vicharanashala platform, participate in the community forum, or reach out to mentors and administrators for guidance.',
+  },
+];
+
 export default function Home() {
   const featuresGridRef = useRef(null);
   const aboutRef = useRef(null);
+  const faqRef = useRef(null);
   const [expandedIdx, setExpandedIdx] = useState(null);
+  const [faqExpandedIdx, setFaqExpandedIdx] = useState(null);
+  const [faqs, setFaqs] = useState(defaultFaqs);
+  // Fetch FAQs from API
+  useEffect(() => {
+    const fetchFaqs = async () => {
+      try {
+        setFaqLoading(true);
+        const response = await api.get('/faqs');
+        if (response.data && response.data.length > 0) {
+          setFaqs(response.data);
+        } else {
+          setFaqs(defaultFaqs);
+        }
+      } catch (err) {
+        console.warn('Failed to fetch FAQs, using default:', err);
+        setFaqs(defaultFaqs);
+      } finally {
+        setFaqLoading(false);
+      }
+    };
+    fetchFaqs();
+  }, []);
+
+  const [faqLoading, setFaqLoading] = useState(false);
 
   useEffect(() => {
     const grid = featuresGridRef.current;
@@ -114,8 +183,40 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const section = faqRef.current;
+    if (!section) return;
+
+    const reveal = section.querySelector('.faq-grid');
+    if (!reveal) return;
+
+    reveal.style.opacity = '0';
+    reveal.style.transform = 'translateY(28px)';
+    reveal.style.transition = 'opacity 700ms ease, transform 700ms ease';
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            reveal.style.opacity = '1';
+            reveal.style.transform = 'translateY(0)';
+          }, 120);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.18 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   const toggleFeature = (i) => {
     setExpandedIdx((prev) => (prev === i ? null : i));
+  };
+
+  const toggleFaq = (i) => {
+    setFaqExpandedIdx((prev) => (prev === i ? null : i));
   };
 
   return (
@@ -393,6 +494,58 @@ export default function Home() {
               <div className="stat-label">{s.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="faq-section" ref={faqRef}>
+        <div className="faq-section-bg" />
+        <div className="section-header faq-header">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <p className="section-subtitle">
+            Everything you need to know about the Vicharanashala Internship Program.
+          </p>
+        </div>
+
+        <div className="faq-grid">
+          <div className="faq-panel">
+            {faqs.map((faq, i) => {
+              const isOpen = faqExpandedIdx === i;
+              const answerId = `faq-answer-${i}`;
+              const buttonId = `faq-button-${i}`;
+              return (
+                <article
+                  className={`faq-item${isOpen ? ' faq-item--active' : ''}`}
+                  key={faq.question}
+                >
+                  <button
+                    id={buttonId}
+                    className="faq-item-toggle"
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={answerId}
+                    onClick={() => toggleFaq(i)}
+                  >
+                    <span className="faq-item-question">{faq.question}</span>
+                    <span className={`faq-chevron${isOpen ? ' faq-chevron--open' : ''}`}>
+                      ▾
+                    </span>
+                  </button>
+                  <div
+                    id={answerId}
+                    className="faq-answer-wrapper"
+                    aria-hidden={!isOpen}
+                    style={{
+                      maxHeight: isOpen ? '320px' : '0px',
+                      opacity: isOpen ? 1 : 0,
+                      paddingTop: isOpen ? '16px' : '0px',
+                    }}
+                  >
+                    <p className="faq-item-answer">{faq.answer}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 

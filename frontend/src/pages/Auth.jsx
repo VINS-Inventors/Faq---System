@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Auth = () => {
@@ -100,7 +100,7 @@ const Auth = () => {
             />
           </div>
 
-          <div className="form-group" style={{ marginBottom: '8px' }}>
+          <div className="form-group" style={{ marginBottom: isLogin ? '4px' : '8px' }}>
             <label className="form-label">Password</label>
             <input
               name="password"
@@ -112,6 +112,17 @@ const Auth = () => {
               autoComplete={isLogin ? 'current-password' : 'new-password'}
             />
           </div>
+
+          {isLogin && (
+            <div style={{ textAlign: 'right', marginBottom: '16px' }}>
+              <RouterLink
+                to="/forgot-password"
+                style={{ fontSize: '13px', color: '#4f46e5', textDecoration: 'none' }}
+              >
+                Forgot Password?
+              </RouterLink>
+            </div>
+          )}
 
           <button
             type="submit"
@@ -126,7 +137,7 @@ const Auth = () => {
         <div className="auth-card-footer">
           {isLogin ? (
             <>
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <span onClick={() => { setIsLogin(false); setError(''); }}>Register</span>
             </>
           ) : (

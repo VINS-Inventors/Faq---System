@@ -10,20 +10,25 @@ function isGreeting(text) {
   return GREETINGS.some(g => text.toLowerCase().trim() === g || text.toLowerCase().startsWith(g + ' '));
 }
 
+const STOP_WORDS = new Set(['what','is','the','a','an','of','in','for','to','how','do','i','my','can','will','are','was','does','it','me','we','our','your','you','at','on','with','and','or','if','be','this','that','have','has','get','not','by']);
+
 function scoreMatch(text, query) {
   if (!text || !query) return 0;
-  const q = query.toLowerCase();
+  const q = query.toLowerCase().trim();
   const t = text.toLowerCase();
-  const words = q.split(/\s+/).filter(Boolean);
-  const titleWords = t.split(/\s+/);
   let score = 0;
-  words.forEach(w => {
-    if (t === q) return score += 50;
-    if (t.startsWith(q)) return score += 30;
-    if (t.includes(q)) return score += 20;
-    titleWords.forEach(tw => {
-      if (tw.startsWith(w) || tw.endsWith(w)) score += 3;
-      else if (tw.includes(w)) score += 1;
+  if (t === q) score += 50;
+  else if (t.startsWith(q)) score += 30;
+  else if (t.includes(q)) score += 20;
+  // Only score non-stop content words
+  const qWords = q.split(/\s+/).filter(w => w.length > 2 && !STOP_WORDS.has(w));
+  if (!qWords.length) return score;
+  const tWords = t.split(/\s+/);
+  qWords.forEach(w => {
+    tWords.forEach(tw => {
+      if (tw === w) score += 6;
+      else if (tw.startsWith(w) && w.length > 3) score += 3;
+      else if (tw.includes(w) && w.length > 4) score += 1;
     });
   });
   return score;
@@ -52,7 +57,7 @@ async function searchKB(query) {
     })),
   ];
 
-  return scored.filter(r => r.score > 3).sort((a, b) => b.score - a.score).slice(0, 4);
+  return scored.filter(r => r.score > 5).sort((a, b) => b.score - a.score).slice(0, 4);
 }
 
 function formatReply(results) {
@@ -116,15 +121,23 @@ exports.message = async (req, res) => {
     const reply = formatReply(results);
 
     if (reply) {
-      const suggestions = buildSuggestions(results);
+      // Check if score is high enough to be confident
+      const topScore = results[0]?.score || 0;
+      if (topScore < 5) {
+        return res.json({
+          reply: `I'm not confident I have an exact answer for that. Here are the closest FAQs I found:\n\n${results.slice(0,3).map((r,i) => `${i+1}. ${r.type === 'faq' ? r.data.question : r.data.title}`).join('\n')}\n\nWould you like to create a support ticket for your specific question?`,
+          action: 'ticket',
+        });
+      }
+      const suggestions = buildSuggestions(results.slice(1));
       return res.json({
-        reply: suggestions ? `${reply}\n\n${suggestions}` : reply,
+        reply: suggestions ? `${reply}\n\n─────\n${suggestions}` : reply,
       });
     }
 
-    // No match — no LLM available, use friendly fallback
+    // No match at all — strict FAQ-only response
     return res.json({
-      reply: "I couldn't find a matching answer in our knowledge base. Would you like me to create a support ticket for you? Just type **'create a ticket'** or click the 🎫 button below.",
+      reply: "I can only answer questions from our FAQ knowledge base about the VINS internship programme. I don't have information about that topic.\n\nYou can:\n1. Try rephrasing your question\n2. Browse FAQs at /faq\n3. Create a support ticket using the 🎫 button",
       action: 'ticket',
     });
   } catch (err) {

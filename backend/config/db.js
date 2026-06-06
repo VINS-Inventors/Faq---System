@@ -93,6 +93,15 @@ const PG_TABLES = `
     "createdAt"  TIMESTAMPTZ DEFAULT NOW(),
     "updatedAt"  TIMESTAMPTZ DEFAULT NOW()
   );
+
+  CREATE TABLE IF NOT EXISTS password_resets (
+    _id         TEXT PRIMARY KEY DEFAULT gen_random_uuid()::TEXT,
+    email       TEXT NOT NULL,
+    token       TEXT NOT NULL,
+    "expiresAt" TIMESTAMPTZ NOT NULL,
+    "createdAt" TIMESTAMPTZ DEFAULT NOW()
+  );
+  CREATE INDEX IF NOT EXISTS idx_password_resets_email ON password_resets(email);
 `;
 
 async function connectPg() {
@@ -249,11 +258,12 @@ function pgRepo(table) {
 }
 
 function buildPgModels() {
-  modelFns.User  = pgRepo('users');
-  modelFns.Query = pgRepo('queries');
-  modelFns.FAQ   = pgRepo('faqs');
-  modelFns.Forum = pgRepo('forums');
-  modelFns.Post  = pgRepo('posts');
+  modelFns.User          = pgRepo('users');
+  modelFns.Query         = pgRepo('queries');
+  modelFns.FAQ           = pgRepo('faqs');
+  modelFns.Forum         = pgRepo('forums');
+  modelFns.Post          = pgRepo('posts');
+  modelFns.PasswordReset = pgRepo('password_resets');
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -274,6 +284,7 @@ const mongoSchemas = {
   Post:  { title: String, body: String, tags: [String], authorId: String, authorName: String,
            votes: Number, votedBy: [String], views: Number, answers: [Object],
            createdAt: String, updatedAt: String },
+  PasswordReset: { email: String, token: String, expiresAt: Date, createdAt: Date },
 };
 
 async function connectMongo() {
@@ -306,7 +317,10 @@ function buildMongoModels() {
 // ═══════════════════════════════════════════════════════════════════════════════
 
 function buildLocalModels() {
-  const map = { User: 'users', Query: 'queries', FAQ: 'faqs', Forum: 'forums', Post: 'posts' };
+  const map = {
+    User: 'users', Query: 'queries', FAQ: 'faqs',
+    Forum: 'forums', Post: 'posts', PasswordReset: 'password_resets',
+  };
   for (const [name, col] of Object.entries(map)) {
     const coll = localDb.collection(col);
     modelFns[name] = {
@@ -372,6 +386,12 @@ const db = {
   User_findByIdAndDelete: id => modelFns.User.findByIdAndDelete(id),
   User_create:   d       => modelFns.User.create(d),
   User_find:     (f={})  => modelFns.User.find(f),
+  User_findOneAndUpdate:   (f, u)  => modelFns.User.findOneAndUpdate(f, u),
+
+  // Password Reset
+  PasswordReset_create:    d => modelFns.PasswordReset.create(d),
+  PasswordReset_findOne:   f => modelFns.PasswordReset.findOne(f),
+  PasswordReset_deleteOne: f => modelFns.PasswordReset.deleteOne(f),
 
   Query_find:            (f={}, o={}) => modelFns.Query.find(f, o),
   Query_findOne:         f            => modelFns.Query.findOne(f),

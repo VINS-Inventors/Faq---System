@@ -21,6 +21,7 @@ const Navbar = () => {
         {user.role !== 'admin' && (
           <>
             <Link to="/ask" className={isActive('/ask') ? 'active' : ''}>Submit Query</Link>
+            <Link to="/faq" className={isActive('/faq') ? 'active' : ''}>FAQs</Link>
             <Link to="/board" className={isActive('/board') ? 'active' : ''}>Knowledge Base</Link>
             <Link to="/status" className={isActive('/status') ? 'active' : ''}>Status Tracker</Link>
             <Link to="/forum" className={isActive('/forum') ? 'active' : ''}>Community Exchange</Link>
@@ -29,6 +30,7 @@ const Navbar = () => {
         {user.role === 'admin' && (
           <>
             <Link to="/admin" className={isActive('/admin') ? 'active' : ''}>Moderation</Link>
+            <Link to="/faq" className={isActive('/faq') ? 'active' : ''}>FAQs</Link>
             <Link to="/db" className={isActive('/db') ? 'active' : ''}>Database</Link>
             <Link to="/escalation" className={isActive('/escalation') ? 'active' : ''}>Escalations</Link>
             <Link to="/users" className={isActive('/users') ? 'active' : ''}>User Directory</Link>
