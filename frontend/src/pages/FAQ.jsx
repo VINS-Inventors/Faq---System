@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Navbar from '../components/Navbar';
 import api from '../utils/api';
+import { useAuth } from '../context/AuthContext';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 const getInitials = s => s ? s.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() : '?';
@@ -73,6 +74,7 @@ const FAQItem = ({ faq, onVote, userVote }) => {
 
 // ── Main FAQ page ─────────────────────────────────────────────────────────────
 export default function FAQ() {
+  const { user } = useAuth();
   const [faqs, setFaqs]       = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError]     = useState('');
@@ -109,6 +111,23 @@ export default function FAQ() {
     setCategories(cats);
   }, [faqs]);
 
+  // Sync user votes from FAQs data
+  useEffect(() => {
+    if (!user || faqs.length === 0) return;
+    const votes = {};
+    const userId = String(user.id || user._id);
+    faqs.forEach(f => {
+      const helpfulVotes = Array.isArray(f.helpfulVotes) ? f.helpfulVotes.map(String) : [];
+      const notHelpfulVotes = Array.isArray(f.notHelpfulVotes) ? f.notHelpfulVotes.map(String) : [];
+      if (helpfulVotes.includes(userId)) {
+        votes[f._id] = 'helpful';
+      } else if (notHelpfulVotes.includes(userId)) {
+        votes[f._id] = 'notHelpful';
+      }
+    });
+    setUserVotes(votes);
+  }, [faqs, user]);
+
   const handleSearch = e => {
     e.preventDefault();
     fetchFAQs(search, category);
@@ -120,15 +139,37 @@ export default function FAQ() {
   };
 
   const handleVote = async (faqId, type) => {
+    if (!user) {
+      alert('Please log in to vote on FAQs.');
+      return;
+    }
     if (submittingVote) return;
     setSubmittingVote(faqId);
     try {
       const res = await api.post(`/faqs/${faqId}/helpful`, { type });
+      const updatedFaq = res.data;
+      
       // Update the voted FAQ in state
-      setFaqs(prev => prev.map(f => f._id === faqId ? res.data : f));
-      setUserVotes(prev => ({ ...prev, [faqId]: type }));
-    } catch {
-      // Silently fail — voting is not critical
+      setFaqs(prev => prev.map(f => f._id === faqId ? updatedFaq : f));
+      
+      // Determine user vote state from backend response
+      const userId = String(user.id || user._id);
+      const helpfulVotes = Array.isArray(updatedFaq.helpfulVotes) ? updatedFaq.helpfulVotes.map(String) : [];
+      const notHelpfulVotes = Array.isArray(updatedFaq.notHelpfulVotes) ? updatedFaq.notHelpfulVotes.map(String) : [];
+      
+      setUserVotes(prev => {
+        const next = { ...prev };
+        if (helpfulVotes.includes(userId)) {
+          next[faqId] = 'helpful';
+        } else if (notHelpfulVotes.includes(userId)) {
+          next[faqId] = 'notHelpful';
+        } else {
+          delete next[faqId];
+        }
+        return next;
+      });
+    } catch (err) {
+      console.error('[FAQ] Vote failed:', err);
     } finally {
       setSubmittingVote(null);
     }

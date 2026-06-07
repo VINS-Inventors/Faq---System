@@ -12,7 +12,7 @@
     "votedBy": [
       "mpsbaxfpmr62g"
     ],
-    "views": 16,
+    "views": 18,
     "answers": [
       {
         "_id": "ba4ce3bb-77aa-4df4-b427-4c1330d2262f",
@@ -25,7 +25,7 @@
       }
     ],
     "createdAt": "2026-05-31T12:45:50.864Z",
-    "updatedAt": "2026-05-31T12:57:40.361Z"
+    "updatedAt": "2026-06-07T12:22:49.093Z"
   },
   {
     "_id": "mptsk0zt320rr",
@@ -41,7 +41,7 @@
     "votedBy": [
       "mptsk0zqwlhrp"
     ],
-    "views": 0,
+    "views": 2,
     "answers": [
       {
         "_id": "8706e882-addf-462c-8af8-1bd986cd292b",
@@ -56,6 +56,6 @@
       }
     ],
     "createdAt": "2026-05-31T13:07:09.579Z",
-    "updatedAt": "2026-05-31T13:07:10.110Z"
+    "updatedAt": "2026-06-07T12:22:59.473Z"
   }
 ]

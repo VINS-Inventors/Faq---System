@@ -305,6 +305,38 @@ html {
   background: rgba(255,255,255,0.08);
 }
 
+/* ── Light Mode Navbar Overrides ── */
+body.light-mode .navbar {
+  background: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+body.light-mode .navbar-center a,
+body.light-mode .navbar-center button {
+  background: rgba(0, 0, 0, 0.03);
+}
+body.light-mode .navbar-center a:hover,
+body.light-mode .navbar-center button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+body.light-mode .btn-logout {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-mode .btn-logout:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+body.light-mode .theme-toggle {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+body.light-mode .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+body.light-mode .user-role.user {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 /* ── Page Container ── */
 .page-container {
   flex: 1;
@@ -426,6 +458,10 @@ html {
 }
 .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
 .form-select { cursor: pointer; }
+.form-select option {
+  background-color: var(--bg-2);
+  color: var(--text-strong);
+}
 .form-textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s16); }
 
@@ -1676,61 +1712,39 @@ body.light-mode .about-stat-divider {
   background: linear-gradient(180deg, transparent, rgba(92,153,0,0.2), transparent) !important;
 }
 
-/* ── Light mode: Home Page Footer ── */
-body.light-mode .home-page footer,
-body.light-mode footer[style*='rgba(6, 9, 26'] {
-  background: rgba(248,248,246,0.95) !important;
-  border-top-color: rgba(92,153,0,0.15) !important;
+/* ── Light mode: Home Page Footer (Modern CSS variables approach) ── */
+footer {
+  --footer-bg: rgba(6, 9, 26, 0.92);
+  --footer-border: rgba(181, 242, 61, 0.15);
+  --footer-text-brand: #ffffff;
+  --footer-text-p: rgba(255, 255, 255, 0.4);
+  --footer-text-h4: rgba(255, 255, 255, 0.3);
+  --footer-text-link: rgba(255, 255, 255, 0.5);
+  --footer-text-link-hover: #b5f23d;
+  --footer-status-text: #b5f23d;
+  --footer-status-dot: #b5f23d;
+  --footer-brand-icon-shadow: rgba(181, 242, 61, 0.3);
+  --footer-arrow-color: rgba(181, 242, 61, 0.5);
+  --footer-divider-gradient: linear-gradient(90deg, transparent, rgba(181, 242, 61, 0.2), rgba(181, 242, 61, 0.1), transparent);
+  --footer-glow-gradient: linear-gradient(90deg, transparent, #b5f23d, transparent);
+  --footer-orb-gradient: radial-gradient(ellipse, rgba(181, 242, 61, 0.07) 0%, transparent 70%);
 }
-body.light-mode footer[style*='rgba(6, 9, 26'] > div[style*='borderTop'] {
-  display: none;
-}
-body.light-mode .footer-brand,
-body.light-mode footer[style] span[style*='fontWeight: 800'] {
-  color: var(--text-strong) !important;
-}
-body.light-mode footer[style] p[style*='color: rgba(255,255,255,0.4)'] {
-  color: var(--text-muted) !important;
-}
-body.light-mode footer[style] a[style*='color: rgba(255,255,255,0.5)'] {
-  color: var(--text-muted) !important;
-}
-body.light-mode footer[style] a[style*='color: rgba(255,255,255,0.5)']:hover {
-  color: var(--text-strong) !important;
-}
-body.light-mode footer[style] h4[style*='color: rgba(255,255,255,0.3)'] {
-  color: var(--text-muted) !important;
-}
-body.light-mode footer[style] p[style*='color: rgba(255,255,255,0.3)'] {
-  color: var(--text-muted) !important;
-}
-body.light-mode footer[style] span[style*="'rgba(181,242,61'"],
-body.light-mode footer[style] span[style*='rgba(181,242,61'] {
-  color: rgba(92,153,0,0.7) !important;
-}
-body.light-mode footer[style] .footer-status-dot,
-body.light-mode footer[style] div[style*='background: #b5f23d'] {
-  background: rgba(92,153,0,0.8) !important;
-  box-shadow: 0 0 8px rgba(92,153,0,0.4) !important;
-}
-body.light-mode footer[style] div[style*='background: linear-gradient(90deg, transparent, #b5f23d'] {
-  background: linear-gradient(90deg, transparent, rgba(92,153,0,0.4), transparent) !important;
-}
-body.light-mode footer[style] div[style*='rgba(181,242,61,0.07)'] {
-  background: radial-gradient(ellipse, rgba(92,153,0,0.04) 0%, transparent 70%) !important;
-}
-body.light-mode footer[style] div[style*='rgba(181,242,61,0.3)'] {
-  box-shadow: 0 0 16px rgba(92,153,0,0.12) !important;
-}
-body.light-mode footer[style] div[style*='rgba(181,242,61,0.2)'] {
-  background: linear-gradient(90deg, transparent, rgba(92,153,0,0.15), rgba(92,153,0,0.08), transparent) !important;
-}
-body.light-mode footer[style] div[style*='background: #b5f23d'][style*='boxShadow'] {
-  background: rgba(92,153,0,0.85) !important;
-  box-shadow: 0 0 6px rgba(92,153,0,0.4) !important;
-}
-body.light-mode footer[style] span[style*="'rgba(181,242,61,0.5)'"] {
-  color: rgba(92,153,0,0.5) !important;
+
+body.light-mode footer {
+  --footer-bg: rgba(248, 248, 246, 0.95);
+  --footer-border: rgba(92, 153, 0, 0.15);
+  --footer-text-brand: var(--text-strong);
+  --footer-text-p: var(--text-muted);
+  --footer-text-h4: var(--text-muted);
+  --footer-text-link: var(--text-muted);
+  --footer-text-link-hover: var(--text-strong);
+  --footer-status-text: rgba(92, 153, 0, 0.7);
+  --footer-status-dot: rgba(92, 153, 0, 0.8);
+  --footer-brand-icon-shadow: rgba(92, 153, 0, 0.12);
+  --footer-arrow-color: rgba(92, 153, 0, 0.5);
+  --footer-divider-gradient: linear-gradient(90deg, transparent, rgba(92, 153, 0, 0.15), rgba(92, 153, 0, 0.08), transparent);
+  --footer-glow-gradient: transparent; /* hidden in light mode */
+  --footer-orb-gradient: radial-gradient(ellipse, rgba(92, 153, 0, 0.04) 0%, transparent 70%);
 }
 
 /* Light mode: home nav links */

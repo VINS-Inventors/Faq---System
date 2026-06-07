@@ -278,6 +278,7 @@ const mongoSchemas = {
            viewCount: Number, helpful: Number, createdAt: String, updatedAt: String },
   FAQ:   { question: String, answer: String, category: String, tags: [String], createdBy: String,
            updatedBy: String, viewCount: Number, helpful: Number, notHelpful: Number,
+           helpfulVotes: [String], notHelpfulVotes: [String],
            relatedQueries: [String], createdAt: String, updatedAt: String },
   Forum: { queryId: String, userId: String, message: String, attachments: [String],
            likes: Number, createdAt: String, updatedAt: String },

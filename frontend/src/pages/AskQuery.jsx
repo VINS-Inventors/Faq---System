@@ -62,7 +62,7 @@ const AskQuery = () => {
   return (
     <div className="app-wrapper">
       <Navbar />
-      <div className="page-container">
+      <div className="page-container" style={{ overflowY: 'auto' }}>
         <div className="page-header">
           <div>
             <div className="page-title">📝 Ask a Question</div>
@@ -72,7 +72,7 @@ const AskQuery = () => {
         </div>
 
         {/* Submit Card */}
-        <div className="card">
+        <div className="card" style={{ flexShrink: 0 }}>
           <div className="card-body">
             {success && (
               <div className="msg-success" style={{ marginBottom: '16px' }}>
@@ -139,7 +139,7 @@ const AskQuery = () => {
         </div>
 
         {/* My Queries */}
-        <div className="my-queries-section">
+        <div className="my-queries-section" style={{ flexShrink: 0 }}>
           <div className="my-queries-title">My Queries ({myQueries.length})</div>
 
           {loadingQueries ? (

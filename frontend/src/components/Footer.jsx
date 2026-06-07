@@ -27,8 +27,8 @@ const socials = [
 
 /* ── Shared link animation ── */
 const linkVariants = {
-  rest: { x: 0, color: 'rgba(255,255,255,0.5)' },
-  hover: { x: 6, color: '#b5f23d' },
+  rest: { x: 0, color: 'var(--footer-text-link)' },
+  hover: { x: 6, color: 'var(--footer-text-link-hover)' },
 };
 
 /* ── Footer Component ── */
@@ -39,10 +39,10 @@ export default function Footer() {
     <footer
       style={{
         position: 'relative',
-        background: 'rgba(6, 9, 26, 0.92)',
+        background: 'var(--footer-bg)',
         backdropFilter: 'blur(24px)',
         WebkitBackdropFilter: 'blur(24px)',
-        borderTop: '1px solid rgba(181, 242, 61, 0.15)',
+        borderTop: '1px solid var(--footer-border)',
         overflow: 'hidden',
       }}
     >
@@ -52,7 +52,7 @@ export default function Footer() {
           position: 'absolute',
           top: 0, left: 0, right: 0,
           height: '1px',
-          background: 'linear-gradient(90deg, transparent, #b5f23d, transparent)',
+          background: 'var(--footer-glow-gradient)',
           opacity: 0.4,
         }}
       />
@@ -63,7 +63,7 @@ export default function Footer() {
           bottom: -80, left: '50%',
           transform: 'translateX(-50%)',
           width: 600, height: 200,
-          background: 'radial-gradient(ellipse, rgba(181,242,61,0.07) 0%, transparent 70%)',
+          background: 'var(--footer-orb-gradient)',
           pointerEvents: 'none',
         }}
       />
@@ -104,7 +104,7 @@ export default function Footer() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: 16,
-                  boxShadow: '0 0 20px rgba(181,242,61,0.3)',
+                  boxShadow: '0 0 20px var(--footer-brand-icon-shadow)',
                 }}
               >
                 📋
@@ -113,7 +113,7 @@ export default function Footer() {
                 style={{
                   fontSize: 17,
                   fontWeight: 800,
-                  color: '#ffffff',
+                  color: 'var(--footer-text-brand)',
                   letterSpacing: '-0.3px',
                 }}
               >
@@ -123,7 +123,7 @@ export default function Footer() {
             <p
               style={{
                 fontSize: 13,
-                color: 'rgba(255,255,255,0.4)',
+                color: 'var(--footer-text-p)',
                 lineHeight: 1.7,
                 marginBottom: 20,
                 maxWidth: 260,
@@ -141,7 +141,7 @@ export default function Footer() {
                     position: 'absolute',
                     inset: -3,
                     borderRadius: '50%',
-                    background: '#b5f23d',
+                    background: 'var(--footer-status-dot)',
                     opacity: 0.35,
                   }}
                 />
@@ -149,8 +149,8 @@ export default function Footer() {
                   style={{
                     width: 8, height: 8,
                     borderRadius: '50%',
-                    background: '#b5f23d',
-                    boxShadow: '0 0 8px #b5f23d',
+                    background: 'var(--footer-status-dot)',
+                    boxShadow: '0 0 8px var(--footer-status-dot)',
                     position: 'relative',
                   }}
                 />
@@ -158,7 +158,7 @@ export default function Footer() {
               <span
                 style={{
                   fontSize: 12,
-                  color: '#b5f23d',
+                  color: 'var(--footer-status-text)',
                   fontWeight: 600,
                   letterSpacing: '0.5px',
                 }}
@@ -181,7 +181,7 @@ export default function Footer() {
                 fontWeight: 700,
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.3)',
+                color: 'var(--footer-text-h4)',
                 marginBottom: 18,
               }}
             >
@@ -198,14 +198,14 @@ export default function Footer() {
                     transition={{ type: 'spring', stiffness: 400, damping: 25 }}
                     style={{
                       fontSize: 13,
-                      color: 'rgba(255,255,255,0.5)',
+                      color: 'var(--footer-text-link)',
                       textDecoration: 'none',
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: 4,
                     }}
                   >
-                    <span style={{ color: 'rgba(181,242,61,0.5)', fontSize: 10 }}>›</span>
+                    <span style={{ color: 'var(--footer-arrow-color)', fontSize: 10 }}>›</span>
                     {link.label}
                   </motion.a>
                 </li>
@@ -226,7 +226,7 @@ export default function Footer() {
                 fontWeight: 700,
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.3)',
+                color: 'var(--footer-text-h4)',
                 marginBottom: 18,
               }}
             >
@@ -243,14 +243,14 @@ export default function Footer() {
                     transition={{ type: 'spring', stiffness: 400, damping: 25 }}
                     style={{
                       fontSize: 13,
-                      color: 'rgba(255,255,255,0.5)',
+                      color: 'var(--footer-text-link)',
                       textDecoration: 'none',
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: 4,
                     }}
                   >
-                    <span style={{ color: 'rgba(181,242,61,0.5)', fontSize: 10 }}>›</span>
+                    <span style={{ color: 'var(--footer-arrow-color)', fontSize: 10 }}>›</span>
                     {item.label}
                   </motion.a>
                 </li>
@@ -271,7 +271,7 @@ export default function Footer() {
                 fontWeight: 700,
                 letterSpacing: '1.5px',
                 textTransform: 'uppercase',
-                color: 'rgba(255,255,255,0.3)',
+                color: 'var(--footer-text-h4)',
                 marginBottom: 18,
               }}
             >
@@ -293,7 +293,7 @@ export default function Footer() {
                     alignItems: 'center',
                     gap: 10,
                     fontSize: 13,
-                    color: 'rgba(255,255,255,0.5)',
+                    color: 'var(--footer-text-link)',
                     textDecoration: 'none',
                   }}
                 >
@@ -309,7 +309,7 @@ export default function Footer() {
         <div
           style={{
             height: '1px',
-            background: 'linear-gradient(90deg, transparent, rgba(181,242,61,0.2), rgba(181,242,61,0.1), transparent)',
+            background: 'var(--footer-divider-gradient)',
             marginBottom: 28,
           }}
         />
@@ -325,7 +325,7 @@ export default function Footer() {
           <p
             style={{
               fontSize: 12,
-              color: 'rgba(255,255,255,0.3)',
+              color: 'var(--footer-text-p)',
               margin: 0,
             }}
           >
@@ -338,14 +338,14 @@ export default function Footer() {
               style={{
                 width: 6, height: 6,
                 borderRadius: '50%',
-                background: '#b5f23d',
-                boxShadow: '0 0 6px #b5f23d',
+                background: 'var(--footer-status-dot)',
+                boxShadow: '0 0 6px var(--footer-status-dot)',
               }}
             />
             <span
               style={{
                 fontSize: 11,
-                color: 'rgba(255,255,255,0.25)',
+                color: 'var(--footer-text-p)',
                 fontWeight: 500,
               }}
             >

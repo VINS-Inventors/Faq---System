@@ -4,14 +4,20 @@
     "question": "How to apply for summer internships?",
     "answer": "Visit the T&P portal at iitr.ac.in for internship listings and apply through the official channel. Make sure to check the eligibility criteria and submit all required documents before the deadline.",
     "category": "Internships",
-    "tags": ["application", "internship", "t&p"],
+    "tags": [
+      "application",
+      "internship",
+      "t&p"
+    ],
     "createdBy": "mptsk0zqwlhrp",
     "helpful": 5,
     "notHelpful": 0,
     "helpfulVotes": [],
     "notHelpfulVotes": [],
     "viewCount": 12,
-    "relatedQueries": ["mptsk0zr7gqaw"],
+    "relatedQueries": [
+      "mptsk0zr7gqaw"
+    ],
     "createdAt": "2026-05-31T13:06:42.083Z",
     "updatedAt": "2026-05-31T13:06:42.083Z"
   },
@@ -20,39 +26,55 @@
     "question": "What is the Vicharanashala Internship?",
     "answer": "The Vicharanashala Internship is a two-month learning and project-based internship where students work on real-world open-source and AI-driven projects under the guidance of mentors from the Vicharanashala Lab.",
     "category": "Vicharanashala",
-    "tags": ["vicharanashala", "internship", "ai", "projects"],
+    "tags": [
+      "vicharanashala",
+      "internship",
+      "ai",
+      "projects"
+    ],
     "createdBy": "admin001",
     "helpful": 8,
-    "notHelpful": 1,
+    "notHelpful": 2,
     "helpfulVotes": [],
-    "notHelpfulVotes": [],
+    "notHelpfulVotes": [
+      "mq3ofnrffhdkf"
+    ],
     "viewCount": 23,
     "relatedQueries": [],
     "createdAt": "2026-05-30T10:00:00.000Z",
-    "updatedAt": "2026-05-30T10:00:00.000Z"
+    "updatedAt": "2026-06-07T12:21:28.994Z"
   },
   {
     "_id": "mptsk0zsjb028",
     "question": "Who is eligible for the internship?",
     "answer": "The internship is open to undergraduate, postgraduate, and doctoral students enrolled in recognized educational institutions. You must have basic programming knowledge and a keen interest in working on real-world projects.",
     "category": "Vicharanashala",
-    "tags": ["eligibility", "requirements", "students"],
+    "tags": [
+      "eligibility",
+      "requirements",
+      "students"
+    ],
     "createdBy": "admin001",
-    "helpful": 6,
+    "helpful": 7,
     "notHelpful": 0,
-    "helpfulVotes": [],
+    "helpfulVotes": [
+      "mq3ofnrffhdkf"
+    ],
     "notHelpfulVotes": [],
     "viewCount": 18,
     "relatedQueries": [],
     "createdAt": "2026-05-30T11:30:00.000Z",
-    "updatedAt": "2026-05-30T11:30:00.000Z"
+    "updatedAt": "2026-06-07T12:21:34.206Z"
   },
   {
     "_id": "mptsk0zsjb029",
     "question": "How long is the internship?",
     "answer": "The internship typically lasts for two months and includes structured project work, mentorship sessions, and learning activities. The exact duration may vary based on your project and agreement with the mentors.",
     "category": "Vicharanashala",
-    "tags": ["duration", "timeline"],
+    "tags": [
+      "duration",
+      "timeline"
+    ],
     "createdBy": "admin001",
     "helpful": 4,
     "notHelpful": 0,
@@ -68,7 +90,11 @@
     "question": "Is there a stipend?",
     "answer": "The VINS (Vicharanashala Internship with No Stipend) track focuses on practical learning, mentorship, skill development, and open-source contributions rather than financial compensation. However, the experience and certificates are highly valuable.",
     "category": "Vicharanashala",
-    "tags": ["stipend", "compensation", "payment"],
+    "tags": [
+      "stipend",
+      "compensation",
+      "payment"
+    ],
     "createdBy": "admin001",
     "helpful": 3,
     "notHelpful": 2,
@@ -84,7 +110,12 @@
     "question": "What kind of projects will I work on?",
     "answer": "Interns work on projects related to Artificial Intelligence, Machine Learning, Web Development, Software Engineering, Education Technology, and Open Source initiatives. Project selection depends on your skills and interests.",
     "category": "Projects",
-    "tags": ["projects", "ai", "ml", "web-dev"],
+    "tags": [
+      "projects",
+      "ai",
+      "ml",
+      "web-dev"
+    ],
     "createdBy": "admin001",
     "helpful": 9,
     "notHelpful": 0,
@@ -100,7 +131,11 @@
     "question": "Do I need a No Objection Certificate (NOC)?",
     "answer": "Yes. Students are generally required to provide a valid NOC from their institution before beginning the internship. This is a standard requirement to ensure there are no conflicts with your college curriculum.",
     "category": "Requirements",
-    "tags": ["noc", "document", "requirements"],
+    "tags": [
+      "noc",
+      "document",
+      "requirements"
+    ],
     "createdBy": "admin001",
     "helpful": 7,
     "notHelpful": 0,
@@ -116,7 +151,11 @@
     "question": "Will I receive a certificate?",
     "answer": "Yes. Students who successfully complete the internship requirements receive an official completion certificate from the Vicharanashala Lab. The certificate includes your project details and mentor's recommendation.",
     "category": "Certification",
-    "tags": ["certificate", "credential", "achievement"],
+    "tags": [
+      "certificate",
+      "credential",
+      "achievement"
+    ],
     "createdBy": "admin001",
     "helpful": 10,
     "notHelpful": 0,
@@ -132,7 +171,11 @@
     "question": "How can I ask additional questions?",
     "answer": "You can submit queries through the Vicharanashala platform, participate in the community forum, or reach out to mentors and administrators for guidance. We also have a dedicated support email for urgent inquiries.",
     "category": "Support",
-    "tags": ["support", "questions", "help"],
+    "tags": [
+      "support",
+      "questions",
+      "help"
+    ],
     "createdBy": "admin001",
     "helpful": 6,
     "notHelpful": 0,
@@ -148,31 +191,2531 @@
     "question": "How do I submit a query on the platform?",
     "answer": "Navigate to the 'Ask Query' section, fill in your question details, select a category, and optionally attach supporting documents. Your query will be reviewed by administrators and you'll receive updates on its status.",
     "category": "Queries",
-    "tags": ["query", "submission", "help"],
+    "tags": [
+      "query",
+      "submission",
+      "help"
+    ],
     "createdBy": "admin001",
-    "helpful": 5,
-    "notHelpful": 0,
-    "helpfulVotes": [],
-    "notHelpfulVotes": [],
+    "helpful": 8,
+    "notHelpful": 1,
+    "helpfulVotes": [
+      "mq3r6twl1uy68",
+      "mq3rgb1ne27h3",
+      "mq3robk5nly5j"
+    ],
+    "notHelpfulVotes": [
+      "mq3ofnrffhdkf"
+    ],
     "viewCount": 13,
     "relatedQueries": [],
     "createdAt": "2026-05-29T09:00:00.000Z",
-    "updatedAt": "2026-05-29T09:00:00.000Z"
+    "updatedAt": "2026-06-07T12:37:37.813Z"
   },
   {
     "_id": "mptsk0zsjb036",
     "question": "What is the difference between FAQ and Queries?",
     "answer": "FAQs are pre-answered common questions available to everyone. Queries are personalized questions you submit that get reviewed and answered specifically for you. You can escalate common queries as FAQ entries after resolution.",
     "category": "General",
-    "tags": ["faq", "query", "difference"],
+    "tags": [
+      "faq",
+      "query",
+      "difference"
+    ],
     "createdBy": "admin001",
-    "helpful": 4,
+    "helpful": 5,
     "notHelpful": 0,
-    "helpfulVotes": [],
+    "helpfulVotes": [
+      "mq3ofnrffhdkf"
+    ],
     "notHelpfulVotes": [],
     "viewCount": 8,
     "relatedQueries": [],
     "createdAt": "2026-05-29T10:00:00.000Z",
-    "updatedAt": "2026-05-29T10:00:00.000Z"
+    "updatedAt": "2026-06-07T12:22:02.873Z"
+  },
+  {
+    "_id": "sam_1_2_mq3rpfz4",
+    "question": "What is VINS?",
+    "answer": "**VINS** is the Vicharanashala Internship — an online programme open to anyone who clears our interview. The work is real open-source contribution under a mentor, the certificate is from the Vicharanashala Lab for Education Design at IIT Ropar, and the programme itself is free (we charge nothing). There is no stipend.\nIf you are seeing a yellow VINS panel on your result page, you are selected.",
+    "category": "About",
+    "tags": [
+      "about"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_1_3_mq3rpfz5",
+    "question": "What are the phases of VINS, and what do the badges mean?",
+    "answer": "VINS is structured as four phases. Each one is marked by a badge — a small token of where you are in the journey.\n• 🥉 **Bronze (Phase 1)** — a short training period at the start, planned\naround what you already know. If you arrive already comfortable with the   basics, your mentor may skip Bronze and put you straight on to the project.\n• 🥈 **Silver (Phase 2)** — the main work. You contribute to a real\nopen-source project under a Vicharanashala mentor. Finishing Bronze and   Silver completes your internship and earns the certificate.\n• 🥇 **Gold (Phase 3)** — a recognition awarded during Silver if your\ncontribution stands on its own as a meaningful feature, not just a small   fix.\n• 🏆 **Platinum (Phase 4)** — a standing invitation to come back and visit\nthe lab — a short trip — any time during the year after your internship   ends. We help with travel through a small visit stipend.\nMost interns finish at Bronze + Silver, and that is exactly what the certificate is for. Gold and Platinum are extras you can pick up if your work makes the case for them. Either way, you walk away with a real open-source contribution to your name and a mentor who knows you well.",
+    "category": "About",
+    "tags": [
+      "about"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_1_4_mq3rpfz6",
+    "question": "Who is the internship for? Are alumni eligible?",
+    "answer": "The internship is for **currently-enrolled students** at any college or university — undergraduate, postgraduate, or doctoral. The NOC requirement is the practical reflection of this: we ask for institutional consent that you can commit your time to this internship.\n**Candidates who have already graduated and are not currently enrolled in any programme are not eligible** for this cycle. If you re-enrol later (higher studies, etc.), you are very welcome to apply again in a future cycle.",
+    "category": "About",
+    "tags": [
+      "about"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_1_5_mq3rpfz7",
+    "question": "Is this the same as IIT Ropar's official Summer Research Internship?",
+    "answer": "No. Summership 2026 is a VLED Lab initiative. The certificate is issued by the **Vicharanashala Lab for Education Design**, not centrally by the institute. IIT Ropar runs a separate institutional summer research internship through its own office. Do not represent Summership 2026 as equivalent to that programme.",
+    "category": "About",
+    "tags": [
+      "about"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_1_6_mq3rpfz8",
+    "question": "I have to attend my class tomorrow/today/some day can I take leave",
+    "answer": "Leave is not permitted. If you are also attending classes or exams, you will be relieved from the internship immediately and will need to join the next batch when it starts.",
+    "category": "About",
+    "tags": [
+      "about"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_2_1_mq3rpfz9",
+    "question": "When can I start?",
+    "answer": "You can start any time in 2026 — VINS is flexible on the start date — **but there are two things you must hold in mind together**, and one strong recommendation.\n**The hard rule.** Your internship must **finish by 31 December 2026.** That date is non-negotiable. Whatever start you pick, your end date (your start + 2 months, with up to 1 month grace) must land on or before 31 December 2026. So while there is no last date to _opt in_, there is absolutely a last date to _finish_.\n**The strong recommendation: start as soon as possible.** The earlier you join, the more of the May–July main cohort you catch — and three things make starting earlier materially better than starting later:\n• **Cohort networking.** The batch goes through Bronze together —\npeer discussions, parallel problem-solving, and lasting   connections happen during this window. Later in the year the   cohort disperses and late starters are largely solo.\n• **TA support is concentrated in May–July.** TAs are full-time\nduring this window. After this they return to their own college   work and bandwidth is materially thinner.\n• **Training rolls out with the cohort**, not piecemeal — you get\nthe material with the discussion around it, not as a static   document.\nIf starting now is genuinely impossible for you (exams, other unavoidable commitments), you can begin later and still complete and earn the certificate — but be honest with yourself: the cohort effect and support will be lighter, and the December cap means a late start leaves no room for slippage.",
+    "category": "Timeline",
+    "tags": [
+      "timeline"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_2_3_mq3rpfzb",
+    "question": "Can I start in July, August or later if I have exams now?",
+    "answer": "Yes — but only if your exams genuinely make an earlier start impossible. Wait until your exams are done, then opt in and start. Do not attempt to juggle this internship with ongoing exams. Make sure your chosen start date plus 2 months (or 3 with grace) lands on or before 31 December 2026.",
+    "category": "Timeline",
+    "tags": [
+      "timeline"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_2_4_mq3rpfzc",
+    "question": "Can I start with the cohort and take a relaxation during my exam window?",
+    "answer": "No. This is not an arrangement we offer.\nVINS is a full-attention internship — six to ten hours a day, sometimes more. Splitting that with college exams damages both sides: the project loses momentum, the exams suffer, and the mentor invests in someone who can only half-engage. We have seen this fail enough times to be firm.\nIf your exams fall inside the cohort duration, defer your start to after your exams end, opt in then, and run the internship at full attention. The certificate and project pathway are the same.\n**A note on consequences.** If we later learn that a candidate was sitting college exams during their internship period, **we reserve the right to terminate the internship or withhold the certificate at any time** — including after the internship has otherwise been completed.",
+    "category": "Timeline",
+    "tags": [
+      "timeline"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_2_5_mq3rpfzd",
+    "question": "Can I take leave or get an exemption during the internship for an exam scheduled in June?",
+    "answer": "The attendance rule is firm — the 55-day continuous window is a non-negotiable part of the internship, and we cannot offer an exemption for an exam during this period. The policy exists because split attention genuinely damages both your exam preparation and your internship work.",
+    "category": "Timeline",
+    "tags": [
+      "timeline"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_2_6_mq3rpfze",
+    "question": "Are orientation session recordings shared with interns, and can project or group assignments be changed after watching them?",
+    "answer": "Recordings of the sessions will not be provided. However, we may provide access to an abridged version of a talk or session if we consider it important. We do not guarantee this for every session.",
+    "category": "Timeline",
+    "tags": [
+      "timeline"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_3_1_mq3rpfzf",
+    "question": "What dates do I put on the NOC?",
+    "answer": "• **Default:** **your chosen start date → your start + 2 months**\n(with up to 1 month grace), ensuring the end date is on or before   31 December 2026. Pick the earliest start date you can realistically   make — the May–July summer window is the main cohort.\n• If the NOC will be signed on a specific later date, pick a start\ndate _after_ the signature date.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_3_2_mq3rpfzg",
+    "question": "Who can sign the NOC?",
+    "answer": "Any authorised signatory at your college: HOD, Acting HOD (during holidays), Principal, Dean, Director, or Training & Placement Officer. For dual-degree students, either institution can sign — pick whichever is easier. For IITM BS Online Degree (standalone) students, any officer from the BS office can sign.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_3_3_mq3rpfzh",
+    "question": "When do I submit the NOC? Is the deadline hard?",
+    "answer": "There is no specific calendar cut-off date by which the NOC must be uploaded — but **your internship cannot formally begin until your official institutional NOC has been uploaded and validated by us.** So submit your signed NOC as early as possible and join the current summer cohort.\nIf you are on VINS you _can_ technically upload your NOC and start later in the year, but **we strongly do not recommend it** — by then your mentor may already be busy with other work, you will not get to network properly with the rest of the cohort, and the cohort + TA support that make this internship genuinely good are concentrated during the summer window. Submit early, start as soon as possible, and you will get the full version of the experience.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_3_4_mq3rpfzi",
+    "question": "What format should I use? Do I need to design it myself?",
+    "answer": "No — **we provide a printable NOC format**. Once your result is out and you log in to samagama.in, you will see a **Download blank NOC** button on your dashboard. Take a printout, get it physically signed and stamped by your authorised signatory, scan it, and upload the signed PDF using the **Upload signed NOC** button (also on the dashboard). You do not need to draft anything yourself, and you do **not** need college letterhead — the format we provide is the canonical layout.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.112Z",
+    "updatedAt": "2026-06-07T12:38:06.112Z"
+  },
+  {
+    "_id": "sam_3_5_mq3rpfzj",
+    "question": "What if my college / Program Chair gives me an NOC in their own format?",
+    "answer": "A college's own NOC format is acceptable, as long as all of the required entries are present on it:\n• the signing authority's (HOD / Dean / Program Chair / Principal)\n**handwritten signature** — this is the most important item,\n• the signing authority's **name, designation, official email address,\nand phone number** (we cross-check with that person to verify the   signature is genuine),\n• your **full name** and the **internship period** (start and end dates),\nand\n• your **signature**.\nIf your college's format does not include a place for your signature, sign clearly and prominently anywhere on the document before uploading. With those entries present, you do not need to switch to our printable format. An NOC missing any of them is incomplete and will be returned for correction.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_6_mq3rpfzk",
+    "question": "Does it need to be signed by hand?",
+    "answer": "Yes. Three things are required, all on the NOC format we provide:\n• the authorised signatory's **handwritten signature**,\n• the **institutional rubber stamp / seal** applied in the designated area, and\n• the signatory's **email address** filled in the designated field — we\nautomatically cross-check with that person to verify the signature is   genuine.\nDigital signatures are not accepted on the PDF path. If a physically- signed printout is impractical for your HOD, use the email-forward path in 5.7 below — it is fully equivalent.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_7_mq3rpfzl",
+    "question": "Can my HOD email the NOC instead of uploading it?",
+    "answer": "**No. Your NOC must be uploaded by you, the student, from your dashboard — we no longer accept NOCs sent by email.**\nWe previously offered an email-forward path where your HOD emailed the NOC to us. **That option has been retired.** NOCs emailed to us — whether by you or by your HOD — will not be processed.\nThe only accepted way to submit your NOC is to download the format, get it signed by the appropriate authority at your institution, and **upload the signed PDF yourself** from your dashboard (see 3.8). If your college gives you a signed NOC in their own format, that is fine (see 3.5) — you still upload it yourself as a PDF.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_8_mq3rpfzm",
+    "question": "How do I download and upload the NOC?",
+    "answer": "Both happen on your **dashboard** at samagama.in once your result is out. You will see a NOC section with two buttons in three places (all backed by the same endpoints — use whichever is convenient):\n• A compact pill in the dark header bar at the top of every screen.\n• A standalone NOC card on the dashboard, between the Results card and\nthe Talk-to-Yaksha button.\n• A NOC section at the bottom of your full Result message itself.\nThe two buttons:\n• **Download blank NOC** — saves the printable NOC format PDF.\n• **Upload signed NOC (PDF)** — opens a file picker; the file must be a\nPDF of at most 1 MB. Confirmation appears on the same card once the   upload is received.\nThe chat surface no longer carries any NOC affordance — please use the dashboard buttons. If you can't see the buttons, make sure you are logged in as the email that received the result, and that your result has been released.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_9_mq3rpfzn",
+    "question": "What if my NOC is not formally verified?",
+    "answer": "NOC verification takes time — typically anywhere between an hour and one full working day from the moment you upload.\nYour offer letter is issued automatically once your signed institutional NOC is uploaded and validated — there is no faster route. (The earlier self-declaration / provisional-offer option was retired on 2026-05-27 and is no longer accepted.) Please upload your signed NOC as early as you can so your start is not delayed.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_10_mq3rpfzo",
+    "question": "My online course (Masai, NPTEL, Coursera, etc.) won't issue an NOC. What do I do?",
+    "answer": "The internship is open only to candidates currently enrolled in a **full-time degree programme** at a recognised college or university. Online-only courses — Masai Institute, NPTEL / MOOC enrolments, Coursera, Udacity, bootcamps, and similar — do not by themselves make a candidate eligible.\nIf you are concurrently enrolled in a full-time degree programme alongside the online course, please obtain a **No Due / No Objection certificate** from that college (department, Dean's office, or Principal) and upload it via the NOC upload flow on your dashboard.\nIf your only current academic engagement is the online course and you are not concurrently enrolled in a full-time degree programme, the internship is not open to you in this cycle. We would warmly welcome you to apply again in a future cycle once you are enrolled in a full-time programme.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_11_mq3rpfzp",
+    "question": "My HOD/college official wants written confirmation before signing my NOC. What do I show them?",
+    "answer": "Your selection is already confirmed the moment your yellow VINS (or green VISE) result panel appears on your samagama.in dashboard — **that is the official confirmation of your selection, and it is what your HOD should sign your NOC on the basis of.**\nThere is no separate written confirmation letter or other proof-of-selection document issued before the NOC step — and none can be sent on request. (The selection-confirmation letter and the self-declaration / provisional-offer route have both been discontinued.) Your offer letter is issued only **after** your signed NOC is uploaded and validated, so it is not available beforehand.\nIf your college will not sign without something in hand, show them your VINS result panel on the dashboard as evidence of selection — that is the confirmation we provide.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_3_12_mq3rpfzq",
+    "question": "Can Prof. Sudarshan Iyengar or a faculty member from IIT Ropar sign my NOC for the internship?",
+    "answer": "Your NOC must be signed by an authorised signatory at the institution where you are enrolled as a student — such as your HOD, Dean, Principal, or Training & Placement Officer. Sudarshan Iyengar is a faculty member at IIT Ropar and is not the authorised signatory for the IIT Ropar/Masai online AIML programme. He cannot sign your NOC in a personal capacity. Regarding eligibility: the internship is open to candidates currently enrolled in a UG/PG/Diploma programme at a recognised college or university. An online-only certification course (even if offered jointly with an IIT) does not meet that requirement on its own. If you are concurrently enrolled in a full-time degree programme elsewhere, please obtain the NOC from the authorised signatory at that institution. If your only current academic enrolment is the IIT Ropar/Masai online programme, you are not eligible for this internship cycle. Please clarify your current enrolment status and we will guide you accordingly.",
+    "category": "NOC",
+    "tags": [
+      "noc"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_1_mq3rpfzr",
+    "question": "How do I know I am selected?",
+    "answer": "If you can see your yellow VINS result panel on samagama.in, you are selected. There is no separate selection step or confirmation email.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_2_mq3rpfzs",
+    "question": "How do I opt into VINS?",
+    "answer": "Tell Yaksha in the chat: _\"I want to take up the online internship without stipend.\"_ Yaksha will confirm. Opting in **is** the selection — no separate confirmation email is sent at that stage.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_3_mq3rpfzt",
+    "question": "When do I get the offer letter?",
+    "answer": "Your offer letter is issued automatically once you upload your **signed institutional NOC** (and have confirmed your start and end dates on the dashboard, see §4.5) and we validate it — typically within an hour to one full working day of upload.\nThere is a single offer letter on Vicharanashala letterhead; once your NOC is validated it is the operative offer for your college / employer records. (The earlier self-declaration / provisional-offer \"fast path\" was retired on 2026-05-27 and is no longer available — a signed institutional NOC is now the only way the offer letter is issued.)\n**The offer letter lives on your dashboard at samagama.in, not in your email.** When it is issued, a notification will appear in the **Announcements section** of samagama.in. Log in and click **Download Offer Letter** from the Offer Letter card on your dashboard. If you do not see it, do a hard refresh and log back in — or raise #escalate in Yaksha chat.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_4_mq3rpfzu",
+    "question": "Will I get a certificate?",
+    "answer": "**Yes — every intern who completes the internship gets a certificate** from Vicharanashala, IIT Ropar. The internship is genuinely demanding; candidates who drop out mid-way do not get a certificate. Finishing means something, because the bar is high.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_5_mq3rpfzv",
+    "question": "How do I confirm my internship dates?",
+    "answer": "Once you have opted into VINS in the chat with Yaksha (see §4.2), log in to samagama.in. On the dashboard, you will see a yellow card titled **\"🗓️ Confirm your internship dates\"**. The two date pickers pre-fill with sensible defaults for the current cohort. If those work for you, hit \"Save dates\". Otherwise edit them to your earliest realistic start — your end must be on or before **31 December 2026**.\nA green confirmation appears once saved. You can edit any time from the same card.\n**Order doesn't matter.** You can save your dates **before or after** uploading your NOC — both paths work.\nThe dates you enter must match the internship period your HOD signs off on in your NOC. If you need to change the period later, edit the dates on the same card and upload a fresh NOC matching the new period.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_6_mq3rpfzw",
+    "question": "I am a minor/major in AI student, can I join the programme? I don't need a NOC as I am from IIT Ropar",
+    "answer": "Minor/Major in AI course from IIT Ropar is a certification course and there will be a different track of internship equivalent to them. Kindly write to us separately for this. For you to be part of this internship programme you should be a registered student in a UG/PG programme with some university. This internship is exclusively meant for the students only and not for working professionals.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_7_mq3rpfzx",
+    "question": "How do I accept the offer letter?",
+    "answer": "Acceptance happens entirely on your **dashboard at samagama.in** — there is no email reply, and nothing to paste or post. The **Offer Letter** card guides you through three steps, and your offer is recorded as accepted only once **all three** are complete. Please finish them within **5 days** of your offer being issued:\n• **Offer letter** — download your offer letter, sign the *Acceptance of\nOffer* block at the bottom of it, and upload the signed PDF on the card.\n• **Terms & Conditions (Participation Agreement)** — read each section and\ntick the box to confirm you have understood it.\n• **Honor Code** — download the Honor Code, sign the last page, and upload the\nsigned PDF.\nEach PDF upload is capped at 1 MB; to correct a file, just upload a new copy — the latest replaces the previous one. The card updates as you complete each step and shows your offer as accepted once all three are done. There is no acceptance email to send and no statement to type.\nIf you have completed all three steps and the card has not updated after a refresh, log in to samagama.in and type #escalate in the Yaksha chat and we will check.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_8_mq3rpfzy",
+    "question": "Can I change my internship dates?",
+    "answer": "**Before the offer letter is issued:** yes — open the **Confirm Internship Dates** card on your dashboard and edit the dates at any time. Your end date must be on or before 31 December 2026.\n**After the offer letter is issued:** no. Dates are final and will not be changed. If the confirmed dates do not work for you, please follow our LinkedIn page for announcements about future cohorts: linkedin.com/company/vicharanashala (https://www.linkedin.com/company/vicharanashala/)\nIf you updated your NOC to reflect new dates before the offer letter was issued, upload the revised NOC via the dashboard.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_9_mq3rpfzz",
+    "question": "When and how do I get the Zoom link for the kickoff meeting?",
+    "answer": "The kickoff orientation is held for the **main summer cohort only** — i.e., candidates starting at the opening of the May–July window. The Zoom link is delivered through two channels:\n• **Email** to your registered samagama.in address.\n• **Your Yaksha chat portal** — log in to samagama.in, open the\nchat, and the link is shown there.\n**If your start date is later** (mid-summer or beyond), there is no separate kickoff event for you. See §2.1 for the trade-offs that come with a later start.\nIf you cannot register with the Zoom link or have not received it, log in to samagama.in and type #escalate in the chat with Yaksha — we will look at your specific case.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_10_mq3rpg00",
+    "question": "My NOC is not ready but my start date is approaching. What do I do?",
+    "answer": "Get your signed institutional NOC uploaded as soon as you can. Your start date cannot be honoured until your official NOC is uploaded and validated by us — **the internship formally begins only after the NOC is validated.** If your NOC is not in by your chosen start date, your start simply shifts to whenever it is validated. (The earlier self-declaration / provisional-offer option was retired on 2026-05-27 and is no longer accepted, so a signed institutional NOC is the only way forward.)",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_11_mq3rpg01",
+    "question": "When does my internship actually begin? Will I receive a notification on the day?",
+    "answer": "Your internship begins on the **start date you confirmed** on the dashboard — the same date printed on your offer letter — **provided your official institutional NOC has been uploaded and validated by us by then.** If your validated NOC is not yet in on your start date, your start shifts to the day it is validated. There is no separate \"your internship has begun\" email, chat message, or dashboard notification on the day itself; the start date is the start date.\nOn the morning of your start date, log in to samagama.in. Yaksha will guide you through the Day-1 steps of the Bronze phase. If your dashboard appears unchanged on that morning, do a hard refresh and re-login. If it still looks the same, type #escalate in the chat and we will look at your specific case.\nYou can review or change your confirmed dates via the **Confirm Internship Dates** card on your dashboard (see §4.5 to set, §4.8 for date-change rules).",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_12_mq3rpg02",
+    "question": "Can I switch from VINS (online) to VISE (offline) after being selected?",
+    "answer": "The two tracks are finalised at the interview stage, and we do not move candidates between them. VISE has a fixed on-campus capacity planned around mentor bandwidth, hostel availability, and stipend allocation — once the shortlist is set, it stays set. VINS is not a consolation track. The project, the mentor, and the certificate are the same as VISE — what differs is the mode (online) and the absence of a fellowship. Many interns find the online format more effective. Your best path forward is to confirm your VINS start dates and get your NOC uploaded — you're already in a strong position.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_13_mq3rpg03",
+    "question": "Can I change my internship dates after the offer letter?",
+    "answer": "**No.** Once your offer letter has been issued, the dates you confirmed are final. They will not be changed at this stage.\nIf the confirmed dates do not work for you, please follow our LinkedIn page for announcements about future cohorts: linkedin.com/company/vicharanashala (https://www.linkedin.com/company/vicharanashala/)",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_14_mq3rpg04",
+    "question": "How do I get the link for the daily Zoom standups? Are they mandatory?",
+    "answer": "Daily Zoom standup links are posted in the **Announcements** section on your samagama.in dashboard — look for the announcement bell at the top of the page. You are expected to check it daily before the session.\nWe do **not** send separate emails for daily standups. The announcement on your dashboard is the only delivery channel for the daily link.\n**Attending the daily standups is mandatory for all interns.** This is a full-time summer internship programme, and the daily standup is the primary touchpoint where progress, blockers, and the day's plan are communicated. Missing standups is treated as missing work. Attendance and participation are tracked against strict thresholds — see §10.7.\n**About the kickoff orientation.** The kickoff orientation was held for the **recommended 15 May cohort** (see §4.9). Session recordings are not shared with interns who join late — see §2.6.\n**If you joined late,** you are expected to complete the orientation through a **special proctored catch-up path on ViBe**. The catch-up is entirely proctored and includes quizzes that check whether you have understood the content of the orientation session. Completing this catch-up is mandatory for late starters before participating in the regular standups.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_15_mq3rpg05",
+    "question": "How do I provide my Zoom ID, and why does it matter?",
+    "answer": "On your dashboard, just before **\"Start the internship,\"** you'll see a step called **\"Provide your Zoom ID.\"** Enter the exact email address linked to your Zoom account — the one you use (or will use) to join the daily live sessions — and save it.\nThis matters because we match your live-session attendance and participation using this email. If the Zoom ID you provide doesn't match the email you actually join Zoom with, your attendance won't be credited to you. So enter it carefully and be sure it is genuinely your Zoom account's email.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_4_16_mq3rpg06",
+    "question": "I saved the wrong Zoom ID — can I change it?",
+    "answer": "Once saved, your Zoom ID is **final and cannot be changed by you** — please double-check before you submit. If you are certain you entered the wrong email, log in and tell us in the chat (type #escalate) with your correct Zoom email, and our team will review and correct it for you.",
+    "category": "Selection",
+    "tags": [
+      "selection"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_1_mq3rpg07",
+    "question": "What will I work on?",
+    "answer": "A real open-source project from Vicharanashala's portfolio — assigned based on your background and the lab's current needs. Areas range across AI/ML, web development, NLP, computer vision, agriculture-tech (Annam.AI), education-tech (ViBe), and open-source infrastructure. We do not pre-publish the exact problem; you choose to join knowing the lab will assign the project.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_2_mq3rpg08",
+    "question": "How many hours per day?",
+    "answer": "Plan for **6 to 10 hours a day**, sometimes more during the build phase. This is a full-time internship for the two-month window. Most candidates who drop out are juggling something else — VINS expects your full attention.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_3_mq3rpg09",
+    "question": "Who is my mentor?",
+    "answer": "You will work with the lab's research and engineering team. The exact mentor depends on the project. The model is fluid — you will get help from a senior researcher one day, a peer the next, and someone else for a different question. That is how real open-source work happens.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_5_mq3rpg0b",
+    "question": "Do I need my own laptop? Should I preload any software?",
+    "answer": "**Yes — a personal laptop is required.** We prefer that you bring a laptop running **Linux or macOS**. If you use Windows, please install a terminal that can SSH and run Unix-style commands — for example, **Windows Subsystem for Linux (WSL)** is a clean choice; a tool such as **PuTTY** also works. You will be SSH-ing into machines and using the command line as part of the work.\nWe do not maintain a fixed software-preload list — your mentor will guide you on the specific tools needed once your project is assigned.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_6_mq3rpg0c",
+    "question": "I am using a different email on GitHub / Zoom / the learning platform. Is that okay?",
+    "answer": "No. **Your registered email is your sole identifier across all programme platforms.** Progress tracking, mentor assignment, and certificate issuance are all tied to it. Mismatches between platforms cannot be retroactively corrected — ensure you use your registered email everywhere from day one.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_5_7_mq3rpg0d",
+    "question": "Why has my mentor not been assigned yet, or contacted me on day 1?",
+    "answer": "Mentors are not assigned on day 1 of the internship. You will be assigned a mentor when you move on to the **project phase** of VINS, which comes later in the timeline. Before that, you must complete the **mandatory coursework** of the Bronze phase (see §1.3). Once coursework is complete and you are placed on a project, your mentor will reach out.\nIf you are looking for a Discord server, please note: we do not run a Discord server. See §6.1 for the official communication channels.",
+    "category": "Work & Mentorship",
+    "tags": [
+      "work-mentorship"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.113Z",
+    "updatedAt": "2026-06-07T12:38:06.113Z"
+  },
+  {
+    "_id": "sam_6_1_mq3rpg0e",
+    "question": "What are the official communication channels?",
+    "answer": "**Official channels only.** The **Announcements section on samagama.in** is how we notify you — all programme notifications are posted there (we no longer send notifications by email). Log in and check it regularly during working hours; sessions are announced at least 1 hour before they begin.\n**To get help with a question or problem, follow this order:**\n• **Yaksha chat** on samagama.in. This is the first place to bring any\nquestion or problem — start here and let Yaksha help.\n• **Discussion forum.** If Yaksha cannot resolve your matter, take it to\nthe discussion forum. The link was sent to you in your sign-up    (registration) email when you first created your account on    samagama.in, and is also posted in the Announcements section. This is    where you troubleshoot and discuss with your peers and the team.\n• **Escalate to a human.** Only if the discussion forum does not resolve\nyour issue — return to Yaksha chat and use #escalate to reach    Sudarshan Iyengar and the team.\n• **Email to internship@vicharanashala.ai** — an absolute last resort,\nonly after all of the above have not resolved your question.\n**WhatsApp support is cancelled.** There is no WhatsApp troubleshooting group. Not being on WhatsApp does not put you at any disadvantage — all information goes through the channels above.\n**Unofficial groups are strictly prohibited.** Creating, joining, or operating any WhatsApp group, Telegram channel, Discord server, or any other peer-coordinated space involving interns or a subset of interns — or contacting another intern through their personal phone number — is **against the code of conduct**. Any complaint or report of this will lead to the **immediate termination** of your internship.\nYou may connect with fellow interns over **LinkedIn and email**.",
+    "category": "Code of Conduct",
+    "tags": [
+      "code-of-conduct"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_7_1_mq3rpg0f",
+    "question": "My interview is not marked as complete on the dashboard — what do I do?",
+    "answer": "A data-sync issue sometimes occurs where the chat session closes but the interview record doesn't update to \"completed.\" The team will check your record and manually mark it as complete if needed. You will be unblocked within 1–2 hours. Apologies for the inconvenience. If you dont hear from us and if your interview continues to be marked incomplete please write to us on internship@vicharanashala.ai",
+    "category": "Interviews",
+    "tags": [
+      "interviews"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_8_1_mq3rpg0g",
+    "question": "Does Vicharanashala send a grade report or evaluation to my university for internship credit?",
+    "answer": "Vicharanashala does not send formal evaluation or grade reports to universities — that process is between you and your college. The certificate issued upon completion is the document you can submit to your college or placement office for credit. Whether your college accepts it and how they translate it into a grade is their decision. If your college specifically requires a structured evaluation form or a report on your performance, raise that with them directly — we can provide the certificate and, if earned, a letter of recommendation, but we don't have a process for sending grade reports to universities.",
+    "category": "Certificate",
+    "tags": [
+      "certificate"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_8_2_mq3rpg0h",
+    "question": "Does the Vicharanashala internship certificate specify whether it was completed online or offline ?",
+    "answer": "The certificate you receive on completing the internship is the same for both tracks. It is issued by Vicharanashala, IIT Ropar, and does not specify whether you completed it online or on campus. The certificate records only that you completed the internship; the mode is not called out separately on the document.",
+    "category": "Certificate",
+    "tags": [
+      "certificate"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_8_3_mq3rpg0i",
+    "question": "Will the completion certificate be a physical hardcopy or an e-certificate?",
+    "answer": "The completion certificate is issued as an e-certificate — you download it from your dashboard on samagama.in after completing both Bronze and Silver. We do not print and mail physical copies. The certificate is digitally signed and authentic, so it cannot be duplicated. It can also be verified from our database using the number on the certificate.",
+    "category": "Certificate",
+    "tags": [
+      "certificate"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_8_4_mq3rpg0j",
+    "question": "Is there a WhatsApp group for candidates during the internship?",
+    "answer": "No. See **§6.1** for the official communication channels.",
+    "category": "Certificate",
+    "tags": [
+      "certificate"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_1_mq3rpg0k",
+    "question": "What is Rosetta?",
+    "answer": "Rosetta is your internship journal — a 65-day document, one entry per day, every day, for the full duration of Summership 2026. You write in it daily, keep it privately, and submit it at the end of the internship as one of your completion requirements.\nThe name comes from the Rosetta Stone — discovered in 1799, it carried the same text in three scripts and became the key to decoding an ancient language that had been silent for centuries. Not because it was grand, but because it was honest and consistent. That is what this journal is meant to be for you. Sixty-five days of honest writing will become the key to understanding your own experience — what you learned, where you struggled, what shifted in you.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_2_mq3rpg0l",
+    "question": "Why does this exist? Is it just busywork?",
+    "answer": "No. It exists for two reasons.\n**For you:** Most people go through an intense experience and carry it without processing it. They finish and cannot articulate what they actually learned, what changed in them, or what they would do differently. The journal builds that articulation, one day at a time. Students who reflect regularly during a programme consistently get more out of it than those who do not — not because they work harder, but because they understand what they are doing and why.\n**For us:** When you submit Rosetta at the end, it gives us qualitative insight into your experience that no survey or evaluation can capture. We use it to understand what worked, what did not, and how to make the programme better for the next cohort. Your honest voice matters to that process.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_3_mq3rpg0m",
+    "question": "What is a \"thinking routine\"?",
+    "answer": "Each day in Rosetta has a thinking routine — a short framework that gives your reflection a specific shape. Instead of staring at a blank page and writing \"today was good,\" the routine gives you a specific lens. Examples:\n• **3-2-1** — 3 things you engaged with, 2 questions on your mind, 1 surprise.\n• **Muddy / Clear** — what is sharp, and what is still foggy.\n• **What? So What? Now What?** — separate facts from meaning from action.\nThe routines rotate across the 65 days so the journal does not feel repetitive or mechanical. Some will feel easy. Some will make you stop and actually think. That is the point.\nYou do not need to research the routine or prepare for it. Just read the description at the top of each day's entry and write.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_4_mq3rpg0n",
+    "question": "How do I get my Rosetta journal?",
+    "answer": "Your journal will be shared with you as a Google Doc template link during orientation. Open the link, **make a copy** to your own Google Drive, rename it Rosetta — [Your Name] — Summership 2026, and that copy is yours for the full 65 days.\nDo not write in the shared template. Always work in your own copy.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_5_mq3rpg0o",
+    "question": "How do I use it day to day?",
+    "answer": "Simple:\n• Open your Rosetta Google Doc.\n• Scroll to the entry for today's day number.\n• Fill in the date at the top of the entry.\n• Read the thinking routine name and its one-line description.\n• Answer the three prompts in the writing boxes below.\n• Close it and get on with your day.\nThat is it. It should take between 10 and 20 minutes. It is not an essay. It is not a report. It is a journal.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_6_mq3rpg0p",
+    "question": "How long should each entry be?",
+    "answer": "There is no minimum or maximum word count. A good entry is one that is honest and specific. Three to five sentences per prompt is usually enough. If you find yourself writing more because something genuinely needs unpacking, write more. If a day was quiet and you genuinely only have two sentences, that is fine too.\nWhat is **not** acceptable: one-word answers, copy-pasted text, vague non-answers like \"today was productive,\" or anything that reads like it was generated by an AI.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_7_mq3rpg0q",
+    "question": "What is the one rule?",
+    "answer": "**Write what is true.**\nNot what sounds impressive. Not what you think we want to read. Not a polished summary of the day. If you hated today, write that. If you are confused and frustrated, write that. If something clicked and you are genuinely excited, write that.\nWe will know immediately if an entry reads like an LLM wrote it. Do not do that. The journal only counts as a completion requirement if it is genuinely yours — in your voice, from your actual experience.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_8_mq3rpg0r",
+    "question": "Can I use ChatGPT or any AI tool to write my entries?",
+    "answer": "**No.** This is the one firm rule of Rosetta.\nThe journal is a record of your thinking, not a demonstration of what an AI can produce on your behalf. Entries that read as AI-generated will not be counted toward your completion requirement. If your entire journal reads this way, the journal will not be accepted.\nUse AI tools for your technical work if that is permitted in the programme. Do not use them here.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_9_mq3rpg0s",
+    "question": "What if I miss a day?",
+    "answer": "Fill it in as soon as you can. Write the **actual date you are filling it in**, not the date of the missed entry. Be honest in the entry about the fact that you are writing it late and why.\nDo not leave entries blank. A late honest entry is always better than no entry.\nIf you find yourself consistently missing entries, that is worth paying attention to. It usually means something else is going wrong. Use Yaksha in chat, or reach out to your scholar.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_10_mq3rpg0t",
+    "question": "Will anyone read my journal during the internship?",
+    "answer": "**No.** We will not access your journal during the 65 days. You write it, you keep it, it is yours.\nThe only time we read it is after you submit it at the end of the internship. This is intentional — we want you to write freely, without feeling observed. The journal is only useful if it is honest, and it is only honest if you are not performing for an audience.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_11_mq3rpg0u",
+    "question": "Can the prompts change mid-internship?",
+    "answer": "Occasionally we may update a prompt for a specific day based on what is happening in the cohort — a major milestone, a collective challenge, or something the team wants to address directly. When this happens, we will announce it in the **Announcements section on samagama.in** before that day begins.\nCheck the Announcements section before filling any entry where a change has been announced. If no announcement has been made, use the prompt as written in your document.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_12_mq3rpg0v",
+    "question": "How do I submit Rosetta at the end?",
+    "answer": "On or before Day 65, share your Rosetta Google Doc with the programme coordinator's email address (shared during wrap-up week). Set the sharing permission to **Viewer**.\nMake sure:\n• Your name is in the document title — Rosetta — [Your Name] — Summership 2026.\n• All 65 entries have been filled in.\n• Your cover page has your name, product, and team filled in.\nRosetta submission is one of the required criteria for receiving your internship certificate. An incomplete or AI-generated journal will not be accepted.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_13_mq3rpg0w",
+    "question": "I have a question about Rosetta that is not answered here. What do I do?",
+    "answer": "Ask Yaksha first. If Yaksha cannot answer it, escalate to your programme coordinator. Do not sit on a question — the journal works best when you start it right.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_9_14_mq3rpg0x",
+    "question": "My college requires a written confirmation that the internship is self-paced and will not clash with college classes — what document can I share with them?",
+    "answer": "This is not a self paced internship, but a very rigorous one which is time demanding. It is not permitted for one to be part of any other activity during this period.",
+    "category": "Rosetta Journal",
+    "tags": [
+      "rosetta-journal"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_1_mq3rpg0y",
+    "question": "I've already completed a course (Vinternship, Pinternship, MERN, or AI) with you in an earlier cohort — am I exempt from repeating it?",
+    "answer": "**Yes.** If you completed the Vinternship, Pinternship, MERN, or AI course with us in an earlier cohort, you don't have to repeat it. Submit the exemption form and we'll exempt you from that course.\n**What counts as \"completed\"?** A course is treated as complete when your **ViBe progress is above 95%**. We've set the bar just below 100% so you're not chasing the last percentage point. We verify against your ViBe record before confirming.\n**My progress is below 95% — can I still be exempted?** No. Below 95% you'll need to finish the remaining portion on ViBe. Once you cross 95%, you're covered.\n**I completed it somewhere else, not on ViBe with VLED — does that count?** No. This exemption is only for courses you completed _with us_. If you're a first-timer confident in your fundamentals, the viva route is a separate option — check the coursework email for details.\n**How will I know my exemption is approved?** We verify submissions against ViBe and confirm on your dashboard. No action is needed from you after submitting.\n**Exemption form:** https://forms.gle/RWt1v22yVePyZXD79\n> **Note:** Even if you're exempted from a course, **live sessions and stand-ups remain mandatory for everyone, regardless of exemption status.** No exceptions.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_2_mq3rpg0z",
+    "question": "How do I register for the AI Fundamentals course on Vibe?",
+    "answer": "Follow these steps:\n• Click the AI Fundamentals registration link posted in the **Announcements section on samagama.in** at Phase 1 launch.\n• You'll be redirected to the **Vibe sign-in page**. If you don't have a Vibe account yet, create one using the **same Gmail you used to register on Samagama**.\n• Log in with your credentials.\n• After logging in, **open the course registration link again** in your browser — the second click after login is what enrols you.\n• Complete the brief registration form and submit.\n• The course will appear instantly on your **Vibe dashboard**, ready to watch.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_3_mq3rpg10",
+    "question": "I registered on Vibe with a different email than my Samagama email — is that OK?",
+    "answer": "Please use the **same email on both platforms** so we can match your Phase 1 progress to your internship record.\nThe one exception: **Vibe requires a Gmail address for signup.** If the email you used on Samagama is not Gmail (e.g. a college email like @xyz.ac.in, @ds.study.iitm.ac.in), you may use **any Gmail of yours** to register on Vibe. In that case, tell Yaksha in your Samagama chat using the tag:\n`` #vibe-email your-gmail@gmail.com ``\nso we can link the records.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_4_mq3rpg11",
+    "question": "Are live sessions mandatory if I'm on the viva route?",
+    "answer": "**Yes — live sessions are mandatory for every intern, regardless of path.** Whether you're on the coursework track, MERN-exempt (returning intern), or have cleared the viva and moved to Phase 2, you're expected to attend every live session. The exchange of knowledge across our cohort — diverse streams, varying levels of experience — is something self-paced study cannot replicate.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_5_mq3rpg12",
+    "question": "Where do I find the daily live-session schedule?",
+    "answer": "The daily live-session schedule is posted in the **Announcements section on samagama.in** at least 1 hour before the session begins. Log in and check the Announcements section during working hours — that is the only channel for session notifications.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_6_mq3rpg13",
+    "question": "Can we register and start the vibe courses before our internship date formally starts?",
+    "answer": "You will receive the viBE course link only after your internship starts. You can register and start the viBE courses related to the internship only after your internship formally starts.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_7_mq3rpg14",
+    "question": "What are the attendance and participation rules?",
+    "answer": "Attendance and participation are tracked **strictly**, and all of the following are measured continuously over a **rolling window of the last 5 working days**:\n• **Live-session attendance — at least 85%.** You must be present for at least 85% of the total Zoom meeting time.\n• **Live participation — at least 85%.** You must respond to the in-session polls and quizzes at least 85% of the times they are run.\n• **Quizzes — attempted, and passed.** Every quiz must be attempted, and your pass percentage must be at least 50%.\nBecause this is a rolling 5-working-day measure, it reflects your _recent_ engagement, not a one-time average. **If any one of these three falls below its threshold, you will be excused from the current batch and moved to the next batch.** This is not a penalty — it simply means you rejoin in a later batch where you can give the programme the full attention it needs.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_8_mq3rpg15",
+    "question": "What are Spurti Points (SP)? Do they affect my internship?",
+    "answer": "Spurti Points are a platform feature that tracks your engagement with the programme. They are currently in an early beta phase — not used for any decisions about your standing. See **Section 11** for the full SP FAQ.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.114Z",
+    "updatedAt": "2026-06-07T12:38:06.114Z"
+  },
+  {
+    "_id": "sam_10_9_mq3rpg16",
+    "question": "What are the live-session (Zoom) participation and conduct rules?",
+    "answer": "Treat every live session as a professional classroom. The following rules apply, and repeated non-compliance may result in removal from a session.\n**Video & visibility**\n• Keep your **video on at all times** unless explicitly permitted otherwise — participants with video off will be removed.\n• Your **face must be clearly visible** — well-lit, centred in frame, and not rotated or partially cut off. A forehead-only view, poor lighting, or a sideways angle are not acceptable.\n• **Do not join from a mobile phone.** Use a laptop or desktop.\n**Audio & environment**\n• **Test your microphone and video** using the platform's audio-test feature before the session begins — especially if you plan to speak.\n• Be in a **reasonably quiet, well-lit space** so you can be seen clearly and participate when called upon.\n**Conduct & attire**\n• **Dress code:** business casuals or neat Indian casuals. Clothing inappropriate for a professional or classroom setting is not allowed.\n• **No multitasking.** Talking on the phone or with people nearby, and any form of distraction or disengagement, may result in removal.\n**Display name & profile picture**\n• Display your **full name** — first and last. Nicknames or partial names are not acceptable.\n• A **professional, clearly identifiable profile picture** is strongly recommended. This rule is enforced starting the **next session** (you have until then to update your display name and picture).\n• Use your **professional email account** to join wherever applicable.\n**Breaks & reconnection**\n• For a short break (e.g. a restroom break), indicate **\"BRB\"** (Be Right Back) and return promptly. Prolonged absence may result in a permanent ban.\n• **Breaks are provided periodically** — manage personal needs during them and avoid leaving during instructional segments.\n• If your internet drops and you are moved to the **waiting room, you will not be re-admitted.** Ensure you have a stable connection — and ideally a backup — before joining.\n**Waiting room**\n• **Do not call or message the Core Team for re-admission from the waiting room** — doing so will result in an **SP deduction**.\n**Speaking effectively**\n• Keep responses concise — aim for two to three sentences. Rehearse before unmuting, and always test your mic and video beforehand if you plan to speak.\n**Grounds for removal or a permanent ban:** video off, joining from mobile, poor visibility, unprofessional attire, disengagement, extended unexplained absence, non-compliance with display-name/picture rules, or repeated violations of session guidelines.",
+    "category": "Coursework & Live Sessions",
+    "tags": [
+      "coursework-live-sessions"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_1_mq3rpg17",
+    "question": "What are Spurti Points?",
+    "answer": "Spurti Points, or SP, are a points layer on the platform that reflects your overall engagement with the programme.\nThink of SP as an indicator of your engagement — nothing more. It is not a score that defines you as a student or determines your future in the programme.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_2_mq3rpg18",
+    "question": "Is SP a finished system?",
+    "answer": "No. Spurti Points are still being actively built and refined.\nSP is best understood as a work in progress rather than a finalised grading or evaluation system. The rules and calculations may evolve as the programme develops.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_3_mq3rpg19",
+    "question": "How much importance should I give to my SP number?",
+    "answer": "Please do not read too much into the number.\nSP is an early beta feature. It is meant to give you a broad sense of your engagement, not to measure your performance or determine outcomes.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_4_mq3rpg1a",
+    "question": "Can I be terminated or excused because of low SP?",
+    "answer": "No.\nThe programme team will not terminate, excuse, or take any decision about any intern on the basis of Spurti Points alone. SP is not used as a basis for such decisions.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_5_mq3rpg1b",
+    "question": "What if my SP shows as zero or even negative?",
+    "answer": "There is genuinely no cause for concern.\nA zero or negative SP balance does not mean you are in trouble with the programme. Because SP is in an early beta phase, the number may not always reflect your actual effort or attendance accurately.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_6_mq3rpg1c",
+    "question": "Does a higher SP bring any benefits?",
+    "answer": "Yes, in a positive way.\nInterns who build up higher Spurti Points may, from time to time, become eligible for small perks or recognition from the programme team.\nThink of a higher SP as a pleasant upside to aim for. SP is not used to punish you for a low number or to decide your standing — the one exception is that a **mentor may deduct SP for clearly non-compliant behaviour** (for example, disrupting a live session or ignoring session conduct rules). That is a deliberate response to conduct, not the same as the beta number simply being low.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_7_mq3rpg1d",
+    "question": "If SP does not determine outcomes, what does?",
+    "answer": "Your attendance and live participation are what the programme watches closely and tracks strictly.\nA low SP number is not a cue to ease off. The programme has clear participation requirements that are monitored independently of SP (see §10.7 for the exact thresholds).",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_8_mq3rpg1e",
+    "question": "What are the participation requirements tracked strictly?",
+    "answer": "Looking at your most recent five working days on a rolling basis, every intern is expected to meet all three of the following:\n• **Stay present for at least 85%** of the total live Zoom session time.\n• **Respond to at least 85%** of the polls and quizzes run during the sessions.\n• **Attempt every quiz and clear each with a score of at least 50%.**\nAll three requirements apply simultaneously. Falling short on even one of them counts.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_9_mq3rpg1f",
+    "question": "What does \"rolling basis\" mean?",
+    "answer": "The programme does not look at a single average across the entire duration.\nInstead, it looks at your most recent five working days at any given point in time. As each new working day passes, the oldest day drops out and the newest day is added.\nThis means your recent, consistent engagement is what counts — not a strong performance in one week followed by long absences. The window keeps moving forward.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_10_mq3rpg1g",
+    "question": "What happens if I fall below the required participation level?",
+    "answer": "If any one of the three participation requirements slips below the mark across your most recent five working days, you will be moved from the current batch into a later batch.\nThis is not a termination or an excusal from the programme. It is a practical step so you can rejoin when you are able to give the programme your full attention.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_11_11_mq3rpg1h",
+    "question": "How are Spurti Points calculated?",
+    "answer": "Every intern starts with a **base of 100 SP** credited on their official internship start date.\nSP is then earned through two live-session activities — **attendance** and **poll participation** — scored independently for every mandatory morning session:\n**A. Attendance**\nTime present (% of session window)SP earned90% or more**+10 SP**\n75% – 89%**+5 SP**\n50% – 74%**+3 SP**\nBelow 50%0 SP\n**B. Poll participation**\nPolls answered (% of polls launched)SP earned90% or more**+10 SP**\n75% – 89%**+5 SP**\n50% – 74%**+3 SP**\nBelow 50%0 SP\nA few things to note:\n• Both A and B are scored per session and summed across all mandatory sessions attended since your start date.\n• **There is no penalty for absence** — missing a session earns 0 for that day, not a deduction.\n• Only mandatory morning standup / orientation sessions count. Breakouts, weekend specials, and evening sessions do not contribute to A or B.\n• SP is updated daily. You can see your current balance and a full transaction history on the portal at samagama.in (https://samagama.in).\n**Important:** SP is a reward and recognition feature — it is **not** used by the programme team to judge your engagement, and it plays **no role** in excusal decisions. Excusal is determined from raw Zoom attendance logs, independently of SP. A low or zero SP number has no bearing on your standing in the programme.",
+    "category": "Spurti Points",
+    "tags": [
+      "spurti-points"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_12_1_mq3rpg1i",
+    "question": "I'm unable to type in the chat after clicking 'Interact with Yaksha' — what should I do?",
+    "answer": "The chat input is only active after you have clicked the **\"Interact with Yaksha\"** button. If you are still unable to type, scroll up to the top of the page — the button may be above the visible area. Click it once, and the chat field will become active.",
+    "category": "Yaksha Chat",
+    "tags": [
+      "yaksha-chat"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_13_1_mq3rpg1j",
+    "question": "How do I log in to ViBe?",
+    "answer": "• Link for the website: https://vibe.vicharanashala.ai/auth (https://vibe.vicharanashala.ai/auth)\n• Sign up as a student with the registered mail ID into the ViBe platform.\n• To log in to the ViBe platform, follow the steps below carefully:\n```\n• Log in to the ViBe platform as a student from registered email ID\n• Check the \"Notifications\" tab in the Top right side of the Dashboard.\n• Accept the course invite sent for your respective MERN Course.\n```\n⚠️ Logging in with a different email ID may result in access issues or missing course visibility.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.115Z",
+    "updatedAt": "2026-06-07T12:38:06.115Z"
+  },
+  {
+    "_id": "sam_13_2_mq3rpg1k",
+    "question": "Invite accepted but shows \"No course enrolled\"?",
+    "answer": "If you see \"No course enrolled\":\n• Make sure you are logged in with the correct registered email ID.\n• Check if your college email has multiple aliases and try the correct one.\n• Log out and log in again once.\n• Use personal wifi instead of college wifi as there might be some network restrictions of access.\n• If the issue continues, please follow these steps:\n**Step 1: Allow Third-Party Cookies**\n• Enable Cookies in Chrome: Open chrome://settings/cookies. Turn OFF _\"Block third-party cookies\"_ and turn ON _\"Allow all cookies.\"_\n• Add Site Exception: Scroll to _\"Sites that can always use cookies\"_ and click _\"Add.\"_ Paste _.vicharanashala.ai and ensure _\"Including third-party cookies\"* is enabled.\n• Restart browser.\n**Step 2: Fix DNS (Most Important)**\n• Change your laptop DNS to Google DNS.\n• Go to: Control Panel → Network → Active Network → Properties → IPv4.\n• Shortcut: Win + R → ncpa.cpl → right-click properties.\n• Set Preferred DNS to 8.8.8.8 and Alternate DNS to 8.8.4.4.\n• Save.\n**Step 3: Flush Old DNS Cache (it's safe)**\n• Open Command Prompt as Admin.\n• Run the following commands:\n• ipconfig /flushdns\n• ipconfig /release\n• ipconfig /renew\n• Restart WiFi.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_3_mq3rpg1l",
+    "question": "Why are videos stuck or repeating?",
+    "answer": "This may happen due to ViBe's monitored learning system. Common reasons include:\n• Videos must be watched fully and in sequence (no skipping).\n• Camera and microphone permissions must be enabled.\n• Poor lighting or high background noise can affect playback.\n• Switching tabs or staying idle may restart the video.\n✅ For smooth playback, stay on the ViBe tab, keep your camera on, and watch videos in a quiet, well-lit environment.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_4_mq3rpg1m",
+    "question": "Can I use a mobile or tablet?",
+    "answer": "No, only **desktop/laptop** is supported.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_5_mq3rpg1n",
+    "question": "I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?",
+    "answer": "Try these troubleshooting steps in order:\n• **Refresh the page** and check multiple times\n• **Inspect browser console**: Right-click → Inspect → Go to Network or Console tab → Try watching the video and check for any visible errors\n• **Log out and log in again**\n• **Use a different browser**\n• **Clear browsing data and cache**, then try to re-login\nIf the issue persists after trying all steps, **record the issue** and contact **Yaksha** for any queries by mentioning **#escalate-ViBe**.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_6_mq3rpg1o",
+    "question": "I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?",
+    "answer": "Please do not worry. This might be a skip made in the quiz/video item due to penalty score as the quiz/video item might not have been successfully completed/marked. Please verify that you've completed all the course items (1006/1006). If not, please retry the missed contents again.\nIn the meantime, you may try the following steps once:\n• **Refresh your browser**\n• **Log out**, clear your browser cache, and **log in again**",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_7_mq3rpg1p",
+    "question": "I feel the ViBe content or platform is not good or I am unhappy with the way progress is evaluated. Can I request an exception or bypass the system?",
+    "answer": "ViBe is built and continuously improved by interns and students themselves. It is a free and open-source learning platform, and our goal is to keep it that way by encouraging the community to actively contribute, improve, and strengthen it rather than bypass it.\nIf a learner strongly feels that the regular ViBe flow does not fairly reflect their understanding, there is a formal alternative evaluation path. However, this path is intentionally rigorous to ensure fairness for everyone.\nIn such cases, you will be asked to:\n• Watch the specified YouTube video content completely (links will be provided).\n• Appear for a three-hour proctored examination based only on that content.\n• Write the exam under strict supervision with:\n• Two cameras (front and side view), and\n• One online human proctor monitoring you live.\nThis examination becomes the sole basis for evaluation in place of the regular internship track.\nThe scoring rules are strict:\n• **Score below 60%**: You are considered not qualified and must join the next cohort and continue only through the normal ViBe mode.\n• **Score between 60% and 80%**: You get one more chance in the next scheduled exam.\n• **Score above 80%**: You are considered to have passed.\nThis special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe.\nBecause this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_8_mq3rpg1q",
+    "question": "Is the ViBe consent form compulsory? What if I don't want to grant camera access?",
+    "answer": "Yes — the consent form is compulsory.\nWe would like to clearly inform you that providing consent is a mandatory requirement for any candidate enrolling in and continuing a course on the ViBe Learning Platform.\nThe platform is designed with proctoring enabled throughout the learning process, which requires access to your webcam and microphone. This is essential to ensure:\n• Fairness across all participants\n• Academic integrity\n• Active and genuine participation\nIf you choose not to grant camera and microphone access, you will not be able to proceed with the course, as proctoring is an integral part of the learning and evaluation workflow.\n**Privacy & Monitoring Clarification**\nAs outlined in the consent form:\n• ViBe does not continuously record videos.\n• Proctoring operates via real-time monitoring mechanisms during learning and assessments.\n• All data is handled strictly in accordance with the stated consent terms and applicable data-protection guidelines.\nIn short, consent is not optional — it is a core requirement for participation on the platform.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_9_mq3rpg1r",
+    "question": "What are penalty scores on the ViBe platform, and how do they affect our performance or HP?",
+    "answer": "Penalty scores are generated when anomalies are detected during your activity on the ViBe platform (for example, irregular behavior while watching video lessons or attempting quizzes).\nIf the penalty score becomes high, you may be required to:\n• Rewatch the video lesson, and\n• Retake the associated quiz.\nAt present, these penalty scores **do not impact your HP (Health Points) or overall performance evaluation**, as they are not being considered for scoring. Their primary purpose is to ensure proper engagement with the learning content.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_10_mq3rpg1s",
+    "question": "When should I use the Flag option on ViBe, and when should I contact support?",
+    "answer": "Use the **Flag feature on ViBe** only for course content-related issues, such as problems with video content or quiz questions.\nFor technical issues, platform errors, login problems, or logistics-related queries, do not use the flag option. Instead, **contact Yaksha** so the team can assist you faster.\nUsing the correct method helps resolve issues quickly and keeps the learning process smooth for everyone.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_11_mq3rpg1t",
+    "question": "What is Linear Progression on ViBe?",
+    "answer": "Linear progression is enabled for every course on ViBe. This means each learner must watch the videos and attempt the quizzes in the **exact order** they appear on the left panel of the course page.\nIn practice:\n• You cannot click on a video or quiz that lies far ahead of your current position.\n• You must complete each item before the next one unlocks.\n• Skipping videos or quizzes is not allowed by design.\nProgress is sequential — finish the item in front of you, and the next one opens up automatically.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_12_mq3rpg1u",
+    "question": "Can I use the left navigation panel to jump ahead to a later video or quiz?",
+    "answer": "No. Although the left navigation panel displays the full list of items in your course, it is meant only as a **progress map** — not as a jump-to-anywhere menu.\nInstead of clicking through the left panel:\n• Click **Next Quiz** or **Next Lesson** as it appears on the **right panel**.\n• Let the platform unlock items for you in sequence as you complete each one.\nTrying to skip ahead through the left panel will simply trigger the **Access Restricted** alert (see 13.13).",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_13_mq3rpg1v",
+    "question": "I am seeing a red \"Access Restricted\" banner. Is this a bug?",
+    "answer": "No, this is **not a bug**. The red **Access Restricted** banner is an intentional alert from the platform.\n**The banner looks like this:** a red toast notification with an exclamation icon, the title **\"Access Restricted\"**, and the message _\"Returning to previous valid content.\"_ below it.\nIt appears when you try to open an item (video or quiz) before completing all the items that come before it. If you are on the _n_th item but haven't completed every video and quiz from item 1 through item _n−1_, the platform will show this alert.\nWhen the banner appears, ViBe automatically **returns you to the previous valid content** — that is, the last item you had legitimately reached in the sequence. You will not lose any progress; you'll simply be sent back to where you actually are in the course.\nIt is the system gently telling you: _\"Please check — there is something earlier in the course that you haven't finished yet.\"_",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_14_mq3rpg1w",
+    "question": "How do I resolve the \"Access Restricted\" error?",
+    "answer": "Follow these steps in order:\n• **Go back to the left panel** and scroll through your course items from the beginning.\n• **Look for any item without a completion tick** — that is your missed video or quiz.\n• **Complete that item** (watch the full video, or attempt and submit the quiz).\n• **Refresh the page** once you've completed all earlier items.\n• If the **Access Restricted** banner _still_ appears after refreshing and you are sure all earlier items are completed, **report the issue to Yaksha** by mentioning **#escalate-ViBe**.\nIn the large majority of cases, simply finding and completing the missed item clears the alert.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_15_mq3rpg1x",
+    "question": "Why does ViBe sometimes make me re-watch a clip after a quiz?",
+    "answer": "If your answer to the check-in quiz didn't go through correctly, ViBe will take you back to the same clip and let you try again. This is called a **re-watch**, and it is part of the design — not a penalty.\nA few things to keep in mind:\n• Re-watches are **not recorded against you**. They do not affect your HP or evaluation.\n• The clips are short, so a re-watch usually costs less time than guessing through multiple retries.\n• Think of the re-watch as the platform helping the idea actually stick before you move on, rather than scolding you for getting it wrong.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_16_mq3rpg1y",
+    "question": "What kinds of quiz questions will I see on ViBe?",
+    "answer": "ViBe quizzes come in four formats:\nFormatWhat it looks likeWhat to do**Pick one (MCQ)**One right answer out of four or so optionsRead all the options before clicking\n**Pick one or more (MSQ)**\"Select all that apply\" — could be one correct option or severalRead each option carefully; small mistakes happen here most\n**Type a number (NAT)**A text box asking for a numeric valueType just the number — no units or extra symbols, unless the question explicitly asks\n**True or False**A statement with only two options — **True** or **False**Read the statement carefully; a single word like \"always,\" \"never,\" or \"only\" can flip the correct answer\nA small tip: watch the clip first, then answer. Trying to read the question while the clip is still playing splits your attention.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_17_mq3rpg1z",
+    "question": "Are the same proctoring rules applied to every course on ViBe?",
+    "answer": "No — and this is one of the most important things to understand before reading the rest of this section.\nViBe's proctoring system is **modular**. Each individual check — face visibility, single-face-in-frame, lighting, background voices, gaze on screen, camera/microphone access — can be **independently switched on or off by the instructor** for a given course or cohort.\nThis means:\n• **The instructor decides** which proctoring elements are active for their course.\n• Some courses may run with **all** checks active (typical for internships, faculty FDPs, and credentialed programmes).\n• Other courses may run with **only a subset** active — for example, face visibility on but background-voice detection off — depending on the learning context.\n• Certain pilot or open courses may have **most proctoring relaxed**, especially where the focus is exploration rather than verified evaluation.\nThe FAQs that follow (**12.18 through 12.23**) describe the **full set of proctoring behaviours** the platform is capable of. They are written as if everything is switched on. **Whether a specific check applies to _your_ course depends entirely on what your instructor has enabled for that course.**\n⚠️ **Please do not assume rules carry across courses.** A relaxation given in one course (for example, allowing two faces in frame for a paired-learning module) does **not** transfer to another course on the same platform. Always check the course-specific guidelines shared by your instructor or programme team before each course you join.\nWhen in doubt, ask your instructor or programme coordinator which proctoring elements are active for your current course.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_18_mq3rpg20",
+    "question": "What does the \"quiet helper\" on ViBe actually do?",
+    "answer": "While a lesson plays, a small helper runs gently on your device using your camera and microphone. It checks, **in real time**, that the basic conditions for learning are present.\nSpecifically, it looks at five things:\n• **A face is visible** — to confirm you are really there.\n• **Only one face is in frame** — to confirm the learning is yours.\n• **There is enough light on your face** — a silhouette is hard to recognise.\n• **The room isn't full of voices** — no talking, TV, or background podcasts.\n• **You are looking at the screen** — brief glances away are fine; long stretches feel like drifting off.\nThe helper is not a judge. Brief, normal movements (a stretch, a sneeze, a glance at your notebook) are absolutely fine. It only pays attention to **sustained patterns**, not split-second things.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_19_mq3rpg21",
+    "question": "Does ViBe record long videos of me while I'm learning?",
+    "answer": "No. ViBe does **not** continuously record videos of you.\n• The camera and microphone are used for **real-time presence checks only**.\n• Long recordings of your face or voice are **not stored**.\n• When the lesson ends, the helper goes quiet too.\n• All data is handled strictly in accordance with the consent terms shown when you signed up.\nThink of the helper as a quiet study partner sitting beside you — there if needed, invisible otherwise.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_20_mq3rpg22",
+    "question": "What is the single most common avoidable mistake learners make?",
+    "answer": "**Sitting with a window directly behind you during the day.**\nThe room may feel bright to you, but your camera only sees a dark silhouette where your face should be. The helper then struggles to confirm your presence, and your lesson may pause or rewind.\nThe fix is simple: move so the window is **to your side** or **in front of the laptop**, not behind you. A lamp placed in front of you works just as well in the evening.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_21_mq3rpg23",
+    "question": "Why does the lesson keep pausing or restarting even when I'm paying attention?",
+    "answer": "If a clip keeps stopping or going back to the start, the cause is almost always something small in your environment, not the platform itself. Run through this checklist:\n• **Your face is too dark** → add a lamp in front of you.\n• **Your face is partly out of frame** → raise the laptop or sit a bit closer to the camera.\n• **There are voices in the background** → close the door, or move to a quieter room.\n• **You switched tabs or went idle** → stay on the ViBe tab; take breaks between clips, not during them.\n• **Camera or mic permission dropped** → check the lock icon in your browser's address bar and confirm both are set to \"Allow\".",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_22_mq3rpg24",
+    "question": "Can I read the quiz questions aloud or mutter to myself while watching?",
+    "answer": "It's best not to. The microphone listens for sustained voices in the room, and reading aloud, muttering, or asking a roommate \"wait, what was that?\" can all be picked up as anomalies.\nThe simple habit is: **watch in silence, answer in silence, and chat freely during your breaks between clips.**",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_23_mq3rpg25",
+    "question": "Can I study with a friend on camera since we're learning together?",
+    "answer": "In most courses, no. Only **you** — the registered Learner — should be in the camera frame during a lesson. The helper checks that exactly one face is visible at a time.\nGroup study is genuinely a wonderful habit, just not inside a ViBe session itself. A good way to do it:\n• Hop on a separate call with your friend on your phone or a second device.\n• Discuss concepts before or after a ViBe lesson, not during it.\n• Return to ViBe alone when you're ready to watch the clip and attempt the quiz.\n> 📌 **Note:** As explained in **12.17**, the single-face-in-frame check is an instructor-controlled setting. A few courses (typically paired-learning or collaborative pilots) may explicitly **relax** this rule. **Do not assume that relaxation in one course applies to another** — even on the same platform with the same login. Always default to studying alone unless your instructor has clearly stated otherwise for that specific course.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_24_mq3rpg26",
+    "question": "Will I lose my progress if I clear my browser or reinstall it?",
+    "answer": "No. Your progress is saved **on the server**, tied to your registered email — not on your browser or your computer.\nSo:\n• Refreshing the page, clearing cache, switching browsers, or even reinstalling your browser will **not** wipe your progress.\n• The moment you log back in with the same registered email, all your completed clips and quizzes will be exactly where you left them.\nWhen in doubt: log out, log back in.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_25_mq3rpg27",
+    "question": "Is there a recommended daily learning rhythm on ViBe?",
+    "answer": "Yes — small, regular sessions work far better than long marathon sessions. A practical rhythm:\n• **Show up daily**, even if only for thirty minutes. Daily consistency beats a five-hour weekend cram.\n• **Take breaks between clips**, not during them. A clip is short — finish it first.\n• **Treat each quiz as a gentle check-in**, not a high-stakes test.\n• **For programmes with deadlines** (such as internships or faculty cohorts), aim for the daily progress target announced by your programme team — typically around 3.33% per day.\n> 📌 **A note on milestones:** The pacing above is a **general guideline** only. For any specific programme (Vinternship cohort, faculty FDP, NPTEL internship, institutional pilot, etc.), the **actual milestones, deadlines, and weekly progress targets will be announced by your instructors or programme team**. Always follow the milestone schedule communicated for your specific cohort — that takes precedence over the general guidance here.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_13_26_mq3rpg28",
+    "question": "What should my \"study corner\" look like before I start a ViBe session?",
+    "answer": "A ViBe-friendly study spot needs only three things:\n• **Light in front of your face** — a lamp or window facing you, never behind.\n• **Just you in the camera frame** — ask family, friends, or pets not to wander through.\n• **A reasonably quiet room** — no TV, no music with words, no one else on a call nearby.\nTwo minutes of setup before you start saves a lot of small frustrations during the lesson.",
+    "category": "ViBe Platform",
+    "tags": [
+      "vibe-platform"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_14_1_mq3rpg29",
+    "question": "Is team formation compulsory?",
+    "answer": "Yes. All projects in Phase 2 and Phase 3 (some parts) must be completed in teams. Every participant is required to be part of a team.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_14_2_mq3rpg2a",
+    "question": "What is the size of a team?",
+    "answer": "The team size is fixed at **four members**. This is mandatory — you cannot have fewer or more members in a team at the time of final formation.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.116Z",
+    "updatedAt": "2026-06-07T12:38:06.116Z"
+  },
+  {
+    "_id": "sam_14_3_mq3rpg2b",
+    "question": "How are teams formed?",
+    "answer": "• For students who joined on **May 15 and 16**: Teams were formed through a structured activity.\n• For students joining later: Teams will be **randomly assigned** by the administration.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_4_mq3rpg2c",
+    "question": "I started on May 15/16 but couldn't form a team during the activity. What happens now?",
+    "answer": "You will be **randomly assigned** to a team.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_5_mq3rpg2d",
+    "question": "There was a typo in our email addresses during team formation. Can we fix it?",
+    "answer": "No action is required from your side. The administration will **verify and match email IDs with names** before finalizing and locking teams.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_6_mq3rpg2e",
+    "question": "I formed a team with only two members. Will it be considered?",
+    "answer": "No. Teams with fewer than four members will be **expanded by adding additional members** to make a final team of four.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_7_mq3rpg2f",
+    "question": "What if a team member leaves or becomes ineligible during Phase 1?",
+    "answer": "• The administration will attempt to **assign a replacement member**.\n• If no replacement is found, you may continue as a **team of three**.\n• You must **inform the admin immediately**, or the change will not be recognized.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_8_mq3rpg2g",
+    "question": "Can I form a team with someone from my own college?",
+    "answer": "No. Teams must consist of members from **different institutions** to encourage networking. **Exception:** Students from the same institution but **different campuses/locations** may be allowed.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_9_mq3rpg2h",
+    "question": "Can I form a team with students from my IIT MBS cohort?",
+    "answer": "No. You are encouraged to collaborate with participants **outside your existing cohort**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_10_mq3rpg2i",
+    "question": "Can we change our team name after submission?",
+    "answer": "Yes, team names are **tentative** and can be changed. However, due to operational constraints, frequent changes are discouraged.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_11_mq3rpg2j",
+    "question": "What if multiple teams choose the same name?",
+    "answer": "Teams will be distinguished using **suffixes (e.g., Team X-1, Team X-2, etc.)**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_12_mq3rpg2k",
+    "question": "What should I do if I face issues within my team?",
+    "answer": "Report any concerns immediately to your **assigned scholar/mentor**. Maintaining a **safe and respectful environment** is a priority.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_13_mq3rpg2l",
+    "question": "How will I know who my mentor is?",
+    "answer": "Your mentor will be the **scholar assigned to the project** your team is working on.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_14_mq3rpg2m",
+    "question": "When will I know my team details?",
+    "answer": "Team details are announced in the **Announcements section on samagama.in**. Log in and check regularly during working hours.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_15_mq3rpg2n",
+    "question": "I received a team list email but my name is not included. What should I do?",
+    "answer": "• Team announcements are **phased**, so your name may appear in a later list.\n• If your entire cohort has moved to team activities and you are still unassigned, **raise the issue on Yaksha or contact a scholar**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_16_mq3rpg2o",
+    "question": "We selected Project X as our top priority but were assigned Project Y. Can we change it?",
+    "answer": "No. **Project assignments are final** and cannot be changed. Allocation is done to ensure **balanced distribution across projects**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_17_mq3rpg2p",
+    "question": "I just started the internship. Can I form my own team now?",
+    "answer": "No. For later cohorts, teams will be **randomly assigned**. Please wait for the official communication.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_18_mq3rpg2q",
+    "question": "When do team activities begin?",
+    "answer": "Team-based work begins in **Phase 2**. During Phase 1 (online coursework), you do not need to worry about team activities.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_19_mq3rpg2r",
+    "question": "Can I request a specific teammate after teams are assigned?",
+    "answer": "No. Team assignments are final and **requests for changes are not entertained**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_20_mq3rpg2s",
+    "question": "What happens if a team member is inactive or not contributing?",
+    "answer": "You should **report the issue to your mentor/scholar early**. Prolonged inactivity may lead to administrative intervention.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_21_mq3rpg2t",
+    "question": "Can I switch teams if there are conflicts?",
+    "answer": "Team switches are **not allowed** except in exceptional, admin-approved cases involving serious concerns.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_22_mq3rpg2u",
+    "question": "Will team performance affect individual evaluation?",
+    "answer": "Yes. While some components may be individual, **team deliverables are a key part of evaluation**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_23_mq3rpg2v",
+    "question": "How will communication happen within teams?",
+    "answer": "Teams self-organise internal coordination over **LinkedIn or email** only, limited to their own team members. **WhatsApp is not encouraged for team coordination — and it is not permitted to create a team WhatsApp group** (a four-person project team is still a \"subset of interns\", which is prohibited under §6.1; a group of that form, if reported, will lead to immediate termination of the internship).\nOfficial programme updates continue to come through the **Announcements section on samagama.in** and **Yaksha chat** — see §6.1 for the full communication policy.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_24_mq3rpg2w",
+    "question": "What if I miss the team allocation announcement?",
+    "answer": "All programme updates are posted in the **Announcements section on samagama.in**. Log in and check regularly during working hours — this is the only channel for official notifications.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_25_mq3rpg2x",
+    "question": "Can a team be dissolved and reformed?",
+    "answer": "No. Once finalized, **teams are locked** and cannot be dissolved.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_26_mq3rpg2y",
+    "question": "What happens if I drop out of the internship?",
+    "answer": "Your team will be adjusted accordingly, and the remaining members may continue as a **team of three or receive a replacement**.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
+  },
+  {
+    "_id": "sam_14_27_mq3rpg2z",
+    "question": "Will we get time to get to know our teammates before Phase 2?",
+    "answer": "Yes. There is typically a **buffer period before Phase 2** where teams can connect and prepare.",
+    "category": "Team Formation",
+    "tags": [
+      "team-formation"
+    ],
+    "createdBy": "admin001",
+    "helpful": 0,
+    "notHelpful": 0,
+    "helpfulVotes": [],
+    "notHelpfulVotes": [],
+    "viewCount": 0,
+    "relatedQueries": [],
+    "createdAt": "2026-06-07T12:38:06.117Z",
+    "updatedAt": "2026-06-07T12:38:06.117Z"
   }
 ]

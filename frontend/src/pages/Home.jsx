@@ -105,6 +105,7 @@ export default function Home() {
   const faqRef = useRef(null);
   const [expandedIdx, setExpandedIdx] = useState(null);
   const [faqExpandedIdx, setFaqExpandedIdx] = useState(null);
+  const [visibleIndices, setVisibleIndices] = useState(() => new Set());
   const [faqs, setFaqs] = useState(defaultFaqs);
   // Fetch FAQs from API
   useEffect(() => {
@@ -141,7 +142,11 @@ export default function Home() {
             const el = entry.target;
             const idx = Number(el.dataset.index) || 0;
             setTimeout(() => {
-              el.classList.add('visible');
+              setVisibleIndices((prev) => {
+                const next = new Set(prev);
+                next.add(idx);
+                return next;
+              });
             }, idx * 80);
             observer.unobserve(el);
           }
@@ -382,9 +387,10 @@ export default function Home() {
           <div className="features-grid" ref={featuresGridRef}>
             {features.map((f, i) => {
               const isOpen = expandedIdx === i;
+              const isVisible = visibleIndices.has(i);
               return (
                 <div
-                  className={`feature-card${isOpen ? ' feature-card--open' : ''}`}
+                  className={`feature-card${isOpen ? ' feature-card--open' : ''}${isVisible ? ' visible' : ''}`}
                   key={i}
                   data-index={i}
                   onClick={() => toggleFeature(i)}
