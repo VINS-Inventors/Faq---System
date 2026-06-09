@@ -1,356 +1,116 @@
-# Vicharanashala — FAQ & Community Platform
+# 🖥️ FAQ & Ticket Management System — Backend Features Specification
 
-> Official internship FAQ portal for the Vicharanashala Lab, IIT Ropar.  
-> Built with React + Express + PostgreSQL.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Database](#database)
-- [API Reference](#api-reference)
-- [Setup & Installation](#setup--installation)
-- [Environment Variables](#environment-variables)
-- [Running the Project](#running-the-project)
-- [User Roles](#user-roles)
-- [Pages & Routes](#pages--routes)
+This document details all backend architectures, engines, database adapters, and API features implemented in the **FAQ & Ticket Management System**.
 
 ---
 
-## Overview
+## 🧭 1. Unified Database Layer & Repository Pattern
 
-Vicharanashala is a centralized FAQ and query management platform for the VINS internship programme at IIT Ropar. It allows students to browse FAQs, submit queries, track their status, discuss on a community forum, and chat with an AI assistant (Yaksha) — all in one place.
+The system uses a unified data connector in [db.js](file:///c:/code/vins/Faq---System/backend/config/db.js) that automatically negotiates and falls back through three database storage engines on startup:
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | React 18, React Router v6, Framer Motion, Vite |
-| Backend | Node.js, Express.js |
-| Primary DB | PostgreSQL 18 (via `pg`) |
-| Fallback DB | MongoDB (via Mongoose) |
-| Last-resort fallback | Local JSON files |
-| Auth | JWT (jsonwebtoken) + bcryptjs |
-| Styling | Custom CSS — Wibify dark theme, neon lime accent |
-| Fonts | Instrument Serif, Outfit, JetBrains Mono (Google Fonts) |
-
----
-
-## Project Structure
-
-```
-faq-system/
-├── backend/
-│   ├── config/
-│   │   ├── db.js              # Unified DB layer (PG → Mongo → JSON)
-│   │   ├── localDb.js         # Local JSON fallback store
-│   │   └── migrate.js         # One-shot migration script (JSON → PG)
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── chatbotController.js
-│   │   ├── faqController.js
-│   │   ├── forumController.js
-│   │   ├── postController.js
-│   │   ├── queryController.js
-│   │   └── userController.js
-│   ├── middleware/
-│   │   └── auth.js            # JWT verify + adminOnly guard
-│   ├── models/                # Mongoose schemas (used when Mongo is active)
-│   │   ├── FAQ.js
-│   │   ├── Forum.js
-│   │   ├── Post.js
-│   │   ├── Query.js
-│   │   └── User.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   ├── faqRoutes.js
-│   │   ├── forumRoutes.js
-│   │   ├── postRoutes.js
-│   │   ├── queries.js
-│   │   └── users.js
-│   ├── local_data/            # JSON fallback data files
-│   ├── .env.example
-│   ├── package.json
-│   └── server.js
-│
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   │   ├── ChatBot.jsx        # Yaksha AI assistant
-    │   │   ├── FloatingScrollbar.jsx
-    │   │   ├── Footer.jsx
-    │   │   ├── Navbar.jsx
-    │   │   ├── ProtectedRoute.jsx
-    │   │   └── ThemeToggle.jsx
-    │   ├── context/
-    │   │   └── AuthContext.jsx
-    │   ├── pages/
-    │   │   ├── AdminDB.jsx        # Live DB viewer (admin)
-    │   │   ├── AdminReview.jsx    # Query moderation (admin)
-    │   │   ├── AskQuery.jsx       # Submit a query
-    │   │   ├── Auth.jsx           # Login / Register
-    │   │   ├── Escalation.jsx     # Escalated queries (admin)
-    │   │   ├── FAQ.jsx            # FAQ accordion page
-    │   │   ├── ForgotPassword.jsx
-    │   │   ├── Forum.jsx          # Community forum list
-    │   │   ├── ForumPost.jsx      # Single post + answers + reactions
-    │   │   ├── Home.jsx           # Landing page
-    │   │   ├── QueryBoard.jsx     # Public resolved Q&A board
-    │   │   ├── ResetPassword.jsx
-    │   │   ├── StatusTracker.jsx  # Track your query status
-    │   │   └── Users.jsx          # User directory (admin)
-    │   ├── utils/
-    │   │   └── api.js             # Axios instance with JWT interceptor
-    │   ├── App.css               # Full theme (dark + light mode)
-    │   └── App.jsx               # Routes + AnimatePresence transitions
-    ├── index.html
-    └── package.json
+```mermaid
+graph TD
+    Start[App Starts] --> CheckPG{1. PostgreSQL Available?}
+    CheckPG -- Yes --> UsePG[🐘 Use PostgreSQL Engine]
+    CheckPG -- No --> CheckMongo{2. MongoDB Available?}
+    CheckMongo -- Yes --> UseMongo[🍃 Use MongoDB Engine]
+    CheckMongo -- No --> UseLocal[📦 Use Local JSON Storage Fallback]
 ```
 
----
-
-## Features
-
-### For Students (Users)
-- **Submit Query** — raise a question with category, priority, and attachments
-- **Knowledge Base** — browse all resolved & approved Q&As
-- **FAQ Accordion** — searchable, filterable FAQ list with 👍/👎 voting
-- **Status Tracker** — 4-step timeline showing query progress
-- **Community Forum** — Stack Overflow-style Q&A with:
-  - ▲▼ upvote/downvote on questions
-  - 👍 Like + 💡 Insightful pinned reaction buttons on answers
-  - ❤️ 🔥 🎯 additional reactions via emoji picker
-  - ✓ Accept answer (question author only)
-  - ✏️ Edit your own answers
-  - 🔗 Share/copy link
-  - Sort by Newest / Top Voted / Most Answered
-  - Tag filtering + full-text search
-- **Yaksha Chatbot** — FAQ-powered AI assistant (strict knowledge-base-only answers), ticket creation
-
-### For Admins
-- **Moderation Panel** — claim, resolve, approve, reject, escalate queries
-- **Escalation Queue** — manage escalated queries
-- **User Directory** — sortable, searchable table of all users
-- **DB Viewer** — live paginated table view of all PostgreSQL tables
-- **FAQ Management** — create, edit, delete FAQs
-
-### Global
-- Dark / Light mode toggle
-- Framer Motion page transitions (fade + slide + scale)
-- Grain texture overlay
-- Neon lime scrollbar
-- Floating radial blur orbs
-- JWT authentication with 7-day tokens
-- Forgot / Reset password flow
+### Features:
+1.  **ElephantSQL/PostgreSQL Engine:**
+    *   Initiates connection pools using the `pg` library.
+    *   Executes auto-migrations to initialize the tabular database schema (`users`, `queries`, `faqs`, `forums`, `posts`, `password_resets`) if tables do not exist.
+    *   Defines indexes on target columns (e.g., password reset emails).
+    *   Provides JSONB mappings for arrays/objects (`tags`, `attachments`, `linkedFAQs`, `votedBy`, `answers`, `helpfulVotes`, `notHelpfulVotes`).
+2.  **Mongoose/MongoDB Engine:**
+    *   Connects dynamically via Mongoose schema structures as a primary database fallback.
+    *   Uses schema validations for constraints.
+3.  **Local Storage JSON Engine (`localDb.js`):**
+    *   Fallback zero-dependency local mock database storing data in `.json` files inside the [local_data/](file:///c:/code/vins/Faq---System/backend/local_data) directory.
+    *   Implements an asynchronous query matching engine (`find`, `findOne`, `create`, `findByIdAndUpdate`, `findByIdAndDelete`) that mirrors the Mongoose API.
 
 ---
 
-## Database
+## 🔐 2. Authentication, Security, & JWT Session Engine
 
-### Connection Priority
-```
-PostgreSQL → MongoDB → Local JSON
-```
-The server auto-detects which database is available at startup and logs:
-- `🐘 Using PostgreSQL`
-- `🍃 Using MongoDB`
-- `📦 Using local JSON storage`
+The authentication engine provides session isolation, secure password hashing, and role checks:
 
-### PostgreSQL Tables
-
-| Table | Description |
-|---|---|
-| `users` | Registered users with roles |
-| `queries` | Student queries with full lifecycle |
-| `faqs` | Published FAQ entries |
-| `posts` | Forum posts with embedded answers & reactions |
-| `forums` | Legacy discussion messages linked to queries |
-
-All array/object fields (`tags`, `answers`, `votedBy`, `reactions`, etc.) are stored as `jsonb`.
-
-### Migrate Local JSON → PostgreSQL
-```bash
-cd backend
-node config/migrate.js
-```
+*   **Bcrypt Hashing:** Uses `bcryptjs` to salt and hash user passwords (rounds = 10) during registration and credential updates.
+*   **JWT Bearer Tokens:** Signs and issues standard JSON Web Tokens on successful login, verifying caller identity in client request headers (`Authorization: Bearer <token>`).
+*   **Access Middleware ([auth.js](file:///c:/code/vins/Faq---System/backend/middleware/auth.js)):**
+    *   `auth`: Parses and validates tokens, binding the current user payload (`id`, `role`) to `req.user`.
+    *   `adminOnly`: Guards route access to queries, database tables, and rosters, permitting only the `admin` role.
 
 ---
 
-## API Reference
+## 📧 3. Nodemailer Password Reset Flow
 
-### Auth — `/api/auth`
-| Method | Route | Description |
-|---|---|---|
-| POST | `/register` | Register new user |
-| POST | `/login` | Login, returns JWT |
-| GET | `/me` | Get current user |
-| POST | `/forgot-password` | Send reset email |
-| POST | `/reset-password/:token` | Reset password |
+Secures credentials recovery via token-based mail flows:
 
-### Queries — `/api/queries`
-| Method | Route | Auth | Description |
-|---|---|---|---|
-| POST | `/` | User | Submit query |
-| GET | `/board` | Public | All resolved queries |
-| GET | `/my` | User | My queries |
-| GET | `/pending` | Admin | Pending queue |
-| GET | `/reviewing` | Admin | In-review queue |
-| GET | `/escalated` | Admin | Escalated queue |
-| POST | `/:id/claim` | Admin | Claim query |
-| POST | `/:id/resolve` | Admin | Resolve with answer |
-| POST | `/:id/approve` | Admin | Approve → publish to FAQ |
-| POST | `/:id/reject` | Admin | Reject query |
-| POST | `/:id/escalate` | Admin | Escalate query |
-
-### FAQs — `/api/faqs`
-| Method | Route | Auth | Description |
-|---|---|---|---|
-| GET | `/` | Public | List all FAQs |
-| GET | `/:id` | Public | Single FAQ |
-| POST | `/` | Admin | Create FAQ |
-| PUT | `/:id` | Admin | Update FAQ |
-| DELETE | `/:id` | Admin | Delete FAQ |
-| POST | `/:id/helpful` | User | Vote helpful/not helpful |
-
-### Forum Posts — `/api/posts`
-| Method | Route | Auth | Description |
-|---|---|---|---|
-| GET | `/` | Public | List posts (search, tag filter) |
-| GET | `/:id` | Public | Single post (increments views) |
-| POST | `/` | User | Create post |
-| DELETE | `/:id` | Owner/Admin | Delete post |
-| POST | `/:id/vote` | User | Upvote/downvote post |
-| POST | `/:id/answers` | User | Add answer |
-| PUT | `/:id/answers/:answerId` | Owner | Edit answer |
-| DELETE | `/:id/answers/:answerId` | Owner/Admin | Delete answer |
-| POST | `/:id/answers/:answerId/vote` | User | Vote on answer |
-| POST | `/:id/answers/:answerId/react` | User | Emoji react (👍💡❤️🔥🎯) |
-| POST | `/:id/answers/:answerId/accept` | Post owner | Accept/unaccept answer |
-
-### Chatbot — `/api/chatbot`
-| Method | Route | Description |
-|---|---|---|
-| POST | `/message` | Send message, get FAQ-based reply |
-| POST | `/ticket` | Create support ticket from chat |
-
-### Users — `/api/users`
-| Method | Route | Auth | Description |
-|---|---|---|---|
-| GET | `/` | Admin | All users |
+*   **Token Dispatcher:** Generates secure temporary tokens and stores them in the database with timestamps.
+*   **Console Logging Fallback:** If `EMAIL_USER` or `EMAIL_PASS` is empty (Local/Dev mode), it automatically intercepts the reset flow and logs the validation url link directly to the console for development testing.
+*   **Expiration Enforcement:** Validates temporary tokens and verifies token timestamp freshness within the `RESET_TOKEN_EXPIRY_MIN` window (defaulting to 15 minutes) before permitting credential changes.
 
 ---
 
-## Setup & Installation
+## 🎫 4. Helpdesk ticket lifecycle Engine
 
-### Prerequisites
-- Node.js 18+
-- PostgreSQL 18 (primary) or MongoDB (fallback)
+Controls the full ticketing pipeline from request submission to final solution publishing:
 
-### 1. Clone
-```bash
-git clone https://github.com/VINS-Inventors/Faq---System.git
-cd Faq---System
-```
-
-### 2. Backend
-```bash
-cd backend
-npm install
-cp .env.example .env
-# Edit .env with your credentials
-```
-
-### 3. Frontend
-```bash
-cd frontend
-npm install
-```
-
-### 4. Create PostgreSQL database
-```bash
-# In psql or via Node:
-CREATE DATABASE faq_system;
-# Tables are created automatically on first server start
-```
-
-### 5. Migrate existing data (optional)
-```bash
-cd backend
-node config/migrate.js
-```
+*   **Atomic Claim Engine:** Employs atomic operations to claim tickets. Moving status from `PENDING` to `REVIEWING` is restricted to one moderator, avoiding race conditions.
+*   **Moderator Workspace:** Allows moderator assignees to post resolution answers and associate related FAQs (`linkedFAQs`).
+*   **Query Helpful/Not Helpful Rating:**
+    *   Logged-in users can rate resolved tickets using the `/helpful` route, voting `helpful` or `notHelpful`.
+    *   Aggregates totals (`helpful` & `notHelpful` count fields) and records voter user IDs (`helpfulVotes`, `notHelpfulVotes` arrays) to prevent duplicate votes per query.
+*   **Approval Pipeline:** Admins review resolved queries. Approvals change statuses to `APPROVED` and automatically trigger the compilation and publishing of a new FAQ entity based on the ticket details.
+*   **Escalation and Rejection Queues:** Provides routes to escalate tickets back to administrative review (`ESCALATED` status) or flag them as `REJECTED` with reason fields.
 
 ---
 
-## Environment Variables
+## 💬 5. Chatbot Engine & LLM Proxy
 
-Create `backend/.env` based on `.env.example`:
+Supports smart chatbot workflows through two matching layers:
 
-```env
-PORT=5000
-PG_URI=postgresql://postgres:<password>@localhost:5432/faq_system
-MONGO_URI=mongodb://localhost:27017/faq-system
-JWT_SECRET=your_jwt_secret_here
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_app_password
-```
-
----
-
-## Running the Project
-
-```bash
-# Terminal 1 — Backend
-cd backend
-npm run dev       # nodemon (auto-restart)
-# or
-npm start         # plain node
-
-# Terminal 2 — Frontend
-cd frontend
-npm run dev       # Vite dev server at http://localhost:5173
-```
-
-Backend runs on `http://localhost:5000`  
-Frontend proxies `/api` to the backend via Vite config.
+1.  **NLP Keyword Matching Layer:**
+    *   Uses a content scoring algorithm in [chatbotController.js](file:///c:/code/vins/Faq---System/backend/controllers/chatbotController.js) to clean messages of common stop words.
+    *   Scores matching keywords against the FAQ database and resolved query history. Returns high-confidence answers alongside automated related suggestions.
+2.  **LLM Proxy Routing:**
+    *   Acts as a fallback if keyword matching scores fall below confidence thresholds.
+    *   Proxies messages directly to local generative AI API endpoints (e.g. vLLM or LM-Studio running on port `6006`).
+3.  **Automatic Ticket Raising:**
+    *   Detects user request intentions (e.g., "create ticket", "raise ticket") via keyword regex.
+    *   Returns structured ticket drafting prompts and action parameters for the frontend to render form templates.
 
 ---
 
-## User Roles
+## 🏛️ 6. Discussion Forums & Community Q&A Threads
 
-| Role | Permissions |
-|---|---|
-| `user` | Submit queries, browse FAQs/board, use forum, chat with Yaksha |
-| `admin` | All user permissions + moderate queries, manage FAQs, view DB, manage users |
+Implements interactive community-based sharing boards:
 
----
-
-## Pages & Routes
-
-| Route | Page | Access |
-|---|---|---|
-| `/` | Landing (Home) | Public |
-| `/login` | Login / Register | Public |
-| `/forgot-password` | Forgot Password | Public |
-| `/faq` | FAQ Accordion | Public |
-| `/ask` | Submit Query | User |
-| `/board` | Knowledge Base | User |
-| `/status` | Status Tracker | User |
-| `/forum` | Community Forum | User |
-| `/forum/:id` | Forum Post Detail | User |
-| `/admin` | Moderation Panel | Admin |
-| `/escalation` | Escalation Queue | Admin |
-| `/users` | User Directory | Admin |
-| `/db` | DB Viewer | Admin |
+*   **Query-Scoped Forums:** Houses conversations on specific queries, allowing users to coordinate, post messages, modify contents, or delete replies.
+*   **Community Posts board:**
+    *   Enables public threads with text posts, tags, and vote metrics.
+    *   Users submit answers, vote on posts/replies, and add custom text reactions (e.g., emoji reactions on solutions).
+    *   Post authors can flag an answer as "Accepted", marking it as the official solution.
 
 ---
 
-## GitHub
+## 🗄️ 7. Administrative SQL Database Inspector
 
-**Repository:** https://github.com/VINS-Inventors/Faq---System  
-**Branch:** `main`
+Restricted backend inspector endpoints (`/api/db-view`) enabling real-time database administration:
+
+*   **Row Counters:** Inspects and compiles row statistics across tables (`users`, `queries`, `faqs`, `forums`, `posts`).
+*   **Dynamic SQL Builder:**
+    *   Checks if active database adapter is PostgreSQL.
+    *   Builds SQL expressions on the fly to perform server-side sorting (`sort`, `dir`), pagination (`limit`, `offset`), and columns search filters (`q`).
+    *   Returns table metadata and row sets to the admin client.
+
+---
+
+## 📊 8. Database Migration Automation (`migrate.js`)
+
+A custom loader script [migrate.js](file:///c:/code/vins/Faq---System/backend/config/migrate.js) to import files from the JSON database directory to PostgreSQL:
+*   Loads local storage documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`).
+*   Normalizes schema columns (including default settings and JSONB parsing parameters).
+*   Batch-upserts rows using `ON CONFLICT (_id) DO NOTHING` constraints to prevent data collisions.
