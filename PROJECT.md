@@ -1,10 +1,10 @@
-# 🖥️ FAQ & Ticket Management System — Backend Features Specification
+# 🖥️ FAQ & Ticket Management System — Full-Stack Technical Specification
 
-This document details all backend architectures, engines, database adapters, and API features implemented in the **FAQ & Ticket Management System**.
+This document details all backend architectures, databases, frontend components, client-side routing modules, chatbot engines, and scalability setups implemented in the **FAQ & Ticket Management System**.
 
 ---
 
-## 🧭 1. Unified Database Layer & Repository Pattern
+## 🧭 1. Unified Database Layer & Repository Pattern (Backend)
 
 The system uses a unified data connector in [db.js](file:///c:/code/vins/Faq---System/backend/config/db.js) that automatically negotiates and falls back through three database storage engines on startup:
 
@@ -32,7 +32,7 @@ graph TD
 
 ---
 
-## 🔐 2. Authentication, Security, & JWT Session Engine
+## 🔐 2. Authentication, Security, & JWT Session Engine (Backend)
 
 The authentication engine provides session isolation, secure password hashing, and role checks:
 
@@ -44,7 +44,7 @@ The authentication engine provides session isolation, secure password hashing, a
 
 ---
 
-## 📧 3. Nodemailer Password Reset Flow
+## 📧 3. Nodemailer Password Reset Flow (Backend)
 
 Secures credentials recovery via token-based mail flows:
 
@@ -54,7 +54,7 @@ Secures credentials recovery via token-based mail flows:
 
 ---
 
-## 🎫 4. Helpdesk ticket lifecycle Engine
+## 🎫 4. Helpdesk Ticket Lifecycle Engine (Backend)
 
 Controls the full ticketing pipeline from request submission to final solution publishing:
 
@@ -68,7 +68,7 @@ Controls the full ticketing pipeline from request submission to final solution p
 
 ---
 
-## 💬 5. Chatbot Engine & LLM Proxy
+## 💬 5. Chatbot Engine & LLM Proxy (Backend)
 
 Supports smart chatbot workflows through two matching layers:
 
@@ -84,19 +84,19 @@ Supports smart chatbot workflows through two matching layers:
 
 ---
 
-## 🏛️ 6. Discussion Forums & Community Q&A Threads
+## 🏛️ 6. Discussion Forums & Community Q&A Threads (Backend)
 
 Implements interactive community-based sharing boards:
 
 *   **Query-Scoped Forums:** Houses conversations on specific queries, allowing users to coordinate, post messages, modify contents, or delete replies.
-*   **Community Posts board:**
+*   **Community Posts Board:**
     *   Enables public threads with text posts, tags, and vote metrics.
     *   Users submit answers, vote on posts/replies, and add custom text reactions (e.g., emoji reactions on solutions).
     *   Post authors can flag an answer as "Accepted", marking it as the official solution.
 
 ---
 
-## 🗄️ 7. Administrative SQL Database Inspector
+## 🗄️ 7. Administrative SQL Database Inspector (Backend)
 
 Restricted backend inspector endpoints (`/api/db-view`) enabling real-time database administration:
 
@@ -108,7 +108,49 @@ Restricted backend inspector endpoints (`/api/db-view`) enabling real-time datab
 
 ---
 
-## 📊 8. Database Migration Automation (`migrate.js`)
+## 🎨 8. User Interface Design & Aesthetics (Frontend)
+
+Provides a premium user interface incorporating modern visual styling and fluid interactions:
+
+*   **Glassmorphic Design Tokens:** Stylized theme-aware component grids utilizing backdrop filters (`backdrop-filter: blur()`), harmonic background gradients, translucent borders, and noise texture overlays (`.grain`).
+*   **Smooth Page Transitions:** Configured via `AnimatePresence` and `motion.div` in [App.jsx](file:///c:/code/vins/Faq---System/frontend/src/App.jsx). Smoothly translates page routes along the vertical axis while fading scaling parameters.
+*   **Theme Control:** Integrated theme selector switch ([ThemeToggle.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/ThemeToggle.jsx)) toggling global CSS variables to switch between high-contrast dark and light modes.
+*   **Floating Progress Scrollbar ([FloatingScrollbar.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/FloatingScrollbar.jsx)):** Custom scroll component tracking viewport progression and mapping reading status visually.
+
+---
+
+## 🧩 9. Component Architecture & State Management (Frontend)
+
+Organizes layouts, authentication contexts, and request interceptors:
+
+*   **Context-Based Session Provider ([AuthContext.jsx](file:///c:/code/vins/Faq---System/frontend/src/context/AuthContext.jsx)):** Caches caller identity profiles and local storage authorization tokens globally. Handles asynchronous authentication requests.
+*   **Axios Request Interceptor ([api.js](file:///c:/code/vins/Faq---System/frontend/src/utils/api.js)):** Sets up a central Axios caller client to intercept outbound requests, automatically embedding JWT keys inside `Authorization: Bearer <token>` headers.
+*   **Protected Guard Wrappers ([ProtectedRoute.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/ProtectedRoute.jsx)):** Guards navigation points, redirecting guest accounts to login frames and restricting administrative panels to verified `admin` profiles.
+
+---
+
+## 📁 10. Dashboard & View Configurations (Frontend)
+
+*   **Public FAQ Directory ([FAQ.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/FAQ.jsx)):**
+    *   Expandable accordion card panels highlighting categories and query tags.
+    *   Interactive voting controls triggers matching `/helpful` APIs.
+*   **Support Desk Dashboards:**
+    *   [AskQuery.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AskQuery.jsx): Submit portal equipped with description controls, category selectors, and urgency selectors.
+    *   [QueryBoard.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/QueryBoard.jsx): Directory showing owned queries, current statuses, and resolution notes.
+    *   [StatusTracker.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/StatusTracker.jsx): Real-time interactive timeline rendering the claim, review, and resolution actions of tickets.
+*   **Moderator Review Panel ([AdminReview.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AdminReview.jsx)):**
+    *   Dynamic ticket queues split by pending and reviewing.
+    *   Claiming interfaces, response inputs, related FAQ associations, and final approvals/rejections triggers.
+*   **Administrative Tables Grid ([AdminDB.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AdminDB.jsx)):**
+    *   Interactive tabular grid showing statistical schemas of database tables.
+    *   Drives queries parameters triggering server-side searching, sorting, and pagination.
+*   **Community Forums & Posts ([Forum.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/Forum.jsx), [ForumPost.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/ForumPost.jsx)):**
+    *   Group messaging feeds inside queries.
+    *   Community QA threads listing, post upvote counters, answer replies, and author-assigned solution parameters.
+
+---
+
+## 📊 11. Database Migration Automation (`migrate.js`)
 
 A custom loader script [migrate.js](file:///c:/code/vins/Faq---System/backend/config/migrate.js) to import files from the JSON database directory to PostgreSQL:
 *   Loads local storage documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`).
@@ -117,13 +159,14 @@ A custom loader script [migrate.js](file:///c:/code/vins/Faq---System/backend/co
 
 ---
 
-## ⚖️ 9. High Availability & Load Balancing Architecture
+## ⚖️ 12. High Availability & Load Balancing Architecture
 
 Describes the scale-out capabilities and operational architecture for production hosting:
 
-1. **Horizontal Node.js Scaling (PM2 Cluster Mode):**
-   - Utilizes node process clustering to duplicate Express servers across multiple logical CPUs.
-   - Enforces internal socket sharing and TCP round-robin traffic routing natively.
-2. **Reverse Proxy Load Balancing (Nginx Upstream Routing):**
-   - Deploys upstream load balancer pools utilizing routing algorithms (`least_conn` for distributing requests to instances with the fewest active connections).
-   - Manages connection upgrades (WebSockets), HTTP proxy configurations, and client IP extraction headers (`X-Forwarded-For`, `X-Real-IP`).
+1.  **Horizontal Node.js Scaling (PM2 Cluster Mode):**
+    *   Utilizes node process clustering to duplicate Express servers across multiple logical CPUs.
+    *   Enforces internal socket sharing and TCP round-robin traffic routing natively.
+2.  **Reverse Proxy Load Balancing (Nginx Upstream Routing):**
+    *   Deploys upstream load balancer pools utilizing routing algorithms (`least_conn` for distributing requests to instances with the fewest active connections).
+    *   Manages connection upgrades (WebSockets), HTTP proxy configurations, and client IP extraction headers (`X-Forwarded-For`, `X-Real-IP`).
+
