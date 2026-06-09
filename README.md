@@ -1,4 +1,4 @@
-# 📖 Premium FAQ & Ticket Management System
+# 📖 Premium FAQ & Ticket Management System — Full-Stack Technical Specification
 
 Welcome to the **FAQ & Ticket Management System**—a modern, enterprise-grade, full-stack knowledge base and helpdesk application. This application bridges the gap between self-service information retrieval (via FAQs & a smart chatbot) and dedicated user assistance (via ticket creation, moderating workflows, status tracking, escalations, and discussion forums).
 
@@ -6,7 +6,7 @@ The system is fully animated and responsive, built with sleek modern UI paradigm
 
 ---
 
-## 🚀 Key Features
+## 🚀 Key Features Overview
 
 *   **Smart Chatbot Interface:** Built-in NLP keyword matching and suggestions to quickly answer placement and internship queries, with full local LLM proxy integration support (e.g. vLLM or LM-Studio). Features automated support ticket raising directly from the chat prompt.
 *   **Helpdesk Ticket Lifecycle:** A complete workflow where users submit queries, moderators claim them to review, resolve them with answers, and admins approve resolutions (which automatically creates official FAQs) or reject queries.
@@ -111,78 +111,37 @@ faq-system/
 
 ---
 
-## ⚙️ Environment Configuration
+## 🔍 Detailed Pinpoint Features Specifications
 
-Copy `backend/.env.example` to `backend/.env` and adjust setup configurations:
+### 🧭 1. Unified Database Layer & Repository Pattern (Backend)
+*   **Connection Negotiation:** Autodetects available databases dynamically on startup. It connects to **PostgreSQL** if possible, falls back to **MongoDB** as a secondary server, and defaults to a zero-config local file-based database wrapper ([localDb.js](file:///c:/code/vins/Faq---System/backend/config/localDb.js)) if no remote servers are running.
+*   **Automatic Migrations:** Connects via a pool configuration and executes schema creations (`users`, `queries`, `faqs`, `forums`, `posts`, `password_resets`) with custom constraints and indices (e.g. password resets emails) automatically.
+*   **JSONB Mappings:** Standardizes PostgreSQL json columns (`tags`, `attachments`, `linkedFAQs`, `votedBy`, `answers`, `helpfulVotes`, `notHelpfulVotes`) automatically in database queries.
 
-```ini
-PORT=5000
-PG_URI=postgresql://postgres:password@localhost:5432/faq_system
-MONGO_URI=mongodb://localhost:27017/faq-system
-JWT_SECRET=your-secure-jwt-secret-key-here
+### 🔐 2. Authentication, Session & Access Security
+*   **Bcrypt Hashing:** Salting and hashing processes protect credentials (salt rounds = 10).
+*   **JWT Bearer Tokens:** Generates authentication tokens upon login and checks requests via authentication middleware ([auth.js](file:///c:/code/vins/Faq---System/backend/middleware/auth.js)).
+*   **Permission Redirection:** Redirection shields restrict administrative panels (`/admin`, `/db`, `/escalation`, `/users`) to verified `admin` profiles and dashboard components to registered accounts.
 
-# 📧 SMTP Configuration (Nodemailer)
-# Leave EMAIL_USER and EMAIL_PASS empty to log reset links directly to console.
-EMAIL_SERVICE=gmail
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_app_password
-EMAIL_FROM="VINS FAQ System Support" <your_email@gmail.com>
+### 📧 3. Nodemailer Password Reset Engine
+*   **Dispatcher System:** Registers temporary validation credentials maps inside database collections.
+*   **Console Logging Fallback:** Intercepts outgoing SMTP traffic and logs recovery links directly to the server terminal if nodemailer mail credentials are not present in `.env` (Dev mode).
+*   **Expiration Windows:** Verifies that incoming reset keys fall within the designated expiration window (15 minutes).
 
-# Password Reset link expiry (in minutes)
-RESET_TOKEN_EXPIRY_MIN=15
-FRONTEND_URL=http://localhost:3000
+### 🎫 4. Helpdesk Ticket Lifecycle & User Ratings
+*   **Atomic Claim Engine:** Employs atomic claiming logic to prevent concurrent claiming conflicts among moderators.
+*   **Helpful/Not Helpful Feedback:** Logged-in users can rate resolved tickets using the `/helpful` route, voting `helpful` or `notHelpful`. It aggregates totals (`helpful` & `notHelpful` count fields) and records voter user IDs (`helpfulVotes`, `notHelpfulVotes` arrays) to prevent duplicate votes per query.
+*   **State Machine Pipeline:** Coordinates ticket updates between `PENDING`, `REVIEWING`, `RESOLVED`, `APPROVED` (generates FAQ automatically), `ESCALATED`, and `REJECTED` states.
 
-# Optional: Custom LLM Endpoint Key (if using local LLM model fallback)
-LLM_API_KEY=lm-studio
-```
+### 💬 5. Chatbot Interface & LLM Proxy Engine
+*   **NLP Keyword Matching:** Scores search strings against FAQs using keyword relevance matching and filters stop words.
+*   **Generative AI Proxy:** Forwards conversations to local LLM frameworks (vLLM / LM-Studio running on port `6006`) if standard scoring falls below threshold values.
+*   **Automated Ticket Creation:** Matches triggers like "file complaint" or "open ticket" to return ticket compilation templates directly in the chat panel.
 
----
-
-## ⚡ Setup & Execution
-
-### 1. Database Provisioning
-The application initiates databases in the following hierarchy on startup:
-1.  **PostgreSQL:** Tries to connect to `PG_URI`. Auto-generates the database schema (`users`, `queries`, `faqs`, `forums`, `posts`, `password_resets`) if not present.
-2.  **MongoDB:** Fallback. Connects to `MONGO_URI` if PostgreSQL is unavailable.
-3.  **Local Storage:** Fallback. Stores data in JSON files in [backend/local_data/](file:///c:/code/vins/Faq---System/backend/local_data) if no database servers are reachable.
-
-### 2. Run the Backend Server
-```bash
-cd backend
-npm install
-npm run dev
-# Starts backend server on http://localhost:5000
-```
-
-### 3. Run the Frontend Development Server
-```bash
-cd frontend
-npm install
-npm run dev
-# Starts local Vite client on http://localhost:3000
-```
-
----
-
-## 🛡️ User Roles & Query Workflow
-
-The application supports three role categories:
-*   **Public/Guest:** Access to the landing page, Chatbot, and reading the public FAQ board.
-*   **User:** Access to ticket submission, personal ticket tracking logs, voting, and interacting in forums.
-*   **Admin/Moderator:** Claiming tickets, escalating priority, resolving tickets, database viewing, and deleting content.
-
-### Query State Machine
-```
-   [User Submits Query] ──> (PENDING)
-                                │
-                                └──> Claimed by Moderator ──> (REVIEWING)
-                                                                 │
-                                ┌────────────────────────────────┴──────────────┐
-                                ▼                                               ▼
-                         (RESOLVED) ──> Admin Approves ──> [Official FAQ]    (REJECTED)
-                                │
-                                └──> Admin Escalate ──> (ESCALATED)
-```
+### 🎨 6. Glassmorphic User Interface & Animations (Frontend)
+*   **Aesthetic Styling Tokens:** Uses dynamic background noise (`.grain`), backdrop filters, layout wrappers, and variables to power customizable Light and Dark themes.
+*   **Framer Motion Routing:** Controls transitions via `AnimatePresence` inside [App.jsx](file:///c:/code/vins/Faq---System/frontend/src/App.jsx), translating pages along the vertical axis while fading opacity.
+*   **Floating Progress Scrollbar:** Displays reading progress on the viewport dynamically.
 
 ---
 
@@ -261,6 +220,55 @@ The application supports three role categories:
 
 ---
 
+## ⚙️ Environment Configuration
+
+Copy `backend/.env.example` to `backend/.env` and adjust setup configurations:
+
+```ini
+PORT=5000
+PG_URI=postgresql://postgres:password@localhost:5432/faq_system
+MONGO_URI=mongodb://localhost:27017/faq-system
+JWT_SECRET=your-secure-jwt-secret-key-here
+
+# 📧 SMTP Configuration (Nodemailer)
+EMAIL_SERVICE=gmail
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_app_password
+EMAIL_FROM="VINS FAQ System Support" <your_email@gmail.com>
+
+RESET_TOKEN_EXPIRY_MIN=15
+FRONTEND_URL=http://localhost:3000
+LLM_API_KEY=lm-studio
+```
+
+---
+
+## ⚡ Setup & Execution
+
+### 1. Database Provisioning
+The application initiates databases in the following hierarchy on startup:
+1.  **PostgreSQL:** Tries to connect to `PG_URI`. Auto-generates the database schema (`users`, `queries`, `faqs`, `forums`, `posts`, `password_resets`) if not present.
+2.  **MongoDB:** Fallback. Connects to `MONGO_URI` if PostgreSQL is unavailable.
+3.  **Local Storage:** Fallback. Stores data in JSON files in [backend/local_data/](file:///c:/code/vins/Faq---System/backend/local_data) if no database servers are reachable.
+
+### 2. Run the Backend Server
+```bash
+cd backend
+npm install
+node server.js
+# Starts backend server on http://localhost:5000
+```
+
+### 3. Run the Frontend Development Server
+```bash
+cd frontend
+npm install
+node .\node_modules\vite\bin\vite.js
+# Starts local Vite client on http://localhost:3000
+```
+
+---
+
 ## 🔑 Seeding the Initial Admin Account
 
 You can register as an admin using the Auth registration screen by choosing the administrative signup checkbox (if enabled), or inject it manually into your storage layer.
@@ -274,15 +282,6 @@ You can register as an admin using the Auth registration screen by choosing the 
   "role": "admin"
 }
 ```
-
----
-
-## 🤖 LLM Chatbot Integration
-
-To connect the Chatbot to a local LLM or API:
-1.  Run your local server (e.g. LM-Studio, Ollama, vLLM) on port `6006` or adjust the URI in [chatbot.js](file:///c:/code/vins/Faq---System/backend/routes/chatbot.js#L15).
-2.  Set `LLM_API_KEY` in your `.env` file.
-3.  The chatbot will automatically fallback to querying the LLM endpoint whenever standard FAQ score matching yields no high-confidence solutions.
 
 ---
 
