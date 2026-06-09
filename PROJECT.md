@@ -150,12 +150,23 @@ Organizes layouts, authentication contexts, and request interceptors:
 
 ---
 
-## 📊 11. Database Migration Automation (`migrate.js`)
+## 📊 11. Database Migration Automation & Seeding (`migrate.js` & `mongoimport`)
 
-A custom loader script [migrate.js](file:///c:/code/vins/Faq---System/backend/config/migrate.js) to import files from the JSON database directory to PostgreSQL:
-*   Loads local storage documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`).
-*   Normalizes schema columns (including default settings and JSONB parsing parameters).
-*   Batch-upserts rows using `ON CONFLICT (_id) DO NOTHING` constraints to prevent data collisions.
+Provides scripts and utility commands to import local storage JSON files into the database layers:
+*   **PostgreSQL Migration (migrate.js):**
+    *   Loads local storage documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`).
+    *   Normalizes schema columns (including default settings and JSONB parsing parameters).
+    *   Batch-upserts rows using `ON CONFLICT (_id) DO NOTHING` constraints to prevent data collisions.
+*   **MongoDB Seeding (mongoimport):**
+    *   Allows importing local data directly into target MongoDB collections.
+    *   Seeding database collections is done via standard MongoDB utility commands:
+        ```bash
+        mongoimport --db faq-system --collection users --file local_data/users.json --jsonArray
+        mongoimport --db faq-system --collection queries --file local_data/queries.json --jsonArray
+        mongoimport --db faq-system --collection faqs --file local_data/faqs.json --jsonArray
+        mongoimport --db faq-system --collection posts --file local_data/posts.json --jsonArray
+        ```
+
 
 ---
 

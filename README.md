@@ -138,10 +138,41 @@ faq-system/
 *   **Generative AI Proxy:** Forwards conversations to local LLM frameworks (vLLM / LM-Studio running on port `6006`) if standard scoring falls below threshold values.
 *   **Automated Ticket Creation:** Matches triggers like "file complaint" or "open ticket" to return ticket compilation templates directly in the chat panel.
 
-### 🎨 6. Glassmorphic User Interface & Animations (Frontend)
-*   **Aesthetic Styling Tokens:** Uses dynamic background noise (`.grain`), backdrop filters, layout wrappers, and variables to power customizable Light and Dark themes.
-*   **Framer Motion Routing:** Controls transitions via `AnimatePresence` inside [App.jsx](file:///c:/code/vins/Faq---System/frontend/src/App.jsx), translating pages along the vertical axis while fading opacity.
-*   **Floating Progress Scrollbar:** Displays reading progress on the viewport dynamically.
+### 🎨 6. User Interface Design & Aesthetics (Frontend)
+*   **Glassmorphic Design Tokens:** Stylized theme-aware component grids utilizing backdrop filters (`backdrop-filter: blur()`), harmonic background gradients, translucent borders, and noise texture overlays (`.grain`).
+*   **Smooth Page Transitions:** Configured via `AnimatePresence` and `motion.div` in [App.jsx](file:///c:/code/vins/Faq---System/frontend/src/App.jsx). Smoothly translates page routes along the vertical axis while fading scaling parameters.
+*   **Theme Control:** Integrated theme selector switch ([ThemeToggle.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/ThemeToggle.jsx)) toggling global CSS variables to switch between high-contrast dark and light modes.
+*   **Floating Progress Scrollbar ([FloatingScrollbar.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/FloatingScrollbar.jsx)):** Custom scroll component tracking viewport progression and mapping reading status visually.
+
+### 🧩 7. Component Architecture & State Management (Frontend)
+*   **Context-Based Session Provider ([AuthContext.jsx](file:///c:/code/vins/Faq---System/frontend/src/context/AuthContext.jsx)):** Caches caller identity profiles and local storage authorization tokens globally. Handles asynchronous authentication requests.
+*   **Axios Request Interceptor ([api.js](file:///c:/code/vins/Faq---System/frontend/src/utils/api.js)):** Sets up a central Axios caller client to intercept outbound requests, automatically embedding JWT keys inside `Authorization: Bearer <token>` headers.
+*   **Protected Guard Wrappers ([ProtectedRoute.jsx](file:///c:/code/vins/Faq---System/frontend/src/components/ProtectedRoute.jsx)):** Guards navigation points, redirecting guest accounts to login frames and restricting administrative panels to verified `admin` profiles.
+
+### 📁 8. Dashboard & View Configurations (Frontend)
+*   **Public FAQ Accordion Directory ([FAQ.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/FAQ.jsx)):** Accordion card panels highlighting categories and query tags.
+*   **Support Desk Dashboards:** Includes submission forms ([AskQuery.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AskQuery.jsx)), user logs ([QueryBoard.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/QueryBoard.jsx)), and claims/resolution history timelines ([StatusTracker.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/StatusTracker.jsx)).
+*   **Administrative Inspector Pages:** Includes claimed/pending tickets moderation grids ([AdminReview.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AdminReview.jsx)), priority escalation queues ([Escalation.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/Escalation.jsx)), user profile roster deletion forms ([Users.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/Users.jsx)), and pg tables inspector grid ([AdminDB.jsx](file:///c:/code/vins/Faq---System/frontend/src/pages/AdminDB.jsx)).
+
+### 🗄️ 9. Administrative SQL Database Inspector (Backend)
+*   **Row Counters:** Inspects and compiles row statistics across tables (`users`, `queries`, `faqs`, `forums`, `posts`).
+*   **Dynamic SQL Builder:** Builds SQL expressions on the fly to perform server-side sorting (`sort`, `dir`), pagination (`limit`, `offset`), and columns search filters (`q`).
+
+### 🏛️ 10. Discussion Forums & Community Q&A Threads (Backend)
+*   **Query-Scoped Forums:** Houses conversations on specific queries, allowing users to coordinate, post messages, modify contents, or delete replies.
+*   **Community Posts Board:** Enables public threads with text posts, tags, upvoting threads/replies, accepted solutions marks, and emoji reactions.
+
+### 📊 11. Database Migration Automation & Seeding (Backend - `migrate.js` & `mongoimport`)
+*   **PostgreSQL Migration (migrate.js):** Loads JSON documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`), normalizes columns, and batch-upserts rows using `ON CONFLICT` DO NOTHING.
+*   **MongoDB Seeding (mongoimport):** Seed collections directly using native utility commands:
+    ```bash
+    mongoimport --db faq-system --collection users --file local_data/users.json --jsonArray
+    mongoimport --db faq-system --collection queries --file local_data/queries.json --jsonArray
+    mongoimport --db faq-system --collection faqs --file local_data/faqs.json --jsonArray
+    mongoimport --db faq-system --collection posts --file local_data/posts.json --jsonArray
+    ```
+
+---
 
 ---
 
