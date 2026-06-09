@@ -55,6 +55,9 @@ exports.getBoard = async (req, res) => {
       askedBy: userMap[x.userId]?.name || 'Anonymous',
       viewCount: x.viewCount || 0,
       helpful: x.helpful || 0,
+      notHelpful: x.notHelpful || 0,
+      helpfulVotes: x.helpfulVotes || [],
+      notHelpfulVotes: x.notHelpfulVotes || [],
       resolvedAt: x.resolvedAt,
       createdAt: x.createdAt,
     }));
@@ -295,6 +298,60 @@ exports.getQueryById = async (req, res) => {
       userId: user ? { name: user.name, email: user.email } : { name: 'Unknown' },
       assignedTo: assignee ? { name: assignee.name } : null,
     });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// ── Mark query helpful / not helpful (per-user vote tracking) ─────────────────
+exports.markHelpful = async (req, res) => {
+  try {
+    const { type } = req.body; // 'helpful' | 'notHelpful'
+    if (!['helpful', 'notHelpful'].includes(type)) {
+      return res.status(400).json({ message: "type must be 'helpful' or 'notHelpful'" });
+    }
+
+    const query = await db.Query_findById(req.params.id);
+    if (!query) return res.status(404).json({ message: 'Query not found' });
+
+    const uid = String(req.user.id);
+    const helpfulVotes = Array.isArray(query.helpfulVotes) ? query.helpfulVotes.map(String) : [];
+    const notHelpfulVotes = Array.isArray(query.notHelpfulVotes) ? query.notHelpfulVotes.map(String) : [];
+
+    let updated;
+    if (type === 'helpful') {
+      if (helpfulVotes.includes(uid)) {
+        // Toggle off
+        updated = await db.Query_findByIdAndUpdate(req.params.id, {
+          helpfulVotes: helpfulVotes.filter(v => v !== uid),
+          helpful: Math.max(0, (query.helpful || 0) - 1),
+        });
+      } else {
+        // Vote on (remove from opposite if present)
+        updated = await db.Query_findByIdAndUpdate(req.params.id, {
+          helpfulVotes: [...helpfulVotes, uid],
+          notHelpfulVotes: notHelpfulVotes.filter(v => v !== uid),
+          helpful: (query.helpful || 0) + 1,
+          notHelpful: Math.max(0, (query.notHelpful || 0) - (notHelpfulVotes.includes(uid) ? 1 : 0)),
+        });
+      }
+    } else {
+      if (notHelpfulVotes.includes(uid)) {
+        updated = await db.Query_findByIdAndUpdate(req.params.id, {
+          notHelpfulVotes: notHelpfulVotes.filter(v => v !== uid),
+          notHelpful: Math.max(0, (query.notHelpful || 0) - 1),
+        });
+      } else {
+        updated = await db.Query_findByIdAndUpdate(req.params.id, {
+          notHelpfulVotes: [...notHelpfulVotes, uid],
+          helpfulVotes: helpfulVotes.filter(v => v !== uid),
+          notHelpful: (query.notHelpful || 0) + 1,
+          helpful: Math.max(0, (query.helpful || 0) - (helpfulVotes.includes(uid) ? 1 : 0)),
+        });
+      }
+    }
+
+    res.json(updated);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

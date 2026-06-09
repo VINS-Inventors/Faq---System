@@ -69,6 +69,9 @@ async function migrate() {
     escalationReason: q.escalationReason || null,
     viewCount:        q.viewCount || 0,
     helpful:          q.helpful || 0,
+    notHelpful:       q.notHelpful || 0,
+    helpfulVotes:     JSON.stringify(q.helpfulVotes || []),
+    notHelpfulVotes:  JSON.stringify(q.notHelpfulVotes || []),
     createdAt:        q.createdAt || new Date().toISOString(),
     updatedAt:        q.updatedAt || new Date().toISOString(),
   }));

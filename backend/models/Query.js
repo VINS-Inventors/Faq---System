@@ -28,6 +28,9 @@ const querySchema = new mongoose.Schema({
   escalationReason: { type: String, default: null },
   viewCount: { type: Number, default: 0 },
   helpful: { type: Number, default: 0 },
+  notHelpful: { type: Number, default: 0 },
+  helpfulVotes: [{ type: String }],
+  notHelpfulVotes: [{ type: String }],
 }, { timestamps: true });
 
 module.exports = mongoose.model('Query', querySchema);

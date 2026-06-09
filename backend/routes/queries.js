@@ -12,6 +12,9 @@ router.get('/mine', auth, queryController.getMyQueries);
 // Single query detail
 router.get('/:id', queryController.getQueryById);
 
+// User votes helpful / not helpful on query
+router.post('/:id/helpful', auth, queryController.markHelpful);
+
 // User submits a query
 router.post('/', auth, queryController.submitQuery);
 

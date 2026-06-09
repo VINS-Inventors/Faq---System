@@ -46,6 +46,9 @@ const PG_TABLES = `
     "escalationReason" TEXT,
     "viewCount"       INT DEFAULT 0,
     helpful           INT DEFAULT 0,
+    "notHelpful"      INT DEFAULT 0,
+    "helpfulVotes"    JSONB DEFAULT '[]',
+    "notHelpfulVotes" JSONB DEFAULT '[]',
     "createdAt"       TIMESTAMPTZ DEFAULT NOW(),
     "updatedAt"       TIMESTAMPTZ DEFAULT NOW()
   );
@@ -275,7 +278,9 @@ const mongoSchemas = {
   Query: { userId: String, title: String, description: String, category: String, status: String,
            priority: String, answer: String, attachments: [String], linkedFAQs: [String],
            assignedTo: String, resolvedAt: String, approvedBy: String, escalationReason: String,
-           viewCount: Number, helpful: Number, createdAt: String, updatedAt: String },
+           viewCount: Number, helpful: Number, notHelpful: Number,
+           helpfulVotes: [String], notHelpfulVotes: [String],
+           createdAt: String, updatedAt: String },
   FAQ:   { question: String, answer: String, category: String, tags: [String], createdBy: String,
            updatedBy: String, viewCount: Number, helpful: Number, notHelpful: Number,
            helpfulVotes: [String], notHelpfulVotes: [String],
