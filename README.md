@@ -199,6 +199,7 @@ The application supports three role categories:
 | **Queries** | `GET` | `/api/queries/board` | None | Get approved FAQ records |
 | | `GET` | `/api/queries/mine` | JWT (User) | Retrieve user's submitted tickets |
 | | `GET` | `/api/queries/:id` | None | Retrieve query details by ID |
+| | `POST` | `/api/queries/:id/helpful` | JWT (Any) | Vote helpful/not-helpful on ticket query |
 | | `POST` | `/api/queries` | JWT (User) | Open/Submit a new ticket query |
 | | `PUT` | `/api/queries/:id/claim` | JWT (Admin) | Claim pending ticket -> `REVIEWING` |
 | | `PUT` | `/api/queries/:id/resolve` | JWT (Admin) | Input resolution answer -> `RESOLVED` |
@@ -282,3 +283,97 @@ To connect the Chatbot to a local LLM or API:
 1.  Run your local server (e.g. LM-Studio, Ollama, vLLM) on port `6006` or adjust the URI in [chatbot.js](file:///c:/code/vins/Faq---System/backend/routes/chatbot.js#L15).
 2.  Set `LLM_API_KEY` in your `.env` file.
 3.  The chatbot will automatically fallback to querying the LLM endpoint whenever standard FAQ score matching yields no high-confidence solutions.
+
+---
+
+## ⚖️ High Availability & Load Balancing Guide
+
+To scale the backend Node.js server to handle high concurrent traffic and ensure continuous service availability, two load-balancing architecture patterns are recommended.
+
+```
+                  ┌──────────────────────────────┐
+                  │      Client HTTPS Traffic    │
+                  └──────────────┬───────────────┘
+                                 ▼
+                  ┌──────────────────────────────┐
+                  │    Nginx Reverse Proxy &     │
+                  │   Load Balancer (Port 80)    │
+                  └──────────────┬───────────────┘
+                                 │
+         ┌───────────────────────┼───────────────────────┐
+         ▼                       ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│ Node Server #1  │     │ Node Server #2  │     │ Node Server #3  │
+│ (Port 5001)     │     │ (Port 5002)     │     │ (Port 5003)     │
+└────────┬────────┘     └────────┬────────┘     └────────┬────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 ▼
+                    ┌──────────────────────────┐
+                    │ PostgreSQL / MongoDB DB  │
+                    └──────────────────────────┘
+```
+
+### Pattern A: Process-Level Load Balancing (Single VM/Server)
+Use **PM2 Cluster Mode** to automatically spawn instance processes matching the system's available CPU cores. PM2 shares the target port internally and distributes requests using round-robin logic:
+
+1.  Install PM2 globally:
+    ```bash
+    npm install pm2 -g
+    ```
+2.  Define process parameters in `ecosystem.config.js`:
+    ```javascript
+    module.exports = {
+      apps: [{
+        name: 'faq-backend',
+        script: './server.js',
+        instances: 'max', // Spawns one instance per CPU core
+        exec_mode: 'cluster', // Enables round-robin balancing
+        env: {
+          NODE_ENV: 'production',
+          PORT: 5000
+        }
+      }]
+    };
+    ```
+3.  Execute and monitor processes:
+    ```bash
+    pm2 start ecosystem.config.js
+    pm2 status
+    ```
+
+### Pattern B: Service-Level Load Balancing (Multi-Server/VM)
+Use **Nginx** upstream configuration to balance traffic across multiple machines or container instances:
+
+1.  Establish running instances of the Node server on target addresses (e.g. `10.0.0.10:5000`, `10.0.0.11:5000`, `10.0.0.12:5000`).
+2.  Configure Nginx reverse-proxy settings inside `/etc/nginx/nginx.conf`:
+    ```nginx
+    upstream faq_backend_servers {
+        # Least-connections strategy distributes to least busy instances
+        least_conn; 
+        
+        server 10.0.0.10:5000 max_fails=3 fail_timeout=10s;
+        server 10.0.0.11:5000 max_fails=3 fail_timeout=10s;
+        server 10.0.0.12:5000 max_fails=3 fail_timeout=10s;
+    }
+
+    server {
+        listen 80;
+        server_name faq-system.local;
+
+        location /api/ {
+            proxy_pass http://faq_backend_servers;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+    ```
+3.  Reload Nginx configuration:
+    ```bash
+    sudo nginx -s reload
+    ```

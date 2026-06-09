@@ -114,3 +114,16 @@ A custom loader script [migrate.js](file:///c:/code/vins/Faq---System/backend/co
 *   Loads local storage documents (`users.json`, `queries.json`, `faqs.json`, `posts.json`).
 *   Normalizes schema columns (including default settings and JSONB parsing parameters).
 *   Batch-upserts rows using `ON CONFLICT (_id) DO NOTHING` constraints to prevent data collisions.
+
+---
+
+## ⚖️ 9. High Availability & Load Balancing Architecture
+
+Describes the scale-out capabilities and operational architecture for production hosting:
+
+1. **Horizontal Node.js Scaling (PM2 Cluster Mode):**
+   - Utilizes node process clustering to duplicate Express servers across multiple logical CPUs.
+   - Enforces internal socket sharing and TCP round-robin traffic routing natively.
+2. **Reverse Proxy Load Balancing (Nginx Upstream Routing):**
+   - Deploys upstream load balancer pools utilizing routing algorithms (`least_conn` for distributing requests to instances with the fewest active connections).
+   - Manages connection upgrades (WebSockets), HTTP proxy configurations, and client IP extraction headers (`X-Forwarded-For`, `X-Real-IP`).
